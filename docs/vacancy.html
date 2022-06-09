@@ -60,8 +60,8 @@
 </footer> 
 
 <div class="modal__hidden">
-	<div id="callback">
-		<form class="form form_callback">
+	<div id="signup-free">
+		<form class="form form_signup-free">
 			<h2 class="form__title">Заполните форму и мы подберем вам лучшее время для занятий!</h2>
 			<div class="form__field form__field_text">
 				<input type="text" name="form_name" placeholder="Введите имя">
@@ -73,7 +73,25 @@
 				<button class="form__button" type="submit"><span>Записаться на бесплатный урок</span></button>
 			</div>
 			<div class="form__agree">
-				<input type="checkbox" name="callback_agree" checked>
+				<input type="checkbox" checked>
+				<p>Я согласен с политикой обработки <a href="./">персональных данных</a></p>
+			</div>
+		</form>
+	</div>
+	<div id="signup">
+		<form class="form form_signup">
+			<h2 class="form__title">Заполните форму и мы подберем вам лучшее время для занятий!</h2>
+			<div class="form__field form__field_text">
+				<input type="text" name="form_name" placeholder="Введите имя">
+			</div>
+			<div class="form__field form__field_text">
+				<input type="text" placeholder="Введите телефон*">
+			</div>
+			<div class="form__field form__field_submit">
+				<button class="form__button" type="submit"><span>Записаться</span></button>
+			</div>
+			<div class="form__agree">
+				<input type="checkbox" checked>
 				<p>Я согласен с политикой обработки <a href="./">персональных данных</a></p>
 			</div>
 		</form>
