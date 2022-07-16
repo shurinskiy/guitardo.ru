@@ -37,7 +37,7 @@
 			</div>
 			<h1 class="l-hero__title l-title l-title_grd"><span>Научись играть на фортепиано красиво и на слух</span></h1>
 			<div class="l-hero__text">За 60 онлайн-занятий с любого уровня (от нуля до музыкальной школы)</div>
-			<a class="l-hero__button l-button" href="./"><span>Попробовать бесплатно</span></a>
+			<a class="l-hero__button l-button" href="./" data-modal="get-free"><span>Попробовать бесплатно</span></a>
 		</div>
 		<div class="l-hero__image">
 			<img src="./images/litvak-hero-image.png" alt="">
@@ -469,7 +469,7 @@
 				<span>Рассрочки</span>
 			</div>
 			<div class="l-deferred__text">Учись и приобретай обучение в рассрочку — всего от 2.499 в месяц</div>
-			<a class="l-deferred__button l-button" href="./">Приобрести в рассрочку</a>
+			<a class="l-deferred__button l-button" href="./" data-modal="get-deferred">Приобрести в рассрочку</a>
 		</div>
 	</section>
 
@@ -487,7 +487,7 @@
 		<div class="l-free__items container">
 			<div class="l-free__item">
 				<img class="l-free__image" src="./images/stuff/litvak-free-image-3.png" alt="">
-				<a class="l-free__button l-button" href="./"><span>Попробовать бесплатно</span></a>
+				<a class="l-free__button l-button" href="./" data-modal="get-free"><span>Попробовать бесплатно</span></a>
 				<div class="l-free__panel">
 					<div class="l-free__badge"><span>1 урок</span></div>
 					<div class="l-free__text">Как научиться играть свободно и на слух?</div>
@@ -495,7 +495,7 @@
 			</div>
 			<div class="l-free__item">
 				<img class="l-free__image" src="./images/stuff/litvak-free-image-1.png" alt="">
-				<a class="l-free__button l-button" href="./"><span>Попробовать бесплатно</span></a>
+				<a class="l-free__button l-button" href="./" data-modal="get-free"><span>Попробовать бесплатно</span></a>
 				<div class="l-free__panel">
 					<div class="l-free__badge"><span>2 урок</span></div>
 					<div class="l-free__text">Первая мелодия на фортепиано за 30 минут (для начинающих)</div>
@@ -503,7 +503,7 @@
 			</div>
 			<div class="l-free__item">
 				<img class="l-free__image" src="./images/stuff/litvak-free-image-2.png" alt="">
-				<a class="l-free__button l-button" href="./"><span>Попробовать бесплатно</span></a>
+				<a class="l-free__button l-button" href="./" data-modal="get-free"><span>Попробовать бесплатно</span></a>
 				<div class="l-free__panel">
 					<div class="l-free__badge"><span>3 урок</span></div>
 					<div class="l-free__text">Принцип подбора мелодий на слух — подбери 3 мелодии на первом уроке! (Для тех, у кого был опыт занятий)</div>
@@ -689,6 +689,44 @@
 		<form class="form form_get-gift">
 			<h2 class="form__title">Подари обучение музыке!</h2>
 			<div class="form__note">Мы свяжемся, чтобы подобрать беспроигрышный вариант подарка и оформить сертификат</div>
+			<div class="form__field form__field_text">
+				<input type="text" name="form_name" placeholder="Введите имя">
+			</div>
+			<div class="form__field form__field_text">
+				<input type="text" placeholder="Введите телефон*">
+			</div>
+			<div class="form__field form__field_submit">
+				<button class="form__button" type="submit"><span>Отправить</span></button>
+			</div>
+			<div class="form__agree">
+				<input type="checkbox" checked>
+				<p>Я согласен с политикой обработки <a href="./">персональных данных</a></p>
+			</div>
+		</form>
+	</div>
+	<div id="get-free">
+		<form class="form form_get-free">
+			<h2 class="form__title form__title_piano">Получи 3 урока фортепиано бесплатно!</h2>
+			<div class="form__note form__note_embrace">На указанный номер придет SMS со ссылкой на урок</div>
+			<div class="form__field form__field_text">
+				<input type="text" name="form_name" placeholder="Введите имя">
+			</div>
+			<div class="form__field form__field_text">
+				<input type="text" placeholder="Введите телефон*">
+			</div>
+			<div class="form__field form__field_submit">
+				<button class="form__button" type="submit"><span>Отправить</span></button>
+			</div>
+			<div class="form__agree">
+				<input type="checkbox" checked>
+				<p>Я согласен с политикой обработки <a href="./">персональных данных</a></p>
+			</div>
+		</form>
+	</div>
+	<div id="get-deferred">
+		<form class="form form_get-deferred">
+			<h2 class="form__title form__title_happy">Учись в рассрочку без % от 2.499 в мес!</h2>
+			<div class="form__note">Оставь заявку, и наша команда поможет тебе присоединиться к программе рассрочки</div>
 			<div class="form__field form__field_text">
 				<input type="text" name="form_name" placeholder="Введите имя">
 			</div>
