@@ -1,0 +1,56 @@
+.g-title {
+	$self: &;
+	font-family: "MBL", sans-serif;
+	text-transform: uppercase;
+	font-size: 32px;
+	color: #fff;
+	line-height: 1.47;
+	position: relative;
+	z-index: 1;
+
+	@include media('<=lg') {
+		font-size: 26px;
+	}
+	
+	@include media('<=xxxs') {
+		font-size: 16px;
+	}
+	
+	&_big {
+		font-size: 40px;
+	
+		@include media('<=lg') {
+			font-size: 35px;
+		}
+		
+		@include media('<=md') {
+			font-size: 30px;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 26px;
+		}
+		
+		@include media('<=xxxs') {
+			font-size: 24px;
+		}
+	}
+
+	&_grd span {
+		display: block;
+		background: linear-gradient(90deg, #FFBF75 4%, #CB3737 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		text-fill-color: transparent;
+	}
+	
+	&_vocal span {
+		display: block;
+		background: linear-gradient(137deg, rgba(143, 93, 250, 0.7) 20%, rgba(237, 31, 255, 0.7) 86%), linear-gradient(208deg, #0D071C 17%, #38ACFF 96%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		text-fill-color: transparent;
+	}
+}

@@ -1,0 +1,573 @@
+.training {
+	$self: &;
+	color: #fff;
+
+	&__container {
+
+	}
+
+	&__title {
+		font-family: "MBL", sans-serif;
+		font-size: 44px;
+		text-transform: uppercase;
+		text-align: center;
+		margin-bottom: 70px;
+		
+		@include media('<=lg') {
+			font-size: 30px;
+			margin-bottom: 65px;
+		}
+		
+		@include media('<=sm') {
+			font-size: 25px;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 40.4px;
+			margin-bottom: 60px;
+		}
+		
+		@include media('<=xxxs') {
+			font-size: 25px;
+			margin-bottom: 37px;
+		}
+	}
+
+	&__columns {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -30px;
+		
+		@include media('<=lg') {
+			margin: 0 -25px;
+		}
+		
+		@include media('<=sm') {
+			margin: 0 -10px;
+		}
+		
+		@include media('<=xs') {
+			display: block;
+			margin: 0;
+		}
+	}
+	
+	&__column {
+		box-sizing: border-box;
+		margin: 0 30px 50px;
+		width: calc(33.3% - 60px);
+		
+		@include media('<=lg') {
+			margin: 0 25px 50px;
+			width: calc(33.3% - 50px);
+		}
+		
+		@include media('<=sm') {
+			margin: 0 10px 50px;
+			width: calc(33.3% - 20px);
+		}
+		
+		@include media('<=xs') {
+			width: 100%;
+			margin: 0 auto 50px;
+			max-width: 370px;
+		}
+		
+		@include media('<=xxxs') {
+			max-width: 228px;
+		}
+
+		&:last-child {
+			#{$self}__item::after {
+				margin-right: 0;
+			}
+		}
+
+		&_vocal {
+			#{$self}__head-title {
+				background: linear-gradient(167deg, rgba(0, 0, 0, 0.3) 30%, rgba(237, 31, 255, 0.4) 86%), 
+							linear-gradient(207.5deg, #0D071C 17%, #38ACFF 96%);
+
+				@include media('<=xs') {
+					background: url('#{$images-path}icons-sprite.svg#icon-arr-down-view-white') center right 40px / 22px 20px no-repeat, linear-gradient(167deg, rgba(0, 0, 0, 0.3) 30%, rgba(237, 31, 255, 0.4) 86%), 
+					linear-gradient(207.5deg, #0D071C 17%, #38ACFF 96%);
+					
+					&.opened {
+						background: url('#{$images-path}icons-sprite.svg#icon-arr-up-view-white') center right 40px / 22px 20px no-repeat, linear-gradient(167deg, rgba(0, 0, 0, 0.3) 30%, rgba(237, 31, 255, 0.4) 86%), 
+						linear-gradient(207.5deg, #0D071C 17%, #38ACFF 96%);
+					}
+				}
+
+				@media (max-width: 380px) {
+					background: url('#{$images-path}icons-sprite.svg#icon-arr-down-view-white') center right 20px / 19px 17px no-repeat, linear-gradient(167deg, rgba(0, 0, 0, 0.3) 30%, rgba(237, 31, 255, 0.4) 86%), 
+					linear-gradient(207.5deg, #0D071C 17%, #38ACFF 96%);
+					
+					&.opened {
+						background: url('#{$images-path}icons-sprite.svg#icon-arr-up-view-white') center right 20px / 19px 17px no-repeat, linear-gradient(167deg, rgba(0, 0, 0, 0.3) 30%, rgba(237, 31, 255, 0.4) 86%), 
+						linear-gradient(207.5deg, #0D071C 17%, #38ACFF 96%);
+					}
+				}
+
+				@include media('<=xxxs') {
+					background: url('#{$images-path}icons-sprite.svg#icon-arr-down-view-white') center right 15px / 15px 13px no-repeat, linear-gradient(167deg, rgba(0, 0, 0, 0.3) 30%, rgba(237, 31, 255, 0.4) 86%), 
+					linear-gradient(207.5deg, #0D071C 17%, #38ACFF 96%);
+					
+					&.opened {
+						background: url('#{$images-path}icons-sprite.svg#icon-arr-up-view-white') center right 15px / 15px 13px no-repeat, linear-gradient(167deg, rgba(0, 0, 0, 0.3) 30%, rgba(237, 31, 255, 0.4) 86%), 
+						linear-gradient(207.5deg, #0D071C 17%, #38ACFF 96%);
+					}
+				}
+			}
+
+			#{$self}__item::after {
+				background: linear-gradient(90deg, #7151BD 0%, #4A6BE0 50%, #6C55C2 100%);
+			}
+
+			#{$self}__item:nth-child(1) #{$self}__item-inner {
+				background: url('#{$images-path}stuff/l-card-image-1.png') center / cover,
+							linear-gradient(167deg, rgba(0, 0, 0, 0.3) 30%, rgba(237, 31, 255, 0.4) 86%), 
+							linear-gradient(207.5deg, #0D071C 17%, #38ACFF 96%);
+			}
+
+			#{$self}__item:nth-child(2) #{$self}__item-inner {
+				background: url('#{$images-path}stuff/l-card-image-2.png') center / cover,
+							linear-gradient(167deg, rgba(0, 0, 0, 0.3) 30%, rgba(237, 31, 255, 0.4) 86%), 
+							linear-gradient(207.5deg, #0D071C 17%, #38ACFF 96%);
+			}
+
+			#{$self}__item:nth-child(3) #{$self}__item-inner {
+				background: url('#{$images-path}stuff/l-card-image-3.png') center / cover,
+							linear-gradient(167deg, rgba(0, 0, 0, 0.3) 30%, rgba(237, 31, 255, 0.4) 86%), 
+							linear-gradient(207.5deg, #0D071C 17%, #38ACFF 96%);
+			}
+
+			#{$self}__item-price span, #{$self}__bottom-price span {
+				background: linear-gradient(136.5deg, rgba(0, 0, 0, 0) 19%, rgba(237, 31, 255, 0.7) 86%), 
+							linear-gradient(207.6deg, #0D071C 17%, #38ACFF 96%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+				text-fill-color: transparent;
+			}
+
+			#{$self}__bottom {
+				background: linear-gradient(158deg, rgba(0, 0, 0, 0.3) 30%, rgba(237, 31, 255, 0.5) 86%), 
+							linear-gradient(207.5deg, #0D071C 17%, #38ACFF 96%);
+				
+				&::after {
+					background: url('#{$images-path}stuff/card-after-1.png') right bottom / 90px no-repeat transparent;
+
+					@include media('<=lg') {
+						background-size: 75px;
+					}
+				}
+			}
+		}
+
+		&_piano {
+			#{$self}__head-title {
+				background: linear-gradient(167deg, rgba(0, 0, 0, 0.3) 30%, rgba(250, 100, 53, 0.7) 97%), 
+							linear-gradient(207.5deg, #000000 17%, #DE5CFF 96%);
+
+				@include media('<=xs') {
+					background: url('#{$images-path}icons-sprite.svg#icon-arr-down-view-white') center right 40px / 22px 20px no-repeat, linear-gradient(167deg, rgba(0, 0, 0, 0.3) 30%, rgba(250, 100, 53, 0.7) 97%), 
+					linear-gradient(207.5deg, #000000 17%, #DE5CFF 96%);
+					
+					&.opened {
+						background: url('#{$images-path}icons-sprite.svg#icon-arr-up-view-white') center right 40px / 22px 20px no-repeat, linear-gradient(167deg, rgba(0, 0, 0, 0.3) 30%, rgba(250, 100, 53, 0.7) 97%), 
+						linear-gradient(207.5deg, #000000 17%, #DE5CFF 96%);
+					}
+				}
+
+				@media (max-width: 380px) {
+					background: url('#{$images-path}icons-sprite.svg#icon-arr-down-view-white') center right 20px / 19px 17px no-repeat, linear-gradient(167deg, rgba(0, 0, 0, 0.3) 30%, rgba(250, 100, 53, 0.7) 97%), 
+					linear-gradient(207.5deg, #000000 17%, #DE5CFF 96%);
+					
+					&.opened {
+						background: url('#{$images-path}icons-sprite.svg#icon-arr-up-view-white') center right 20px / 19px 17px no-repeat, linear-gradient(167deg, rgba(0, 0, 0, 0.3) 30%, rgba(250, 100, 53, 0.7) 97%), 
+						linear-gradient(207.5deg, #000000 17%, #DE5CFF 96%);
+					}
+				}
+
+				@include media('<=xxxs') {
+					background: url('#{$images-path}icons-sprite.svg#icon-arr-down-view-white') center right 15px / 15px 13px no-repeat, linear-gradient(167deg, rgba(0, 0, 0, 0.3) 30%, rgba(250, 100, 53, 0.7) 97%), 
+					linear-gradient(207.5deg, #000000 17%, #DE5CFF 96%);
+					
+					&.opened {
+						background: url('#{$images-path}icons-sprite.svg#icon-arr-up-view-white') center right 15px / 15px 13px no-repeat, linear-gradient(167deg, rgba(0, 0, 0, 0.3) 30%, rgba(250, 100, 53, 0.7) 97%), 
+						linear-gradient(207.5deg, #000000 17%, #DE5CFF 96%);
+					}
+				}
+			}
+
+			#{$self}__item::after {
+				background: linear-gradient(90deg, #6C55C2 0%, #92468D 50%, #9F584E 100%);
+			}
+
+			#{$self}__item:nth-child(1) #{$self}__item-inner {
+				background: url('#{$images-path}stuff/l-card-image-4.png') center / cover,
+							linear-gradient(135.8deg, rgba(0, 0, 0, 0) 25%, rgba(250, 100, 53, 0.7) 97%), 
+							linear-gradient(207.6deg, #000000 17%, #DE5CFF 96%);			
+			}
+
+			#{$self}__item:nth-child(2) #{$self}__item-inner {
+				background: url('#{$images-path}stuff/l-card-image-5.png') center / cover,
+							linear-gradient(135.8deg, rgba(0, 0, 0, 0) 25%, rgba(250, 100, 53, 0.7) 97%), 
+							linear-gradient(207.6deg, #000000 17%, #DE5CFF 96%);			
+			}
+
+			#{$self}__item:nth-child(3) #{$self}__item-inner {
+				background: url('#{$images-path}stuff/l-card-image-6.png') center / cover,
+							linear-gradient(135.8deg, rgba(0, 0, 0, 0) 25%, rgba(250, 100, 53, 0.7) 97%), 
+							linear-gradient(207.6deg, #000000 17%, #DE5CFF 96%);			
+			}
+
+			#{$self}__item-price span, #{$self}__bottom-price span {
+				background: linear-gradient(135.8deg, rgba(0, 0, 0, 0) 25%, rgba(250, 100, 53, 0.7) 97%), 
+							linear-gradient(207.6deg, #000000 17%, #DE5CFF 96%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+				text-fill-color: transparent;
+			}
+
+			#{$self}__bottom {
+				background: linear-gradient(167deg, rgba(0, 0, 0, 0.3) 30%, rgba(250, 100, 53, 0.6) 97%), 
+							linear-gradient(207.5deg, #000000 17%, #DE5CFF 96%);
+				
+				&::after {
+					background: url('#{$images-path}stuff/card-after-2.png') right bottom / 110px no-repeat transparent;
+
+					@include media('<=lg') {
+						background-size: 90px;
+					}
+				}
+			}
+		}
+		
+		&_guitar {
+			#{$self}__head-title {
+				background: linear-gradient(167deg, rgba(0, 0, 0, 0.25) 35%, rgba(209, 39, 38, 0.7) 80%), 
+							linear-gradient(242deg, #000000 37%, #F8941F 94%);
+
+				@include media('<=xs') {
+					background: url('#{$images-path}icons-sprite.svg#icon-arr-down-view-white') center right 40px / 22px 20px no-repeat, linear-gradient(167deg, rgba(0, 0, 0, 0.25) 35%, rgba(209, 39, 38, 0.7) 80%), linear-gradient(242deg, #000000 37%, #F8941F 94%);
+					
+					&.opened {
+						background: url('#{$images-path}icons-sprite.svg#icon-arr-up-view-white') center right 40px / 22px 20px no-repeat, linear-gradient(167deg, rgba(0, 0, 0, 0.25) 35%, rgba(209, 39, 38, 0.7) 80%), linear-gradient(242deg, #000000 37%, #F8941F 94%);
+					}
+				}
+
+				@media (max-width: 380px) {
+					background: url('#{$images-path}icons-sprite.svg#icon-arr-down-view-white') center right 20px / 19px 17px no-repeat, linear-gradient(167deg, rgba(0, 0, 0, 0.25) 35%, rgba(209, 39, 38, 0.7) 80%), linear-gradient(242deg, #000000 37%, #F8941F 94%);
+					
+					&.opened {
+						background: url('#{$images-path}icons-sprite.svg#icon-arr-up-view-white') center right 20px / 19px 17px no-repeat, linear-gradient(167deg, rgba(0, 0, 0, 0.25) 35%, rgba(209, 39, 38, 0.7) 80%), linear-gradient(242deg, #000000 37%, #F8941F 94%);
+					}
+				}
+
+				@include media('<=xxxs') {
+					background: url('#{$images-path}icons-sprite.svg#icon-arr-down-view-white') center right 15px / 15px 13px no-repeat, linear-gradient(167deg, rgba(0, 0, 0, 0.25) 35%, rgba(209, 39, 38, 0.7) 80%), linear-gradient(242deg, #000000 37%, #F8941F 94%);
+					
+					&.opened {
+						background: url('#{$images-path}icons-sprite.svg#icon-arr-up-view-white') center right 15px / 15px 13px no-repeat, linear-gradient(167deg, rgba(0, 0, 0, 0.25) 35%, rgba(209, 39, 38, 0.7) 80%), linear-gradient(242deg, #000000 37%, #F8941F 94%);
+					}
+				}
+			}
+
+			#{$self}__item::after {
+				background: linear-gradient(90deg, #9F584E 0%, #A25D3B 100%);
+			}
+
+			#{$self}__item:nth-child(1) #{$self}__item-inner {
+				background: url('#{$images-path}stuff/l-card-image-7.png') center / cover,
+							linear-gradient(145deg, rgba(0, 0, 0, 0) 18%, rgba(209, 39, 38, 0.7) 80%), 
+							linear-gradient(242deg, #000000 37%, #F8941F 94%);
+			}
+
+			#{$self}__item:nth-child(2) #{$self}__item-inner {
+				background: url('#{$images-path}stuff/l-card-image-8.png') center / cover,
+							linear-gradient(145deg, rgba(0, 0, 0, 0) 18%, rgba(209, 39, 38, 0.7) 80%), 
+							linear-gradient(242deg, #000000 37%, #F8941F 94%);
+			}
+
+			#{$self}__item:nth-child(3) #{$self}__item-inner {
+				background: url('#{$images-path}stuff/l-card-image-9.png') center / cover,
+							linear-gradient(145deg, rgba(0, 0, 0, 0) 18%, rgba(209, 39, 38, 0.7) 80%), 
+							linear-gradient(242deg, #000000 37%, #F8941F 94%);
+			}
+
+			#{$self}__item-price span, #{$self}__bottom-price span {
+				background: linear-gradient(145deg, rgba(0, 0, 0, 0) 18%, rgba(209, 39, 38, 0.7) 80%), 
+							linear-gradient(242deg, #000000 37%, #F8941F 94%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+				text-fill-color: transparent;
+			}
+
+			#{$self}__bottom {
+				background: linear-gradient(167deg, rgba(0, 0, 0, 0.3) 35%, rgba(209, 39, 38, 0.5) 80%), 
+							linear-gradient(242deg, #000000 32%, #F8941F 94%);
+
+				&::after {
+					background: url('#{$images-path}stuff/card-after-3.png') right bottom / 100px no-repeat transparent;
+
+					@include media('<=lg') {
+						background-size: 80px;
+					}
+				}
+			}
+		}
+	}
+
+	&__head {
+		overflow: hidden;
+		border-radius: 25px 25px 16px 16px;
+		height: 345px;
+		margin-bottom: 67px;
+		
+		@include media('<=lg') {
+			height: 275px;
+			margin-bottom: 53px;
+		}
+		
+		@include media('<=xs') {
+			height: 320px;
+		}
+		
+		
+		@include media('<=xxs') {
+			border-radius: 37px 37px 25px 25px;
+			margin-bottom: 85px;
+			height: 460px;
+		}
+		
+		@include media('<=xxxs') {
+			border-radius: 25px 25px 16px 16px;
+			margin-bottom: 53px;
+			height: 285px;
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center top;
+		}
+	}
+
+	&__head-title {
+		box-sizing: border-box;
+		text-transform: uppercase;
+		font-family: "MEB", sans-serif;
+		font-size: 20px;
+		padding: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 70px;
+		margin-top: -70px;
+		border-radius: 16px 16px 0 0;
+		position: relative;
+		z-index: 1;
+		
+		@include media('<=lg') {
+			font-size: 16px;
+		}
+		
+		@include media('<=xs') {
+			clear: both;
+			cursor: pointer;
+			border-radius: 25px 25px 0 0;
+			height: 105px;
+			margin-top: -105px;
+			font-size: 26.6px;
+		}
+
+		@media (max-width: 380px) {
+			font-size: 22px;
+		}
+		
+		@include media('<=xxxs') {
+			clear: both;
+			cursor: pointer;
+			border-radius: 16px 16px 0 0;
+			height: 65px;
+			margin-top: -65px;
+			font-size: 16.5px;
+		}
+	}
+
+	&__items {
+		box-sizing: border-box;
+
+		@include media('<=xs') {
+			display: none;
+		}
+	}
+
+	&__item {
+
+		&::after {
+			display: block;
+			content: '';
+			height: 2px;
+			margin: 30px -60px 25px 0;
+			background-color: #fff;
+			
+			@include media('<=lg') {
+				height: 1px;
+				margin: 22px -60px 22px 0;
+			}
+
+			@include media('<=xs') {
+				margin: 22px 0;
+			}
+
+			@include media('<=xxs') {
+				margin: 30px 0;
+			}
+
+			@include media('<=xxxs') {
+				margin: 22px 0;
+			}
+		}
+	}
+	
+	&__item-inner {
+		box-sizing: border-box;
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: flex-start;
+		border-radius: 16px;
+		height: 160px;
+		padding: 30px 25px 25px;
+		
+		@include media('<=lg') {
+			padding: 25px 20px 25px;
+			height: 130px;
+		}
+		
+		@include media('<=xxs') {
+			padding: 35px 25px 30px;
+			height: 180px;
+			border-radius: 25px;
+		}
+		
+		@include media('<=xxxs') {
+			padding: 25px 20px 25px;
+			border-radius: 16px;
+			height: 130px;
+		}
+	}
+	
+	&__item-title, &__bottom-title {
+		font-family: "MSB", sans-serif;
+		font-size: 18px;
+		line-height: 1.4;
+		margin-bottom: 5px;
+		
+		@include media('<=lg') {
+			font-size: 14px;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 18px;
+		}
+		
+		@include media('<=xxxs') {
+			font-size: 14px;
+		}
+
+		&::after {
+			display: none;
+			content: '';
+			width: 17px;
+			height: 17px;
+			background-position: center;
+			background-repeat: no-repeat;
+			vertical-align: middle;
+			margin-left: 8px;
+			background-size: 17px;
+		
+			@include media('<=lg') {
+				background-size: 15px;
+			}
+		}
+		
+		&_mic::after {
+			display: inline-block;
+			background-image: url('#{$images-path}ic-mic.png');
+		}
+		
+		&_piano::after {
+			display: inline-block;
+			background-image: url('#{$images-path}ic-piano.png');
+		}
+		
+		&_guitar::after {
+			display: inline-block;
+			background-image: url('#{$images-path}ic-guitar.png');
+		}
+	}
+	
+	&__item-price, &__bottom-price {
+		display: inline-block;
+		margin-top: auto;
+		font-family: "MSB", sans-serif;
+		font-size: 18px;
+		background-color: #fff;
+		padding: 7px 12px;
+		border-radius: 50px;
+		
+		@include media('<=lg') {
+			font-size: 14px;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 18px;
+		}
+		
+		@include media('<=xxxs') {
+			font-size: 14px;
+		}
+
+		span { color: #000; }
+		strong { font-family: "MEB", sans-serif; }
+	}
+
+	&__bottom {
+		box-sizing: border-box;
+		position: relative;
+		overflow: hidden;
+		border-radius: 16px;
+		height: 192px;
+		padding: 35px 25px 30px;
+		
+		@include media('<=lg') {
+			padding: 25px 20px;
+			height: 150px;
+		}
+
+		&::after {
+			display: block;
+			content: '';
+			width: 110px;
+			height: 125px;
+			position: absolute;
+			bottom: -1px;
+			right: 0;
+		}
+	}
+
+	&__bottom-inner {
+		position: relative;
+		z-index: 1;
+	}
+
+	&__bottom-title {
+		margin-bottom: 15px;
+	}
+}

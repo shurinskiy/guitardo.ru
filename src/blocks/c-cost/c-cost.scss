@@ -1,0 +1,429 @@
+.c-cost {
+	$self: &;
+	margin-bottom: 150px;
+	
+	@include media('<=xxs') {
+		margin-bottom: 135px;
+	}
+	
+	@include media('<=xxxs') {
+		margin-bottom: 100px;
+	}
+
+	&_guitar {
+
+		#{$self}__item {
+			&[data-badge]::after {
+				color: #884217;
+			}
+			
+			&_type-1 {
+				background: linear-gradient(#160F16 0 0) padding-box, 
+					linear-gradient(175deg, rgba(0, 0, 0, 0) 20%, rgba(209, 39, 38, 0.7) 80%) border-box, 
+					linear-gradient(250deg, #000000 35%, #F8941F 100%) border-box;
+				
+			}
+
+			&_type-2 {
+				background-color: #C05C1C;
+			}
+			
+			&_type-3 {
+				span {
+					background: linear-gradient(145deg, rgba(0, 0, 0, 0) 18%, rgba(209, 39, 38, 0.7) 80%), linear-gradient(242deg, #000000 40%, #F8941F 100%);
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+					background-clip: text;
+					text-fill-color: transparent;
+				}
+			}
+			
+			&_type-4 {
+				background: linear-gradient(205deg, #100B11 30%, #C05C1C 70%, #C05C1C 100%);
+			}
+
+			&_type-5 {
+				border-color: #C05C1C;
+			}
+		}
+	}
+
+	&_vocal {
+		
+		#{$self}__item {
+			&[data-badge]::after {
+				color: #5541C6;
+			}
+			
+			&_type-1 {
+				background: linear-gradient(#160F16 0 0) padding-box, 
+					linear-gradient(137deg, rgba(0, 0, 0, 0) 0%, rgba(237, 31, 255, 0.5) 85%) border-box, 
+					linear-gradient(207deg, #0D071C 20%, #38ACFF 95%) border-box;
+			}
+
+			&_type-2 {
+				background-color: #5541C6;
+			}
+			
+			&_type-3 {
+				span {
+					background: linear-gradient(136deg, rgba(0, 0, 0, 0) 25%, rgba(250, 100, 53, 0.7) 100%), linear-gradient(207deg, #000000 17%, #DE5CFF 100%);
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+					background-clip: text;
+					text-fill-color: transparent;
+				}
+			}
+			
+			&_type-4 {
+				background: linear-gradient(137deg, rgba(143, 93, 250, 0.7) 20%, rgba(237, 31, 255, 0.7) 100%), linear-gradient(207deg, #0D071C 17%, #38ACFF 100%);
+			}
+
+			&_type-5 {
+				border-color: #5541C6;
+			}
+		}
+	}
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+		margin: 0 -9px;
+		
+		@include media('<=lg') {
+			margin: 0 -6px;
+		}
+		
+		@include media('<=xxs') {
+			margin: 0 -3px;
+		}
+	
+		&_bottom {
+			#{$self}__item {
+				min-height: 80px;
+			
+				@include media('<=lg') {
+					min-height: 65px;
+				}
+			
+				@include media('<=sm') {
+					min-height: 55px;
+				}
+			
+				@include media('<=xxs') {
+					min-height: 35px;
+				}
+				
+				@include media('<=xxxs') {
+					min-height: 25px;
+				}
+			}
+		}
+	}
+	
+	&__item {
+		box-sizing: border-box;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		position: relative;
+		width: calc(99.9% / 12 * 3 - 18px);
+		border-radius: 14px;
+		margin: 0 9px 24px;
+		min-height: 100px;
+		color: #fff;
+		padding: 15px;
+		
+		@include media('<=lg') {
+			width: calc(99.9% / 12 * 3 - 12px);
+			border-radius: 11px;
+			margin: 0 6px 18px;
+			min-height: 85px;
+			padding: 10px;
+		}
+		
+		@include media('<=sm') {
+			min-height: 75px;
+		}
+		
+		@include media('<=xs') {
+			min-height: 65px;
+			border-radius: 8px;
+		}
+		
+		@include media('<=xxs') {
+			width: calc(99.9% / 12 * 3 - 6px);
+			margin: 0 3px 10px;
+			min-height: 45px;
+			border-radius: 6px;
+			padding: 8px;
+		}
+		
+		@include media('<=xxxs') {
+			padding: 5px;
+			margin: 0 3px 6px;
+			border-radius: 4px;
+			min-height: 32px;
+		}
+
+		&_title {
+			font-family: "MEB", sans-serif;
+			text-align: left;
+			justify-content: flex-start;
+			text-transform: uppercase;
+			font-size: 32px;
+			line-height: 1.6;
+			padding: 0 15px;
+			
+			@include media('<=lg') {
+				font-size: 25px;
+				padding: 0 10px;
+			}
+			
+			@include media('<=sm') {
+				font-size: 21px;
+			}
+			
+			@include media('<=xs') {
+				font-size: 15px;
+			}
+			
+			@include media('<=xxs') {
+				font-size: 13px;
+			}
+			
+			@include media('<=xxxs') {
+				font-size: 9px;
+			}
+		}
+		
+		&_type-1 {
+			box-sizing: border-box;
+			text-align: left;
+			justify-content: flex-start;
+			border: 2px solid transparent;
+			background: linear-gradient(#160F16 0 0) padding-box,
+			linear-gradient(145deg, rgba(0, 0, 0, 0.2) 70%, rgba(250, 100, 53, 0.7) 100%) border-box, 
+			linear-gradient(207deg, #000000 17%, #DE5CFF 100%) border-box;
+			font-family: "MSB", sans-serif;
+			font-size: 22px;
+			
+			@include media('<=lg') {
+				font-size: 18px;
+			}
+			
+			@include media('<=sm') {
+				font-size: 15px;
+			}
+			
+			@include media('<=xs') {
+				font-size: 13px;
+			}
+			
+			@include media('<=xxs') {
+				border: 1px solid transparent;
+				font-size: 7px;
+			}
+				
+			@include media('<=xxxs') {
+				font-size: 5px;
+			}
+		}
+
+		&_type-2 {
+			background-color: #A044B3;
+			text-transform: uppercase;
+			font-family: "MEB", sans-serif;
+			font-size: 18px;
+			
+			@include media('<=lg') {
+				font-size: 15px;
+			}
+			
+			@include media('<=sm') {
+				font-size: 12px;
+			}
+			
+			@include media('<=xs') {
+				font-size: 9px;
+			}
+			
+			@include media('<=xxs') {
+				font-size: 7px;
+			}
+			
+			@include media('<=xxxs') {
+				font-size: 5px;
+			}
+		}
+		
+		&_type-3 {
+			background-color: #fff;
+			font-family: "MB", sans-serif;
+			font-size: 22px;
+			
+			@include media('<=lg') {
+				font-size: 18px;
+			}
+			
+			@include media('<=sm') {
+				font-size: 15px;
+			}
+			
+			@include media('<=xs') {
+				font-size: 13px;
+			}
+			
+			@include media('<=xxs') {
+				font-size: 9px;
+			}
+		
+			span {
+				background: linear-gradient(136deg, rgba(0, 0, 0, 0) 25%, rgba(250, 100, 53, 0.7) 97%), linear-gradient(207.5deg, #000000 17%, #DE5CFF 96%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+				text-fill-color: transparent;
+			}
+		}
+
+		&_type-4 {
+			background: linear-gradient(205deg, #150e16 23%, #29182e 38%, #8A3B9D 65%, #D9596E 100%);
+			font-family: "MB", sans-serif;
+			font-size: 22px;
+			
+			@include media('<=lg') {
+				font-size: 18px;
+			}
+			
+			@include media('<=sm') {
+				font-size: 15px;
+			}
+			
+			@include media('<=xs') {
+				font-size: 13px;
+			}
+			
+			@include media('<=xxs') {
+				font-size: 9px;
+			}
+		}
+
+		&_type-5 {
+			border: 2px solid #A044B3;
+			text-align: left;
+			justify-content: flex-start;
+			padding: 15px 20px 15px 15px;
+			
+			@include media('<=lg') {
+				font-size: 13px;
+				padding: 10px 20px 10px 10px;
+			}
+			
+			@include media('<=sm') {
+				padding: 10px;
+				font-size: 11px;
+			}
+			
+			@include media('<=xs') {
+				font-size: 8px;
+			}
+			
+			@include media('<=xxs') {
+				border: 1px solid #A044B3;
+				font-size: 6px;
+				padding: 8px;
+			}
+			
+			@include media('<=xxxs') {
+				font-size: 5px;
+			}
+		}
+
+		&[data-badge]::after {
+			display: block;
+			box-sizing: border-box;
+			content: attr(data-badge);
+			position: absolute;
+			z-index: 2;
+			bottom: -15px;
+			right: 10px;
+			padding: 6px 27px 6px 15px;
+			border-radius: 100px;
+			background: url('#{$images-path}ic-flat-fire.png') center right / 27px no-repeat #fff;
+			color: #7e278b;
+			font-family: "MEB", sans-serif;
+			font-size: 13px;
+			text-transform: uppercase;
+			transform: rotate(-7deg);
+			box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+			
+			@include media('<=lg') {
+				padding: 5px 25px 5px 12px;
+				background-size: 24px;
+				font-size: 11px;
+			}
+			
+			@include media('<=xs') {
+				font-size: 8px;
+				padding: 5px 20px 5px 10px;
+				background-size: 20px;
+				bottom: -10px;
+				right: -5px;
+			}
+			
+			@include media('<=xxs') {
+				padding: 3px 15px 3px 7px;
+				background-size: 12px;
+				font-size: 5px;
+				bottom: -5px;
+				right: -5px;
+			}
+			
+			@include media('<=xxxs') {
+
+			}
+		}		
+	}
+
+	&__subtitle {
+		font-family: "MEB", sans-serif;
+		font-size: 22px;
+		text-transform: uppercase;
+		color: #fff;
+		margin: 0 75px 20px 0;
+		text-align: right;
+		
+		@include media('<=lg') {
+			margin: 0 55px 20px 0;
+			font-size: 18px;
+		}
+		
+		@include media('<=sm') {
+			margin: 0 0 20px 0;
+			font-size: 16px;
+		}
+		
+		@include media('<=xs') {
+			margin: 0 0 15px 0;
+			font-size: 14px;
+		}
+		
+		@include media('<=xxs') {
+			margin: 0 30px 10px 0;
+			font-size: 9px;
+		}
+		
+		@include media('<=xxxs') {
+			padding-top: 5px;
+			margin: 0 30px 10px 0;
+			font-size: 7px;
+		}
+	}
+
+	&__button {
+		margin: 30px auto 0;
+	}
+}

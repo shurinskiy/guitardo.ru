@@ -1,0 +1,319 @@
+.showcase {
+	$self: &;
+	color: #fff;
+	background: linear-gradient(180deg, #0f0d0f 0%, #1A101B 40%, #1A101B 100%);
+	padding: 90px 0px;
+	
+	@include media('<=lg') {
+
+	}
+	
+	@include media('<=xxs') {
+		padding: 80px 0 0;
+	}
+	
+	@include media('<=xxxs') {
+		padding: 60px 0 40px;
+	}
+
+	&__container {
+
+	}
+
+	&__title {
+		text-transform: uppercase;
+		font-family: "MBL", sans-serif;
+		line-height: 1.4;
+		font-size: 31px;
+		margin-bottom: 25px;
+		max-width: 900px;
+		
+		@include media('<=lg') {
+			font-size: 25px;
+			max-width: 720px;
+			margin-bottom: 20px;
+		}
+		
+		@include media('<=xxs') {
+			margin-bottom: 36px;
+		}
+		
+		@include media('<=xxxs') {
+			font-size: 18px;
+			margin-bottom: 24px;
+		}
+	}
+	
+	&__title-top {
+		
+		@include media('<=sm') {
+			font-family: "MB", sans-serif;
+			display: block;
+		}
+				
+		@include media('<=xxxs') {
+			margin-bottom: 7px;
+		}
+	}
+	
+	&__title-bottom {
+		line-height: 1.55;
+
+		@include media('<=sm') {
+			display: block;
+			background: linear-gradient(93.98deg, #4AC3E7 20.34%, #E559D7 60.76%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			text-fill-color: transparent;
+		}
+
+		@include media('<=xxs') {
+			font-size: 27px;
+			padding-top: 13px;
+		}
+
+		@include media('<=xxxs') {
+			font-size: 19px;
+			padding: 0;
+		}
+
+		br {
+			display: none;
+
+			@include media('<=xxs') {
+				display: block;
+			}
+		}
+	}
+	
+	&__note {
+		font-size: 20px;
+		margin-bottom: 43px;
+		line-height: 1.4;
+		font-family: "MR", sans-serif;
+		
+		@include media('<=lg') {
+			font-size: 17px;
+			margin-bottom: 45px;
+		}
+		
+		@include media('<=sm') {
+			font-family: "ML", sans-serif;
+			font-size: 21px;
+			line-height: 1.5;
+			margin-bottom: 65px;
+		}
+		
+		@include media('<=xxxs') {
+			font-size: 14px;
+			margin-bottom: 57px;
+		}
+	}
+	
+	&__plate {
+		box-sizing: border-box;
+		display: inline-block;
+		padding: 14px 35px 15px 67px;
+		font-family: "MEB", sans-serif;
+		font-size: 20px;
+		border-radius: 10px;
+		margin-bottom: 30px;
+		position: relative;
+		border: 2px solid transparent;
+		
+		@include media('<=lg') {
+			font-size: 14px;
+			padding: 11px 20px 11px 50px;
+			border-radius: 8px;
+			margin-bottom: 22px;
+		}
+		
+		@include media('<=sm') {
+			font-size: 18px;
+		}
+		
+		@include media('<=xxs') {
+			width: 100%;
+			padding: 14px 5px 13px 40px;
+			margin-bottom: 35px;
+		}
+		
+		@include media('<=iphone') {
+			font-size: 16px;
+		}
+		
+		@include media('<=xxxs') {
+			font-size: 12px;
+			width: 100%;
+			padding: 10px 5px 9px 28px;
+			margin-bottom: 35px;
+		}
+
+		&::before {
+			display: block;
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 25px;
+			transform: translateY(-50%);
+			width: 35px;
+			height: 35px;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 24px;
+			
+			@include media('<=lg') {
+				width: 25px;
+				height: 25px;
+				background-size: 18px;
+				left: 15px;
+			}
+			
+			@include media('<=xxs') {
+				width: 30px;
+				height: 30px;
+				background-size: 22px;
+				left: 7px;
+			}
+			
+			@include media('<=xxxs') {
+				width: 25px;
+				height: 25px;
+				left: 3px;
+				background-size: 15px;
+			}
+		}
+
+		span {
+			display: inline-block;
+			position: relative;
+			z-index: 2;
+		}
+
+		&_mic {
+			background: linear-gradient(#120e12 0 0) padding-box,
+				linear-gradient(181.7deg, rgba(0,0,0,1) 0%, rgba(24,45,80,1) 30%, rgba(176,49,221,1) 60%, rgba(66,114,196,1) 100%) border-box;
+
+			&::before { background-image: url('#{$images-path}ic-mic.png'); }
+		}
+		
+		&_piano {
+			background: linear-gradient(#1A101B 0 0) padding-box,
+			linear-gradient(183deg, rgba(0,0,0,1) 10%, rgb(243, 76, 98) 70%, rgb(245, 55, 188) 100%) border-box;
+			
+			&::before { background-image: url('#{$images-path}ic-piano.png'); }
+			
+			@include media('<=xxs') {
+				font-size: 15px;
+			}
+			
+			@include media('<=iphone') {
+				font-size: 14px;
+			}
+				
+			@include media('<=xxxs') {
+				font-size: 10.8px;
+			}
+		}
+		
+		&_guitar {
+			background: linear-gradient(#1A101B 0 0) padding-box,
+				linear-gradient(183deg, rgba(0,0,0,1) 10%, rgb(243, 76, 98) 70%, rgb(245, 125, 55) 100%) border-box;
+
+			&::before { background-image: url('#{$images-path}ic-guitar.png'); }
+
+			@include media('<=xxs') {
+				margin-top: -17px;
+			}
+		}
+	}
+
+	&__card {
+		margin-bottom: 24px;
+		
+		@include media('<=lg') {
+			margin-bottom: 12px;
+		}
+	}
+
+&__button {
+		@extend %reset-button;
+		display: block;
+		background-color: #fff;
+		font-family: "MBL", sans-serif;
+		width: 100%;
+		max-width: 360px;
+		font-size: 15px;
+		text-align: center;
+		line-height: 1.4;
+		text-transform: uppercase;
+		color: #000;
+		padding: 16px 28px;
+		border-radius: 100px;
+		box-shadow: 6px 5px 27px rgba(145, 134, 204, 0.85);
+		margin: 0 0 95px 55px;
+		position: relative;
+		z-index: 2;
+		
+		@include media('<=lg') {
+			margin: 0 0 60px 45px;
+			max-width: 240px;
+			padding: 12px 15px;
+			font-size: 11px;
+		}
+		
+		@include media('<=sm') {
+			margin: 0 0 60px 0;
+		}
+		
+		@include media('<=xxs') {
+			max-width: 320px;
+			margin: 0 auto 150px;
+			font-size: 14.5px;
+			padding: 19px 28px;
+		}
+		
+		@include media('<=iphone') {
+			max-width: 350px;
+		}
+		
+		@include media('<=xxxs') {
+			margin: 0 auto 100px;
+			padding: 12px 15px;
+			font-size: 10.8px;
+			max-width: 240px;
+		}
+
+		span {
+			display: block;
+			text-align: center;
+		}
+
+		&_grd-1 span {
+			// background: linear-gradient(155deg, rgba(24,45,80,1) 33%, rgba(66,114,196,1) 66%, rgba(176,49,221,1) 100%);
+			background: linear-gradient(134.65deg, rgba(0, 0, 0, 0) 13.95%, rgba(237, 31, 255, 0.7) 85.64%), linear-gradient(207.61deg, #0D071C 17.17%, #38ACFF 95.92%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			text-fill-color: transparent;
+		}
+		
+		&_grd-2 span {
+			// background: linear-gradient(160deg, rgba(0,0,0,1) 0%, rgb(245, 108, 126) 100%);
+			background: linear-gradient(197.66deg, rgba(0, 0, 0, 0) -29.27%, rgba(209, 39, 38, 0.7) 63.49%), linear-gradient(241.99deg, #000000 37.34%, #F8941F 93.8%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			text-fill-color: transparent;
+		}
+		
+		&_grd-3 span {
+			background: linear-gradient(153.99deg, rgba(0, 0, 0, 0) -19.15%, rgba(250, 100, 53, 0.7) 98.2%), linear-gradient(207.61deg, #000000 17.17%, #DE5CFF 95.92%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			text-fill-color: transparent;
+		}
+	}
+}

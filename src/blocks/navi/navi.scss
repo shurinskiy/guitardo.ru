@@ -1,0 +1,48 @@
+.navi {
+	$self: &;
+	box-sizing: border-box;
+	color: #fff;
+	font-family: "MEL", sans-serif;
+	font-size: 14px;
+	display: flex;
+	justify-content: space-between;
+	
+	@include media('<=lg') {
+		font-size: 11px;
+	}
+
+	@include media('<=sm') {
+		flex-flow: column nowrap;
+		justify-content: flex-start;
+		padding: 100px 30px 20px;
+	}
+
+	&__close {
+		@extend %reset-button;
+		display: none;
+		position: absolute;
+		top: 33px;
+		right: 28px;
+		width: 20px;
+		height: 20px;
+		background: url('#{$images-path}icons-sprite.svg#icon-close-view-white') center / 17px 16px no-repeat transparent;
+
+		@include media('<=sm') {
+			display: block;
+		}
+	}
+
+	&__link {
+		color: inherit;
+		text-decoration: none;
+		padding: 10px;
+
+		@include media('<=sm') {
+			font-size: 16px;
+		}
+
+		@include media('<=xxs') {
+			font-size: 14px;
+		}
+	}
+}

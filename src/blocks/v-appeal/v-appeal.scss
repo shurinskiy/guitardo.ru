@@ -1,0 +1,65 @@
+.v-appeal {
+	$self: &;
+	margin-bottom: 110px;
+
+	&__inner {
+		border-top: 3px solid #6842B6;
+		border-bottom: 3px solid #6842B6;
+		padding: 30px 30px 30px 150px;
+		color: #fff;
+		font-family: "MB", sans-serif;
+		text-transform: uppercase;
+		font-size: 28px;
+		line-height: 1.4;
+		position: relative;
+		
+		&::before {
+			display: block;
+			content: '';
+			height: 90px;
+			width: 90px;
+			background: url('#{$images-path}ic-flat-mic.png') center / contain no-repeat transparent;
+			position: absolute;
+			left: 30px; top: 50%;
+			transform: translateY(-50%);
+			
+			@include media('<=lg') {
+				left: 10px;
+				height: 70px;
+				width: 70px;
+			}
+			
+			@include media('<=xs') {
+				top: 0;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				height: 55px;
+				width: 55px;
+			}
+			
+			@include media('<=xs') {
+				height: 40px;
+				width: 40px;
+			}
+		}
+		
+		@include media('<=lg') {
+			padding: 35px 0 35px 95px;
+			font-size: 25px;
+		}
+		
+		@include media('<=xs') {
+			padding: 50px 20px 35px;
+			text-align: center;
+		}
+		
+		@include media('<=xxs') {
+			padding: 35px 0 25px;
+			font-size: 22px;
+		}
+
+		@include media('<=xxxs') {
+			font-size: 18px;
+		}
+	}
+}

@@ -1,0 +1,62 @@
+.l-mockup {
+	$self: &;
+	position: relative;
+	margin-bottom: 65px;
+	
+	@include media('<=lg') {
+		margin-bottom: 52px;
+	}
+	
+	@include media('<=xxxs') {
+		margin-bottom: 38px;
+	}
+
+	&::before {
+		display: block;
+		content: '';
+		position: absolute;
+		width: 1400px;
+		height: 1200px;
+		background: url('#{$images-path}litvak-glow-mockup.png') center / contain no-repeat transparent;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -55%);
+		z-index: -1;
+	}
+
+	&_che {
+		&::before {
+			display: none;
+		}
+
+		#{$self}__image {
+			max-width: 470px;
+			transform: translateX(13%);
+			
+			@include media('<=xxs') {
+				transform: translateX(9%);
+			}
+		}
+	}
+
+	&__image {
+		max-width: 730px;
+		margin: 0 auto;
+		
+		@include media('<=lg') {
+			max-width: 600px;
+		}
+			
+		@include media('<=xxs') {
+			max-width: none;
+		}
+
+		img {
+			transform: translateX(-20px);
+			
+			@include media('<=xxs') {
+				transform: translateX(-5px) scale(1.08);
+			}
+		}
+	}
+}

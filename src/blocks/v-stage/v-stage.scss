@@ -1,0 +1,123 @@
+.v-stage {
+	$self: &;
+	margin-bottom: 140px;
+	position: relative;
+	
+	@include media('<=xs') {
+		margin-bottom: 120px;
+	}
+
+	&::after {
+		display: block;
+		content: '';
+		width: 200px;
+		height: 200px;
+		background: url('#{$images-path}fro-planet-1.png') center / 100% 100% no-repeat transparent;
+		position: absolute;
+		right: -130px;
+		top: calc(100% - 20px);
+		
+		@include media('<=xs') {
+			width: 180px;
+			height: 180px;
+			top: 60%;
+			right: 0;
+		}
+		
+		@include media('<=xxs') {
+			width: 150px;
+			height: 150px;
+			right: -30px;
+		}
+	}
+
+	&__title {
+		text-align: center;
+		margin-bottom: 40px;
+	}
+
+	&__items {
+		display: flex;
+		counter-reset: v_stage_ctr;
+		position: relative;
+		z-index: 1;
+
+		@include media('<=xs') {
+			display: block;
+		}
+	}
+
+	&__item {
+		box-sizing: border-box;
+		@include aspect-ratio(1, 1);
+		border: 3px solid transparent;
+		background: linear-gradient(#0F0D10 0 0) padding-box, linear-gradient(270deg, #286AA5 17%, #9E2BC6 100%) border-box;
+		box-shadow: 8px 3px 15px rgba(245, 204, 255, 0.45);
+		border-radius: 50%;
+		flex-shrink: 0;
+		width: calc(100% / 3 + 30px);
+		margin-right: -45px;
+		
+		@include media('<=xs') {
+			width: 100%;
+			max-width: 280px;
+			margin: 0 auto;
+
+			&:not(:first-child) {
+				margin-top: -40px;
+			}
+		}
+		
+		@include media('<=xxs') {
+			max-width: 240px;
+		}
+	}
+
+	&__wrapper {
+		color: #fff;
+		margin: 0 auto;
+		width: 75%;
+		font-family: "MR", sans-serif;
+		line-height: 1.5;
+		font-size: 22px;
+		padding-top: 70px;
+		
+		&::before {
+			display: block;
+			counter-increment: v_stage_ctr;
+			content: counter(v_stage_ctr);
+			font-family: "MEB", sans-serif;
+			font-size: 40px;
+			line-height: 1;
+			margin-bottom: 20px;
+			text-align: center;
+			
+			@include media('<=lg') {
+				font-size: 32px;
+			}
+			
+			@include media('<=xxxs') {
+				font-size: 28px;
+			}
+		}
+		
+		@include media('<=lg') {
+			padding-top: 50px;
+			font-size: 18px;
+		}
+		
+		@include media('<=sm') {
+			font-size: 16px;
+		}
+		
+		@include media('<=xs') {
+			text-align: center;
+			padding-top: 50px;
+			font-size: 16px;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 14px;
+		}
+	}
+}

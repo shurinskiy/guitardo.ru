@@ -1,0 +1,164 @@
+.c-fit {
+	$self: &;
+	margin-bottom: 145px;
+	position: relative;
+	
+	@include media('<=lg') {
+		margin-bottom: 125px;
+	}
+	
+	@include media('<=xxs') {
+		margin-bottom: 130px;
+	}
+	
+	@include media('<=xxxs') {
+		margin-bottom: 96px;
+	}
+
+	&::before {
+		display: block;
+		content: '';
+		width: 1280px;
+		height: 1130px;
+		position: absolute;
+		background: url('#{$images-path}course-glow-2.png') center / auto no-repeat transparent;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translate(-35%, -50%);
+		
+		@include media('<=lg') {
+			width: 980px;
+			height: 830px;
+			background-size: 980px;
+			transform: translate(-25%, -50%);
+		}
+	}
+
+	&_guitar {
+		&::before {
+			background-image: url('#{$images-path}guitar-glow-fit.png');
+		}
+
+		@include media('<=lg') {
+			margin-bottom: 145px;
+		}
+		
+		@include media('<=xxs') {
+			margin-bottom: 85px;
+		}
+		
+		@include media('<=xxxs') {
+			margin-bottom: 90px;
+		}
+	}
+
+	&_vocal {
+		&::before {
+			background-image: url('#{$images-path}vocal-glow-fit.png');
+		}
+	}
+
+	&__title {
+		margin-bottom: 23px;
+		position: relative;
+		z-index: 1;
+
+		@include media('<=xxlg') {
+			margin-bottom: 30px;
+		}
+		
+		@include media('<=lg') {
+			margin-bottom: 23px;
+		}
+
+		@include media('<=xxs') {
+			margin-bottom: 30px;
+		}
+		
+		@include media('<=xxxs') {
+			margin-bottom: 20px;
+		}
+		
+		&.c-title {
+			@include media('<=xxs') {
+				line-height: 1.5;
+			}
+		}
+	}
+	
+	&__list {
+		font-family: "MR", sans-serif;
+		font-size: 22px;
+		line-height: 1.43;
+		color: #fff;
+		margin-bottom: 50px;
+		position: relative;
+		z-index: 1;
+		
+		@include media('<=lg') {
+			font-size: 18px;
+			line-height: 1.5;
+			margin-bottom: 45px;
+		}
+		
+		@include media('<=xxs') {
+			margin-bottom: 56px;
+		}
+		
+		@include media('<=xxxs') {
+			margin-bottom: 30px;
+			font-size: 15px;
+		}
+	
+		li {
+			margin-bottom: 27px;
+			padding-left: 40px;
+			position: relative;
+			
+			@include media('<=lg') {
+				padding-left: 35px;
+				margin-bottom: 20px;
+			}
+			
+			@include media('<=xxs') {
+				margin-bottom: 22px;
+			}
+			
+			@include media('<=xxxs') {
+				padding-left: 25px;
+				margin-bottom: 18px;
+			}
+
+			&::before {
+				display: block;
+				content: '';
+				width: 18px;
+				height: 18px;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-image: url('#{$images-path}ic-star.png');
+				background-size: 18px 18px;
+				position: absolute;
+				left: 0;
+				top: 4px;
+				
+				@include media('<=lg') {
+					top: 3px;
+				}
+				
+				@include media('<=xxxs') {
+					width: 15px;
+					height: 15px;
+					background-size: 15px 15px;
+				}
+			}
+		}
+	}
+
+	&__button {
+		margin: 0 auto;
+		position: relative;
+		z-index: 1;
+	}
+}

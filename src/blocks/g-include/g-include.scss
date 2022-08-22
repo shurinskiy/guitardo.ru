@@ -1,0 +1,373 @@
+.g-include {
+	$self: &;
+	margin-bottom: 200px;
+	
+	@include media('<=xxs') {
+		margin-bottom: 100px;
+	}
+	
+	@include media('<=xxxs') {
+		margin-bottom: 70px;
+	}
+
+	&_fro {
+
+		@include media('<=xs') {
+			margin-bottom: 100px;			
+		}
+
+		#{$self}__inner {
+			background: linear-gradient(137deg, rgba(0, 0, 0, 0) 20%, rgba(237, 31, 255, 0.7) 86%), linear-gradient(208deg, #0D071C 18%, #38ACFF 96%);
+			box-shadow: 0 7px 60px -5px rgba(143, 93, 250, 0.8);
+			padding: 70px;
+			position: relative;
+			z-index: 1;
+			max-width: 790px;
+			
+			&::after {
+				display: block;
+				content: '';
+				width: 240px;
+				height: 720px;
+				position: absolute;
+				top: 50%; right: 0;
+				transform: translate(40%, -50%);
+				background: url('#{$images-path}che-include-mic.png') center / contain no-repeat transparent;
+				
+				@include media('<=lg') {
+					width: 180px;
+					height: 570px;
+				}
+				
+				@include media('<=sm') {
+					display: none;
+				}
+			}
+			
+			@include media('<=lg') {
+				max-width: 640px;
+			}
+			
+			@include media('<=sm') {
+				padding: 70px 45px;
+			}
+			
+			@include media('<=xxs') {
+				padding: 50px 20px;
+			}
+		}
+
+		#{$self}__title {
+			padding: 0;
+			margin-bottom: 10px;
+			&::before { display: none; }
+			
+			@include media('<=xxs') {
+				text-align: left;
+			}
+		}
+
+		#{$self}__text {
+			color: #fff;
+			font-size: 20px;
+			margin-bottom: 70px;
+			max-width: 580px;
+			
+			@include media('<=sm') {
+				margin-bottom: 50px;
+				font-size: 18px;
+			}
+			
+			@include media('<=xxs') {
+				font-size: 16px;
+			}
+			
+			@include media('<=xxxs') {
+				margin-bottom: 40px;
+				font-size: 14px;
+			}
+		}
+
+		#{$self}__subtitle {
+			color: #fff;
+			font-family: "MEB", sans-serif;
+			font-size: 28px;
+			text-transform: uppercase;
+			margin-bottom: 10px;
+			
+			@include media('<=lg') {
+				font-size: 22px;
+			}
+			
+			@include media('<=xxs') {
+				font-size: 18px;
+			}
+			
+			@include media('<=xxxs') {
+				font-size: 14px;
+			}
+		}
+		
+		#{$self}__entries {
+			max-width: 510px;
+			margin-bottom: 50px;
+			
+			@include media('<=sm') {
+				margin-bottom: 30px;
+			}
+		}
+
+		#{$self}__cost {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 45px;
+		padding-left: 85px;
+		position: relative;
+		
+		@include media('<=lg') {
+			padding-left: 65px;
+		}
+		
+		@include media('<=xxs') {
+			text-align: center;
+			padding: 0;
+		}
+			
+		@include media('<=xxxs') {
+			margin-bottom: 25px;
+		}
+
+		&::before {
+			display: block;
+			content: '';
+			width: 60px;
+			height: 60px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: url('#{$images-path}ic-flat-smile.png') center / contain no-repeat transparent;
+			
+			@include media('<=lg') {
+				top: 5px;
+				width: 45px;
+				height: 45px;
+			}
+			
+			@include media('<=xxs') {
+				display: none;
+			}
+		}
+		
+		&.g-title {
+			line-height: 1.2;
+			
+			@include media('<=xxs') {
+				font-size: 25px;
+			}
+			
+			@include media('<=xxxs') {
+				font-size: 16px;
+			}
+		}
+	}
+	
+	&__inner {
+		box-sizing: border-box;
+		max-width: 830px;
+		border-radius: 40px;
+		background: linear-gradient(145deg, rgba(7, 5, 4, 0.7) 18%, rgba(209, 39, 38, 0.7) 80%), linear-gradient(242deg, #000000 37%, #F8941F 94%);
+		box-shadow: 0px 0px 35px rgba(255, 255, 255, 0.3);
+		padding: 70px 40px;
+		margin: 0 auto;
+		
+		@include media('<=lg') {
+			max-width: 650px;
+		}
+		
+		@include media('<=xxs') {
+			border-radius: 30px;
+			padding: 50px 20px;
+		}
+	}
+
+	&__cost {
+		text-align: center;
+		font-family: "MEB", sans-serif;
+		margin-bottom: 10px;
+		font-size: 50px;
+		color: #fff;
+		
+		@include media('<=lg') {
+			font-size: 38px;
+		}
+		
+		@include media('<=xxxs') {
+			font-size: 30px;
+		}
+		
+		span {
+			font-family: "MM", sans-serif;
+			font-size: 35px;
+			
+			@include media('<=lg') {
+				font-size: 27px;
+			}
+			
+			@include media('<=xxxs') {
+				font-size: 20px;
+			}
+		}
+	}
+	
+	&__note {
+		font-family: "MM", sans-serif;
+		text-align: center;
+		font-size: 16px;
+		color: #fff;
+		margin-bottom: 30px;
+			
+		@include media('<=lg') {
+			font-size: 12px;
+		}
+		
+		@include media('<=xxxs') {
+			font-size: 10px;
+		}
+
+		&::before {
+			display: inline-block;
+			content: '';
+			width: 18px;
+			height: 18px;
+			width: 18px;
+			height: 18px;
+			background: url('#{$images-path}ic-flat-hourglass.png') center / contain no-repeat transparent;
+			margin-right: 8px;
+			vertical-align: middle;
+			
+			@include media('<=lg') {
+				width: 14px;
+				height: 14px;
+				margin-right: 6px;
+			}
+			
+			@include media('<=xxxs') {
+				width: 11px;
+				height: 11px;
+				margin-right: 4px;
+			}
+		}
+	}
+
+	&__button {
+		margin: 0 auto;
+		position: relative;
+		z-index: 1;
+	}
+
+	&__entries {
+		font-family: "MM", sans-serif;
+		font-size: 20px;
+		line-height: 1.38;
+		
+		@include media('<=lg') {
+			font-size: 15px;
+		}
+		
+		@include media('<=xxxs') {
+			font-size: 12px;
+		}
+	}
+
+	&__entry {
+		color: #fff;
+		margin-bottom: 30px;
+		padding-left: 40px;
+		position: relative;
+		
+		@include media('<=lg') {
+			margin-bottom: 25px;
+		}
+		
+		@include media('<=xxs') {
+			padding-left: 35px;
+		}
+		
+		@include media('<=xxxs') {
+			padding-left: 30px;
+			margin-bottom: 18px;
+		}
+	
+		strong {
+			font-family: "MM", sans-serif;
+			font-weight: normal;
+		}
+
+		&::before {
+			display: block;
+			content: '';
+			width: 30px;
+			height: 30px;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			position: absolute;
+			left: 0;
+			top: 0;
+			
+			@include media('<=lg') {
+				width: 25px;
+				height: 25px;
+				top: -3px;
+			}
+			
+			@include media('<=xxxs') {
+				width: 20px;
+				height: 20px;
+			}
+		}
+
+		&_type-1::before {
+			background-image: url('#{$images-path}ic-education.png');
+		}
+		
+		&_type-2::before {
+			background-image: url('#{$images-path}ic-guitar.png');
+		}
+		
+		&_type-3::before {
+			background-image: url('#{$images-path}ic-flat-teacher.png');
+		}
+		
+		&_type-4::before {
+			background-image: url('#{$images-path}ic-talk.png');
+		}
+		
+		&_type-5::before {
+			background-image: url('#{$images-path}ic-flat-books.png');
+		}
+		
+		&_type-6::before {
+			background-image: url('#{$images-path}ic-flat-cal.png');
+		}
+		
+		&_type-7::before {
+			background-image: url('#{$images-path}ic-flat-ear.png');
+		}
+		
+		&_type-8::before {
+			background-image: url('#{$images-path}ic-mic.png');
+		}
+		
+		&_type-9::before {
+			background-image: url('#{$images-path}ic-song.png');
+		}
+		
+		&_type-10::before {
+			background-image: url('#{$images-path}ic-flat-hand.png');
+		}
+	}
+}

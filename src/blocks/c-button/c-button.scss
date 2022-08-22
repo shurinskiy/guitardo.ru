@@ -1,0 +1,113 @@
+.c-button {
+	$self: &;
+	@extend %reset-button;
+	display: block;
+	background-color: #fff;
+	text-transform: uppercase;
+	color: #000;
+	padding: 15px 20px;
+	border-radius: 150px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: "MEB", sans-serif;
+	
+	span {
+		text-align: center;
+	}
+
+	&_sgl {
+		font-size: 18px;
+		min-height: 60px;
+		box-shadow: 5px 6px 13px rgba(163, 69, 102, 0.45);
+		width: 345px;
+		
+		@include media('<=xxs') {
+			width: 100%;
+			max-width: 310px;
+			min-height: 55px;
+			font-size: 15px;
+		}
+		
+		@include media('<=xxxs') {
+			max-width: 240px;
+			min-height: 42px;
+			font-size: 12px;
+		}
+			
+		span {
+			background: linear-gradient(136deg, rgba(0, 0, 0, 0) 25%, rgba(250, 100, 53, 0.7) 97%), linear-gradient(207.5deg, #000000 17%, #DE5CFF 96%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			text-fill-color: transparent;
+		}
+	}
+	
+	&_mlt {
+		min-height: 75px;
+		width: 335px;
+		font-size: 15px;
+		line-height: 1.2;
+		box-shadow: 9px 8px 41px rgba(145, 134, 204, 0.85);
+		font-family: "MBL", sans-serif;
+		
+		@include media('<=xxs') {
+			width: 100%;
+			max-width: 305px;
+			min-height: 67px;
+			font-size: 13px;
+		}
+		
+		@include media('<=xxxs') {
+			padding: 12px 20px;
+			font-size: 11px;
+			min-height: 52px;
+			max-width: 240px;
+		}
+		
+		span {
+			background: linear-gradient(154deg, rgba(0, 0, 0, 0) -19%, rgba(250, 100, 53, 0.7) 98%), linear-gradient(207.6deg, #000000 17%, #DE5CFF 96%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			text-fill-color: transparent;
+		}
+	}
+	
+	&_guitar {
+		box-shadow: 4px 17px 50px rgba(217, 94, 25, 0.4);
+
+		span {
+			background: linear-gradient(145deg, rgba(0, 0, 0, 0) 18%, rgba(209, 39, 38, 0.7) 80%), linear-gradient(242deg, #000000 37%, #F8941F 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			text-fill-color: transparent;
+		}
+	}
+
+	&_vocal {
+		box-shadow: 4px 17px 51px -47px rgba(85, 65, 198, 0.5);
+
+		span {
+			background: linear-gradient(137deg, rgba(0, 0, 0, 0) 20%, rgba(237, 31, 255, 0.5) 85%), linear-gradient(208deg, #0D071C 17%, #2274af 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			text-fill-color: transparent;
+		}
+	}
+
+	&_che {
+		box-shadow: 4px 17px 51px rgba(217, 94, 25, 0.4);
+
+		span {
+			background: linear-gradient(145deg, rgba(0, 0, 0, 0) 18%, rgba(209, 39, 38, 0.7) 80%), linear-gradient(242deg, #000000 37%, #F8941F 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			text-fill-color: transparent;
+		}
+	}
+}

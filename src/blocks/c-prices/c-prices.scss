@@ -1,0 +1,501 @@
+.c-prices {
+	$self: &;
+	margin-bottom: 147px;
+
+	@include media('<=lg') {
+		margin-bottom: 128px;
+	}
+
+	@include media('<=xxs') {
+		margin-bottom: 132px;
+	}
+
+	@include media('<=xxxs') {
+		margin-bottom: 109px;
+	}
+	
+	&_guitar {
+
+		@include media('<=lg') {
+			margin-bottom: 110px;
+		}
+
+		@include media('<=xxs') {
+			margin-bottom: 125px;
+		}
+		
+		@include media('<=xxxs') {
+			margin-bottom: 100px;
+		}
+
+		#{$self}__item {
+			&[data-badge]::after {
+				color: #C05C1C;
+			}
+			
+			&:nth-child(1) {
+				background: linear-gradient(#160F16 0 0) padding-box, 
+					linear-gradient(175deg, rgba(0, 0, 0, 0) 20%, rgba(209, 39, 38, 0.7) 80%) border-box, 
+					linear-gradient(250deg, #000000 35%, #F8941F 100%) border-box;
+			}
+
+			&_type-1 {
+				span {
+					background: linear-gradient(145deg, rgba(0, 0, 0, 0) 18%, rgba(209, 39, 38, 0.7) 80%), linear-gradient(242deg, #000000 40%, #F8941F 100%);
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+					background-clip: text;
+					text-fill-color: transparent;
+				}
+			}
+
+			&_type-2 {
+				background: linear-gradient(205deg, #100B11 30%, #C05C1C 70%, #C05C1C 100%);
+			}
+
+			&_type-3 {
+				background-color: #C05C1C;
+			}
+		}
+	}
+
+	&_vocal {
+
+		@include media('<=lg') {
+			margin-bottom: 110px;
+		}
+
+		@include media('<=xxs') {
+			margin-bottom: 125px;
+		}
+		
+		@include media('<=xxxs') {
+			margin-bottom: 100px;
+		}
+
+		#{$self}__item {
+			&[data-badge]::after {
+				color: #5339c6;
+			}
+			
+			&:nth-child(1) {
+				background: linear-gradient(#160F16 0 0) padding-box,
+					linear-gradient(137deg, rgba(0, 0, 0, 0) 0%, rgba(237, 31, 255, 0.5) 85%) border-box, 
+					linear-gradient(207deg, #0D071C 20%, #38ACFF 95%) border-box;
+			}
+
+			&_type-1 {
+				span {
+					background: linear-gradient(137deg, rgba(0, 0, 0, 0) 20%, rgba(237, 31, 255, 0.5) 85%), linear-gradient(207deg, #0D071C 17%, #38ACFF 100%);
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+					background-clip: text;
+					text-fill-color: transparent;
+				}
+			}
+
+			&_type-2 {
+				background: linear-gradient(137deg, rgba(0, 0, 0, 0) 20%, rgba(237, 31, 255, 0.5) 85%), linear-gradient(207deg, #0D071C 20%, #38ACFF 100%);
+			}
+
+			&_type-3 {
+				background-color: #513BCB;
+			}
+		}
+	}
+
+	&__title {
+		margin-bottom: 25px;
+		
+		@include media('<=lg') {
+			margin-bottom: 20px;
+		}
+		
+		@include media('<=xxxs') {
+			text-align: center;
+			margin-bottom: 14px;
+		}
+	}
+
+	&__row {
+		box-sizing: border-box;
+		display: flex;
+		margin: 0 -7px 25px 0;
+		min-height: 90px;
+		
+		@include media('<=lg') {
+			margin-bottom: 16px;
+			min-height: 75px;
+			padding: 0;
+		}
+		
+		@include media('<=xxs') {
+			min-height: 42px;
+			margin: 0 -6px 10px 0;
+		}
+		
+		@include media('<=xxxs') {
+			min-height: 31px;
+			margin-bottom: 6px;
+		}
+	}
+
+	&__item {
+		box-sizing: border-box;
+		font-family: "MM", sans-serif;
+		display: flex;
+		align-items: center;
+		color: #fff;
+		border-radius: 14px;
+		position: relative;
+		margin: 0 7px;
+		
+		@include media('<=lg') {
+			border-radius: 10px;
+		}
+		
+		@include media('<=xs') {
+			border-radius: 8px;
+		}
+		
+		@include media('<=xxs') {
+			border-radius: 6px;
+		}
+		
+		@include media('<=xxxs') {
+			border-radius: 4px;
+		}
+
+		&[data-badge]::after {
+			content: attr(data-badge);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			bottom: -15px;
+			right: -35px;
+			width: 158px;
+			height: 32px;
+			border-radius: 100px;
+			background-color: #fff;
+			color: #7e278b;
+			font-family: "MB", sans-serif;
+			font-size: 13px;
+			transform: rotate(-7deg);
+			box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+			
+			@include media('<=lg') {
+				right: -30px;
+				font-size: 12px;
+				width: 140px;
+				height: 28px;
+			}
+			
+			@include media('<=xs') {
+				right: -20px;
+				bottom: -10px;
+				font-size: 11px;
+				width: 120px;
+				height: 22px;
+			}
+			
+			@include media('<=xxs') {
+				right: -10px;
+				bottom: -7px;
+				font-size: 7px;
+				width: 80px;
+				height: 16px;
+			}
+			
+			@include media('<=xxxs') {
+				right: -10px;
+				bottom: -7px;
+				font-size: 4px;
+				width: 52px;
+				height: 11px;
+			}
+		}
+
+		&:nth-child(1) {
+			box-sizing: border-box;
+			border: 2px solid transparent;
+			background: linear-gradient(#160F16 0 0) padding-box,
+			linear-gradient(145deg, rgba(0, 0, 0, 0.2) 70%, rgba(250, 100, 53, 0.7) 100%) border-box, 
+			linear-gradient(207deg, #000000 17%, #DE5CFF 100%) border-box;
+			padding: 14px 18px 14px 35px;
+			// margin: 0 7px;
+			width: calc(31% - 14px);
+			position: relative;
+			font-size: 20px;
+			
+			@include media('<=lg') {
+				padding: 14px 18px 14px 32px;
+				width: calc(34% - 14px);
+				font-size: 18px;
+			}
+			
+			@include media('<=sm') {
+				font-size: 16px;
+			}
+			
+			@include media('<=xs') {
+				padding: 10px 10px 10px 22px;
+				font-size: 13px;
+			}
+			
+			@include media('<=xxs') {
+				width: calc(31% - 6px);
+				border: 1px solid transparent;
+				padding: 5px 5px 5px 17px;
+				font-size: 11px;
+				margin: 0 3px;
+			}
+			
+			@include media('<=xxxs') {
+				width: calc(34% - 6px);
+				padding: 5px 5px 5px 15px;
+				font-size: 8px;
+			}
+
+			&::before {
+				display: block;
+				content: '';
+				width: 55px;
+				height: 55px;
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translate(-50%, -50%);
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: 55px 55px;
+				
+				@include media('<=lg') {
+					width: 45px;
+					height: 45px;
+					background-size: 45px 45px;
+				}
+				
+				@include media('<=xs') {
+					width: 35px;
+					height: 35px;
+					background-size: 35px 35px;
+				}
+				
+				@include media('<=xxs') {
+					width: 25px;
+					height: 25px;
+					background-size: 25px 25px;
+				}
+				
+				@include media('<=xxxs') {
+					width: 18px;
+					height: 18px;
+					background-size: 18px 18px;
+				}
+			}
+		}
+		
+		&:not(:nth-child(1)) {
+			box-sizing: border-box;
+			padding: 10px 25px;
+			margin: 0 6px;
+			width: calc(23% - 14px);
+			
+			@include media('<=lg') {
+				width: calc(22% - 14px);
+			}
+			
+			@include media('<=sm') {
+				padding: 10px 15px;
+			}
+			
+			@include media('<=xs') {
+				padding: 10px;
+			}
+			
+			@include media('<=xxs') {
+				padding: 5px 10px;
+				margin: 0 3px;
+				width: calc(23% - 6px);
+			}
+			
+			@include media('<=xxxs') {
+				width: calc(22% - 6px);
+				padding: 5px 7px;
+			}
+		}
+
+		&_name-1::before {
+			background-image: url('#{$images-path}ic-flat-fire.png');
+		}
+		
+		&_name-2::before {
+			background-image: url('#{$images-path}ic-flat-stopwatch.png');
+		}
+		
+		&_name-3::before {
+			background-image: url('#{$images-path}ic-flat-money.png');
+			transform: translate(-50%, -50%) rotate(-17deg) !important;
+		}
+		
+		&_name-4 {
+			text-transform: uppercase;
+			font-family: "MB", sans-serif;
+			
+			&::before {
+				background-image: url('#{$images-path}ic-flat-puke.png');
+			}
+		}
+		
+		&_type-1 {
+			background-color: #fff;
+			font-family: "MB", sans-serif;
+			font-size: 22px;
+			
+			@include media('<=lg') {
+				font-size: 18px;
+			}
+		
+			@include media('<=sm') {
+				font-size: 16px;
+			}
+		
+			@include media('<=xs') {
+				font-size: 13px;
+			}
+		
+			@include media('<=xxs') {
+				font-size: 10px;
+			}
+			
+			@include media('<=xxxs') {
+				font-size: 7px;
+			}
+		
+			span {
+				background: linear-gradient(136deg, rgba(0, 0, 0, 0) 25%, rgba(250, 100, 53, 0.7) 97%), linear-gradient(207.5deg, #000000 17%, #DE5CFF 96%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+				text-fill-color: transparent;
+			}
+		}
+		
+
+		&_type-2 {
+			background: linear-gradient(205deg, #100B11 30%, #8A3B9D 70%, #D9596E 100%);
+			font-family: "MEB", sans-serif;
+			font-size: 27px;
+			justify-content: center;
+		
+			@include media('<=xxlg') {
+				font-size: 24px;
+			}
+			
+			@include media('<=lg') {
+				font-size: 22px;
+			}
+		
+			@include media('<=sm') {
+				font-size: 20px;
+			}
+		
+			@include media('<=xs') {
+				font-size: 18px;
+			}
+			
+			@include media('<=xxs') {
+				font-size: 14px;
+			}
+			
+			@include media('<=xxxs') {
+				font-size: 10px;
+			}
+		}
+		
+		&_type-3 {
+			background-color: #7A368B;
+			font-family: "MEB", sans-serif;
+			font-size: 27px;
+			justify-content: center;
+		
+			@include media('<=xxlg') {
+				font-size: 24px;
+			}
+			
+			@include media('<=lg') {
+				font-size: 22px;
+			}
+		
+			@include media('<=sm') {
+				font-size: 20px;
+			}
+		
+			@include media('<=xs') {
+				font-size: 18px;
+			}
+			
+			@include media('<=xxs') {
+				font-size: 14px;
+			}
+
+			@include media('<=xxxs') {
+				font-size: 10px;
+			}
+		}
+	}
+
+	&__subtitle {
+		color: #fff;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 20px;
+		font-family: "MEB", sans-serif;
+		padding-top: 3px;
+		margin-bottom: 25px;
+		
+		@include media('<=xxlg') {
+			font-size: 20px;
+		}
+		
+		@include media('<=lg') {
+			font-size: 17px;
+			margin-bottom: 17px;
+			padding-top: 7px;
+		}
+		
+		@include media('<=sm') {
+			font-size: 14px;
+			margin-bottom: 17px;
+			padding-top: 7px;
+		}
+		
+		@include media('<=xxs') {
+			margin-bottom: 11px;
+			padding-top: 0;
+			font-size: 9px;
+		}
+		
+		@include media('<=xxxs') {
+			font-size: 7px;
+			margin-bottom: 6px;
+		}
+	}
+
+	&__button {
+		margin: 70px auto 0;
+		
+		@include media('<=lg') {
+			margin: 52px auto 0;
+		}
+		
+		@include media('<=xxs') {
+			margin: 43px auto 0;
+		}
+		
+		@include media('<=xxxs') {
+			margin: 30px auto 0;
+		}
+	}
+}

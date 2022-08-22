@@ -1,0 +1,98 @@
+.c-note {
+	$self: &;
+	box-sizing: border-box;
+	padding: 35px 95px 35px 30px;
+	font-family: "MSB", sans-serif;
+	font-size: 22px;
+	line-height: 1.5;
+	color: #fff;
+	position: relative;
+	z-index: 1;
+	border-radius: 14px;
+	border: 2px solid transparent;
+	background: linear-gradient(#1A101B 0 0) padding-box,
+		linear-gradient(160deg, rgba(0, 0, 0, 0.2) 70%, rgba(250, 100, 53, 0.7) 100%) border-box, 
+		linear-gradient(195deg, #000000 17%, #DE5CFF 100%) border-box;
+	
+	@include media('<=lg') {
+		padding: 30px 80px 30px 60px;
+		font-size: 18px;
+	}
+	
+	@include media('<=xxs') {
+		padding: 18px 30px 18px 30px;
+		font-size: 16px;
+		line-height: 1.5;
+	}
+	
+	@include media('<=xxxs') {
+		padding: 13px 20px 13px 20px;
+		border-radius: 10px;
+		font-size: 14px;
+	}
+
+	&::after {
+		display: block;
+		content: '';
+		position: absolute;
+		width: 175px;
+		height: 175px;
+		background: url('#{$images-path}about-quote-after.png') center / contain no-repeat transparent;
+		bottom: -90px;
+		right: -20px;
+		z-index: 2;
+		
+		@include media('<=lg') {
+			width: 150px;
+			height: 150px;
+			right: -20px;
+			bottom: -80px;
+		}
+		
+		@include media('<=sm') {
+			width: 130px;
+			height: 130px;
+			right: -20px;
+			bottom: -65px;
+		}
+		
+		@include media('<=xxs') {
+			width: 110px;
+			height: 110px;
+			right: -10px;
+			bottom: -55px;
+		}
+		
+		@include media('<=xxxs') {
+			width: 90px;
+			height: 90px;
+			right: -5px;
+			bottom: -47px;
+		}
+	}
+
+	&_guitar {
+		padding: 35px 95px 35px 35px;
+		background: linear-gradient(#160F16 0 0) padding-box, 
+			linear-gradient(175deg, rgba(0, 0, 0, 0) 20%, rgba(209, 39, 38, 0.7) 80%) border-box, 
+			linear-gradient(250deg, #000000 35%, #F8941F 100%) border-box;
+
+		@include media('<=lg') {
+			// padding: 30px 70px 30px 30px;
+		}
+
+		@include media('<=xxs') {
+			padding: 30px 22px 30px 30px;
+		}
+
+		@include media('<=xxxs') {
+			font-size: 11px;
+			padding: 25px 20px;
+		}
+	}
+
+	&_vocal {
+		border: none;
+		background: linear-gradient(137deg, rgba(0, 0, 0, 0) 20%, rgba(237, 31, 255, 0.7) 85%), linear-gradient(207deg, #0D071C 17%, #38ACFF 100%);
+	}
+}

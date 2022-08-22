@@ -1,0 +1,966 @@
+.c-programm {
+	$self: &;
+	margin-bottom: 55px;
+	
+	@include media('<=lg') {
+		margin-bottom: 54px;
+	}
+	
+	@include media('<=xxs') {
+		margin-bottom: 145px;
+	}
+	
+	@include media('<=xxxs') {
+		margin-bottom: 90px;
+	}
+
+	&_guitar {
+		margin-bottom: 90px;
+		
+		@include media('<=lg') {
+			margin-bottom: 10px;
+		}
+		
+		@include media('<=xxs') {
+			margin-bottom: 125px;
+		}
+		
+		@include media('<=xxxs') {
+			margin-bottom: 82px;
+		}
+
+		#{$self}__item {
+
+			@include media('<=xxxs') {
+
+				&:nth-child(2), &:nth-child(6), &:nth-child(10), &:nth-child(13), &:nth-child(17), &:nth-child(26), &:nth-child(24) {
+					&::after {
+						width: 137px;
+						height: 167px;
+						background-size: 177px 100%;
+					}
+				}
+	
+				&:nth-child(24)::after {
+					left: 50px;
+					height: 180px;
+					width: 90px;
+				}
+	
+				&:nth-child(4), &:nth-child(8), &:nth-child(11), &:nth-child(15), &:nth-child(19), &:nth-child(22) {
+					&::before {
+						top: -1px;
+						right: 95%;
+						width: 65px;
+						height: 170px;
+						background-size: 160px 100%;
+					}
+				}
+			}
+
+			&:nth-child(1), &:nth-child(8), &:nth-child(17), &:nth-child(20) {
+				#{$self}__wrapper::after {
+					background-image: url('#{$images-path}guitar-glow-program.png');
+				}
+			}
+			
+			&_foto-1 {
+				#{$self}__wrapper {
+					@include media('<=xxxs') {
+						min-height: 163px;						
+					}
+
+					&::before {
+						background-image: url('#{$images-path}guitar-glow-program-image-1.png');
+						transform: translate(-25%, -50%);
+					}
+					
+					&::after {
+						background-image: url('#{$images-path}guitar-program-image-1.png');
+						height: 420px;
+						width: 280px;
+						transform: translate(-53%, -67%);
+						
+						@include media('<=lg') {
+							height: 310px;
+							width: 230px;
+							transform: translate(-53%, -68%);
+						}
+			
+						@include media('<=xxs') {
+							height: 210px;
+							width: 155px;
+							transform: translate(-30%, -65%);
+						}
+						
+						@include media('<=xxxs') {
+							transform: translate(-35%, -65%);
+							height: 140px;
+							width: 115px;
+						}
+					}
+				}
+			}
+			
+			&_foto-2 {
+				#{$self}__wrapper {
+					@include media('<=xxxs') {
+						min-height: 163px;						
+					}
+				
+					&::before {
+						background-image: url('#{$images-path}guitar-glow-program-image-2.png');
+					}
+					
+					&::after {
+						background-image: url('#{$images-path}guitar-program-image-2.png');
+						height: 370px;
+						width: 350px;
+						transform: translate(-27%, -54%);
+						
+						@include media('<=lg') {
+							height: 290px;
+							width: 300px;
+							transform: translate(-28%, -59%);
+							
+							@include media('<=xxs') {
+								height: 200px;
+								width: 200px;
+								transform: translate(-5%, -55%);
+							}
+						}
+					}
+				}
+			}
+		}
+
+		#{$self}__badge {
+			background: linear-gradient(#160F16 0 0) padding-box,
+				linear-gradient(145deg, rgba(0, 0, 0, 0) 70%, #921B1A 100%) border-box, 
+				linear-gradient(207deg, #000000 17%, #d47a1a 100%) border-box;
+		}
+
+		#{$self}__wrapper {
+			
+			@include media('<=xxxs') {
+				min-height: 186px;
+			}
+		}
+
+		#{$self}__text {
+			
+			@include media('<=xxxs') {
+				max-width: 105px;
+				font-size: 9px;
+			}
+		}
+
+		#{$self}__num {
+
+			@include media('<=xxxs') {
+				margin-bottom: 7px;
+				font-size: 16px;
+			}
+
+			&::before {
+				@include media('<=xxxs') {
+					height: 38px;
+					width: 40px;
+				}
+			}
+
+			span {
+				background: linear-gradient(145deg, rgba(0, 0, 0, 0) 18%, rgba(209, 39, 38, 0.7) 80%), linear-gradient(242deg, #000000 37%, #F8941F 100%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+				text-fill-color: transparent;
+			}
+		}
+	}
+
+	&__title {
+		text-align: center;
+		margin-bottom: 112px;
+		
+		@include media('<=lg') {
+			margin-bottom: 90px;
+		}
+		
+		@include media('<=xxs') {
+			margin-bottom: 55px;
+		}
+		
+		@include media('<=xxxs') {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -10px;
+		
+		@include media('<=sm') {
+			justify-content: center;
+			margin: 0 auto;
+		}
+	}
+	
+	&__item {
+		box-sizing: border-box;
+		margin: 0 10px;
+		width: calc(33.3% - 20px);
+		position: relative;
+		z-index: 2;
+	
+		&::after {
+			display: block;
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: calc(100% + 20px);
+			height: 1px;
+			background: url('#{$images-path}icons-sprite.svg#icon-dash-view-white') center / 20px 1px repeat-x transparent;
+		}
+
+		&::before {
+			display: block;
+			content: '';
+			position: absolute;
+			right: 100%;
+			top: 0;
+		}
+
+		&:nth-child(1), &:nth-child(8), &:nth-child(17), &:nth-child(20) {
+			z-index: 1;
+
+			#{$self}__wrapper::after {
+				display: block;
+				content: '';
+				width: 885px;
+				height: 985px;
+				background: url('#{$images-path}course-glow-3.png') center / auto no-repeat transparent;
+				z-index: -1;
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translate(-40%, -50%);
+				
+				@include media('<=xxs') {
+					width: 700px;
+					height: 700px;
+					background-size: 700px;
+				}
+				
+				@include media('<=xxxs') {
+					width: 500px;
+					height: 500px;
+					background-size: 500px;
+				}
+			}
+		}
+
+		&:nth-child(1) {
+			order: 1;
+		}
+
+		&:nth-child(2) {
+			order: 2;
+		}
+
+		&:nth-child(3) {
+			order: 3;
+			
+			@include media('<=sm') {
+				order: 4;
+			}
+		}
+
+		&:nth-child(4) {
+			order: 6;
+			
+			@include media('<=sm') {
+				order: 3;
+			}
+		}
+
+		&:nth-child(5) {
+			order: 5;
+		}
+
+		&:nth-child(6) {
+			order: 4;
+			
+			@include media('<=sm') {
+				order: 6;
+			}
+		}
+
+		&:nth-child(7) {
+			order: 7;
+			
+			@include media('<=sm') {
+				order: 8;
+			}
+		}
+
+		&:nth-child(8) {
+			order: 8;
+			
+			@include media('<=sm') {
+				order: 7;
+			}
+		}
+
+		&:nth-child(9) {
+			order: 9;
+		}
+
+		&:nth-child(10) {
+			order: 11;
+			
+			@include media('<=sm') {
+				order: 10;
+			}
+		}
+
+		&:nth-child(11) {
+			order: 10;
+			
+			@include media('<=sm') {
+				order: 11;
+			}
+		}
+
+		&:nth-child(12) {
+			order: 13;
+		}
+
+		&:nth-child(13) {
+			order: 14;
+		}
+
+		&:nth-child(14) {
+			order: 15;
+			
+			@include media('<=sm') {
+				order: 16;
+			}
+		}
+
+		&:nth-child(15) {
+			order: 18;
+			
+			@include media('<=sm') {
+				order: 15;
+			}
+		}
+
+		&:nth-child(16) {
+			order: 17;
+		}
+
+		&:nth-child(17) {
+			order: 16;
+			
+			@include media('<=sm') {
+				order: 18;
+			}
+		}
+
+		&:nth-child(18) {
+			order: 18;
+			
+			@include media('<=sm') {
+				order: 20;
+			}
+		}
+
+		&:nth-child(19) {
+			order: 19;
+		}
+
+		&:nth-child(20) {
+			order: 20;
+			
+			@include media('<=sm') {
+				order: 21;
+			}
+		}
+
+		&:nth-child(21) {
+			order: 23;
+			
+			@include media('<=sm') {
+				order: 24;
+			}
+		}
+
+		&:nth-child(22) {
+			order: 22;
+			
+			@include media('<=sm') {
+				order: 23;
+			}
+		}
+
+		&:nth-child(23) {
+			order: 24;
+			
+			@include media('<=sm') {
+				order: 25;
+			}
+		}
+
+		&:nth-child(24) {
+			order: 25;
+			
+			@include media('<=sm') {
+				order: 26;
+			}
+
+			&::after {
+				width: calc(100% + 80px);
+			}
+		}
+
+		&:nth-child(25) {
+			order: 12;
+		}
+
+		&:nth-child(26) {
+			order: 21;
+			
+			@include media('<=sm') {
+				order: 22;
+			}
+		}
+
+		&:nth-child(27) {
+			order: 27;
+		}
+
+		&:nth-child(3), &:nth-child(9), &:nth-child(14), &:nth-child(20) {
+			&::after {
+				width: 368px;
+				height: 325px;
+				background: url('#{$images-path}c-program-after.svg') center right / 450px 100% no-repeat transparent;
+				
+				@include media('<=lg') {
+					width: 320px;
+					height: 266px;
+				}
+			}
+		}
+
+		&:nth-child(4), &:nth-child(25), &:nth-child(15), &:nth-child(21) {
+			&::after {
+				display: none;
+			}
+		}
+
+		&:nth-child(6), &:nth-child(11), &:nth-child(17), &:nth-child(26) {
+			&::before {
+				width: 150px;
+				height: 325px;
+				background: url('#{$images-path}c-program-before.svg') center left / 450px 100% no-repeat transparent;
+				
+				@include media('<=lg') {
+					background-position: top -7px left;
+					width: 116px;
+					height: 280px;
+				}
+			}
+		}
+
+		&_foto-1, &_foto-2, &_final {
+			
+			#{$self}__wrapper {
+				min-height: 320px;
+				margin-top: 0;
+				padding: 0;
+				
+				@include media('<=lg') {
+					min-height: 266px;
+				}
+				
+				@include media('<=xxs') {
+					min-height: 232px;
+				}
+				
+				@include media('<=xxxs') {
+					min-height: 192px;
+				}
+			}
+		}
+
+		&_foto-1 {
+
+			#{$self}__wrapper::before {
+				display: block;
+				content: '';
+				width: 600px;
+				height: 450px;
+				background: url('#{$images-path}course-glow-3.png') center / 100% 100% no-repeat transparent;
+				z-index: -1;
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translate(-35%, -50%);
+				
+				@include media('<=xxs') {
+
+				}
+				
+				@include media('<=xxxs') {
+
+				}
+			}
+
+			#{$self}__wrapper::after {
+				display: block;
+				content: '';
+				width: 360px;
+				height: 490px;
+				background: url('#{$images-path}c-program_foto-1.png') center / contain no-repeat transparent;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -60%);
+				
+				@include media('<=lg') {
+					width: 290px;
+					height: 390px;
+					transform: translate(-57%, -64%);
+				}
+				
+				@include media('<=xxs') {
+					width: 230px;
+					height: 310px;
+					transform: translate(-50%, -67%);
+				}
+				
+				@include media('<=xxxs') {
+					width: 170px;
+					height: 250px;
+					transform: translate(-50%, -60%);
+				}
+			}
+		}
+
+		&_foto-2 {
+			z-index: 1;
+
+			#{$self}__wrapper::before {
+				display: block;
+				content: '';
+				width: 550px;
+				height: 400px;
+				background: url('#{$images-path}course-glow-3.png') center / 100% 100% no-repeat transparent;
+				z-index: -1;
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translate(-50%, -50%);
+				
+				@include media('<=sm') {
+					left: 50%;
+				}
+				
+				@include media('<=xxxs') {
+
+				}
+			}
+			
+			#{$self}__wrapper::after {
+				display: block;
+				content: '';
+				width: 230px;
+				height: 350px;
+				background: url('#{$images-path}c-program_foto-2.png') center / contain no-repeat transparent;
+				position: absolute;
+				left: 0;
+				top: 50%;
+				transform: translate(-40%, -65%);
+				
+				@include media('<=lg') {
+					width: 200px;
+					height: 305px;
+					transform: translate(-30%, -62%);
+				}
+				
+				@include media('<=sm') {
+					width: 220px;
+					height: 320px;
+					transform: translate(18%, -60%);
+				}
+				
+				@include media('<=xxs') {
+					width: 180px;
+					height: 280px;
+					transform: translate(-12%, -60%);
+				}
+				
+				@include media('<=xxxs') {
+					width: 160px;
+					height: 240px;
+					transform: translate(-12%, -60%);
+				}
+			}
+		}
+		
+		&_final {
+
+			@include media('<=sm') {
+				width: 100% !important;
+				max-width: 340px !important;
+				margin-left: -60px;
+			}
+			
+			@include media('<=xxs') {
+				max-width: 270px !important;
+				margin: 0 auto;
+			}
+			
+			@include media('<=xxxs') {
+				margin: -33px auto 0;
+				max-width: 240px !important;
+				padding-left: 30px;
+			}
+		
+			#{$self}__wrapper {
+				padding-top: 110px;
+				
+				@include media('<=sm') {
+					padding: 0;
+					width: 100%;
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					min-height: 170px;
+				}
+				
+				@include media('<=xxs') {
+					min-height: 130px;
+				}
+				
+				@include media('<=xxxs') {
+					min-height: 90px;
+				}
+
+				&::after {
+					display: block;
+					content: '';
+					width: 165px;
+					height: 165px;
+					background: url('#{$images-path}ic-program-cup.png') center / 165px no-repeat transparent;
+					position: absolute;
+					top: -80px;
+					left: 0;
+					transform: rotate(-8deg);
+					
+					@include media('<=sm') {
+						position: static;
+					}
+					
+					@include media('<=xxs') {
+						width: 115px;
+						height: 115px;
+						background-size: 115px;
+					}
+					
+					@include media('<=xxxs') {
+						width: 90px;
+						height: 90px;
+						background-size: 90px;
+					}
+				}
+			}
+	
+			&::after {
+				display: none;
+			}
+		}
+
+		@include media('<=sm') {
+			width: calc(50% - 20px);
+			max-width: 250px;
+
+			&:nth-child(1n + 1)::after {
+				display: block;
+				transform: none;
+				right: auto;
+				left: 20px;
+				// width: calc(100% + 20px);
+				width: 100%;
+				height: 1px;
+				background: url('#{$images-path}icons-sprite.svg#icon-dash-view-white') center / 20px 1px repeat-x transparent;
+			}
+
+			&:nth-child(1n + 1)::before {
+				transform: none;
+				right: auto;
+				left: auto;
+				width: auto;
+				height: auto;
+				background: none;
+			}
+
+			&:nth-child(2), &:nth-child(6), &:nth-child(10), &:nth-child(13), &:nth-child(17), &:nth-child(26), &:nth-child(24) {
+				&::after {
+					left: 0;
+					width: 300px;
+					height: 266px;
+					background: url('#{$images-path}c-program-after.svg') center right / 450px 100% no-repeat transparent;
+				}
+			}
+
+			&:nth-child(24)::after {
+				height: 340px;
+			}
+
+			&:nth-child(3), &:nth-child(7), &:nth-child(25), &:nth-child(14), &:nth-child(18), &:nth-child(21), &:nth-child(27) {
+				&::after {
+					display: none;
+				}
+			}
+
+			&:nth-child(4), &:nth-child(8), &:nth-child(11), &:nth-child(15), &:nth-child(19), &:nth-child(22) {
+				&::before {
+					top: -12px;
+					right: 100%;
+					width: 100px;
+					height: 293px;
+					background: url('#{$images-path}c-program-before.svg') center left / 450px 100% no-repeat transparent;
+				}
+			}
+		}
+
+		@include media('<=xxs') {
+			max-width: 160px;
+
+			&:nth-child(2), &:nth-child(6), &:nth-child(10), &:nth-child(13), &:nth-child(17), &:nth-child(26), &:nth-child(24) {
+				&::after {
+					top: -1px;
+					width: 203px;
+					height: 234px;
+					background-size: 215px 100%;
+					background-image: url('#{$images-path}c-program-after-mobile.svg');
+				}
+			}
+
+			&:nth-child(24)::after {
+				left: 50px;
+				height: 305px;
+				width: 150px;
+			}
+			
+			&:nth-child(4), &:nth-child(8), &:nth-child(11), &:nth-child(15), &:nth-child(19), &:nth-child(22) {
+				&::before {
+					top: -1px;
+					right: 100%;
+					width: 100px;
+					height: 235px;
+					background-size: 215px 100%;
+					background-image: url('#{$images-path}c-program-before-mobile.svg');
+				}
+			}
+		}
+
+		@include media('<=xxxs') {
+
+			&:nth-child(2), &:nth-child(6), &:nth-child(10), &:nth-child(13), &:nth-child(17), &:nth-child(26), &:nth-child(24) {
+				&::after {
+					width: 163px;
+					height: 193px;
+					background-size: 188px 100%;
+				}
+			}
+
+			&:nth-child(24)::after {
+				left: 50px;
+				height: 250px;
+				width: 110px;
+			}
+
+			&:nth-child(4), &:nth-child(8), &:nth-child(11), &:nth-child(15), &:nth-child(19), &:nth-child(22) {
+				&::before {
+					top: -1px;
+					right: 100%;
+					width: 60px;
+					height: 193px;
+					background-size: 160px 100%;
+				}
+			}
+		}
+	}
+
+	&__wrapper {
+		box-sizing: border-box;
+		min-height: 369px;
+		margin-top: -45px;
+		padding-bottom: 50px;
+		position: relative;
+		z-index: 1;
+		
+		@include media('<=lg') {
+			min-height: 310px;
+		}
+		
+		@include media('<=sm') {
+			padding-bottom: 40px;
+		}
+		
+		@include media('<=xxs') {
+			margin-top: -30px;
+			min-height: 261px;
+		}
+		
+		@include media('<=xxxs') {
+			min-height: 212px;
+			margin-top: -22px;
+		}
+	}
+
+	&__num {
+		font-family: "MB", sans-serif;
+		font-size: 43px;
+		height: 100px;
+		width: 105px;
+		position: relative;
+		z-index: 2;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 25px;
+		
+		@include media('<=lg') {
+			height: 82px;
+			width: 88px;
+			font-size: 35px;
+		}
+		
+		@include media('<=sm') {
+			margin-bottom: 20px;
+		}
+		
+		@include media('<=xxs') {
+			margin-bottom: 15px;
+			font-size: 25px;
+			height: 55px;
+			width: 55px;
+		}
+		
+		@include media('<=xxxs') {
+			margin-bottom: 10px;
+			font-size: 19px;
+			height: 45px;
+			width: 45px;
+		}
+
+		&::before {
+			display: block;
+			content: '';
+			height: 100px;
+			width: 110px;
+			position: absolute;
+			background: url('#{$images-path}icons-sprite.svg#icon-spot-view-white') center / contain no-repeat transparent;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		
+			@include media('<=lg') {
+				height: 82px;
+				width: 88px;
+			}
+		
+			@include media('<=xxs') {
+				height: 52px;
+				width: 56px;
+			}
+			
+			@include media('<=xxxs') {
+				height: 43px;
+				width: 45px;
+			}
+		}
+
+		span {
+			position: relative;
+			z-index: 1;
+			background: linear-gradient(135.81deg, rgba(0, 0, 0, 0) 25.43%, rgba(250, 100, 53, 0.7) 97.3%), linear-gradient(207.61deg, #000000 17.17%, #DE5CFF 95.92%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			text-fill-color: transparent;
+		}
+	}
+
+	&__text {
+		font-family: "MR", sans-serif;
+		font-size: 18px;
+		line-height: 1.5;
+		color: #fff;
+		margin-bottom: 10px;
+		position: relative;
+		z-index: 2;
+		
+		@include media('<=lg') {
+			font-size: 15px;
+		}
+		
+		@include media('<=sm') {
+			font-size: 14px;
+		}
+		
+		@include media('<=xxs') {
+			margin-bottom: 15px;
+			font-size: 12px;
+		}
+		
+		@include media('<=xxxs') {
+			font-size: 10px;
+			margin-bottom: 12px;
+		}
+	}
+
+	&__badge {
+		box-sizing: border-box;
+		display: inline-block;
+		font-family: "MR", sans-serif;
+		font-size: 18px;
+		color: #fff;
+		white-space: nowrap;
+		border-radius: 100px;
+		padding: 13px 15px;
+		border: 2px solid transparent;
+		background: linear-gradient(#160F16 0 0) padding-box,
+			linear-gradient(145deg, rgba(0, 0, 0, 0) 70%, rgba(250, 100, 53, 0.7) 100%) border-box, 
+			linear-gradient(207deg, #000000 17%, #DE5CFF 100%) border-box;
+		position: relative;
+		z-index: 2;
+		
+		@include media('<=lg') {
+			padding: 10px 13px;
+			font-size: 15px;
+		}
+		
+		@include media('<=sm') {
+			padding: 9px 13px;
+			font-size: 14px;
+		}
+		
+		@include media('<=xxs') {
+			border: 1px solid transparent;
+			padding: 8px 12px;
+			font-size: 12px;
+		}
+		
+		@include media('<=xxxs') {
+			padding: 6px 10px;
+			font-size: 9px;
+		}
+	}
+}

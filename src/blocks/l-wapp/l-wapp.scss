@@ -1,0 +1,87 @@
+.l-wapp {
+	$self: &;
+	color: #fff;
+	margin-bottom: 70px;
+	position: relative;
+	
+	@include media('<=xxs') {
+		margin-bottom: 100px;
+	}
+	
+	@include media('<=xxxs') {
+		margin-bottom: 20px;
+	}
+
+	&::before {
+		display: block;
+		content: '';
+		height: 800px;
+		width: 1480px;
+		background: url('#{$images-path}litvak-glow-wapp.png') center / 100% 100% no-repeat transparent;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		z-index: -1;
+		transform: translate(-50%, -50%);
+	}
+	
+	&_che {
+		&::before {
+			background: url('#{$images-path}che-glow-wapp.png') center / 100% 100% no-repeat transparent;
+		}
+	}
+	
+	&_fro {
+		margin-bottom: 160px;
+		
+		@include media('<=xs') {
+			margin-bottom: 110px;
+		}
+
+		&::before {
+			background: url('#{$images-path}fro-glow-wapp.png') center / 100% 100% no-repeat transparent;
+		}
+	}
+
+	&__title {
+		text-align: center;
+		margin-bottom: 5px;
+	}
+
+	&__text {
+		text-align: center;
+		font-size: 24px;
+		margin-bottom: 10px;
+		
+		@include media('<=lg') {
+			font-size: 22px;
+		}
+		
+		@include media('<=xxs') {
+			margin-bottom: 8px;
+			font-size: 18px;
+		}
+		
+		@include media('<=xxxs') {
+			font-size: 16px;
+		}
+	}
+
+	&__link {
+		display: block;
+		width: 100px;
+		height: 100px;
+		background: url('#{$images-path}ic-wapp.png') center / 100% 100% no-repeat transparent;
+		margin: 0 auto;
+		
+		@include media('<=lg') {
+			width: 95px;
+			height: 95px;
+		}
+		
+		@include media('<=xxs') {
+			width: 75px;
+			height: 73px;
+		}
+	}
+}

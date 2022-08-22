@@ -1,0 +1,449 @@
+.c-mean {
+	$self: &;
+	margin-bottom: 140px;
+	
+	@include media('<=lg') {
+		margin-bottom: 80px;
+	}
+		
+	@include media('<=xxs') {
+		margin-bottom: 160px;
+	}
+	
+	@include media('<=xxxs') {
+		margin-bottom: 125px;
+	}
+
+	&_litvak {
+		padding-top: 30px;
+
+		@include media('<=lg') {
+			margin-bottom: 98px;
+		}
+		
+		@include media('<=xxs') {
+			margin-bottom: 60px;
+		}
+		
+		@include media('<=xxxs') {
+			margin-bottom: 55px;
+		}
+	
+		#{$self}__items {
+			display: flex;
+			margin: 0 -10px;
+			position: relative;
+			z-index: 1;
+			
+			@include media('<=xs') {
+				justify-content: center;
+			}
+		}
+
+		#{$self}__item {
+			font-size: 18.5px;
+			line-height: 1.4;
+			padding: 38px 15px;
+			margin: 0 10px 50px;
+			width: calc(33.3% - 20px);
+			
+			@include media('<=lg') {
+				padding: 32px 15px 23px;
+				margin: 0 10px 40px;
+				font-size: 15.5px;
+				line-height: 1.5;
+				border-radius: 12px;
+			}
+			
+			@include media('<=xs') {
+				width: calc(50% - 20px);
+			}
+			
+			@include media('<=xxs') {
+				padding: 25px 15px 23px;
+				margin: 0 10px 60px;
+				border-width: 2px;
+
+				&:nth-child(1) {
+					order: 1;
+				}
+				
+				&:nth-child(2) {
+					order: 9;
+					max-width: none;
+					width: calc(100% - 20px);
+				}
+
+				&:nth-child(3) {
+					order: 3;
+				}
+
+				&:nth-child(4) {
+					order: 4;
+				}
+
+				&:nth-child(5) {
+					order: 5;
+				}
+
+				&:nth-child(6) {
+					order: 7;
+				}
+
+				&:nth-child(7) {
+					order: 6;
+				}
+
+				&:nth-child(8) {
+					order: 8;
+				}
+
+				&:nth-child(9) {
+					order: 2;
+				}
+			}
+			
+			@include media('<=xxxs') {
+				padding: 25px 10px 19px;
+				font-size: 11px;
+				margin: 0 10px 35px;
+			}
+		
+			&::before {
+
+				@include media('<=lg') {
+					width: 40px;
+					height: 40px;
+					background-size: 40px 40px;
+				}
+				
+				@include media('<=xxxs') {
+					width: 32px;
+					height: 32px;
+					background-size: 32px 32px;
+				}
+			}
+		}
+	}
+
+	&_piano {
+		margin-bottom: 120px;
+
+		@include media('<=lg') {
+			margin-bottom: 95px;
+		}
+
+		@include media('<=xxs') {
+			margin-bottom: 100px;
+		}
+
+		@include media('<=xxxs') {
+			margin-bottom: 60px;
+		}
+
+		#{$self}__title {
+			text-align: left;
+		}
+
+		#{$self}__items {
+			display: flex;
+			margin: 0 -10px;
+			
+			@include media('<=xxxs') {
+				margin: 0 -7px;
+			}
+		}
+
+		#{$self}__item {
+			font-size: 16px;
+			padding: 38px 7px;
+			width: calc(25% - 20px);
+			
+			@include media('<=xxlg') {
+				font-size: 14px;
+				padding: 35px 10px;
+			}
+			
+			@include media('<=xlg') {
+				font-size: 13px;
+			}
+			
+			@include media('<=sm') {
+				width: calc(33.3% - 20px);
+			}
+			
+			@include media('<=xs') {
+				width: calc(50% - 20px);
+			}
+			
+			@include media('<=xxxs') {
+				width: calc(50% - 14px);
+				margin: 0 7px 35px;
+				font-size: 11px;
+			}
+
+			&::before {
+
+				@include media('<=xlg') {
+					width: 40px;
+					height: 40px;
+					background-size: 40px 40px;
+				}
+			}
+		}
+	}
+
+	&_guitar {
+			
+		@include media('<=lg') {
+			margin-bottom: 75px;
+		}
+		
+		@include media('<=xxs') {
+			margin-bottom: 110px;
+		}
+		
+		@include media('<=xxxs') {
+			margin-bottom: 85px;
+		}
+
+		#{$self}__item {
+			background: linear-gradient(#160F16 0 0) padding-box, 
+				linear-gradient(175deg, rgba(0, 0, 0, 0) 20%, rgba(209, 39, 38, 0.7) 80%) border-box, 
+				linear-gradient(250deg, #000000 35%, #F8941F 100%) border-box;
+		}
+	}
+
+	&_vocal {
+		#{$self}__item {
+			background: linear-gradient(#160F16 0 0) padding-box,
+				linear-gradient(137deg, rgba(0, 0, 0, 0) 0%, rgba(237, 31, 255, 0.5) 85%) border-box, 
+				linear-gradient(207deg, #0D071C 20%, #38ACFF 95%) border-box;
+		}
+	}
+
+	&_fro {
+		margin-bottom: 80px;
+		
+		@include media('<=xs') {
+			margin-bottom: 110px;
+		}
+
+		#{$self}__item {
+			background: linear-gradient(#202125 0 0) padding-box,
+				linear-gradient(137deg, rgba(0, 0, 0, 0) 0%, rgba(237, 31, 255, 0.5) 85%) border-box, 
+				linear-gradient(207deg, #0D071C 20%, #38ACFF 95%) border-box;
+		}
+	}
+
+	&__title {
+		text-align: center;
+		margin-bottom: 50px;
+		
+		@include media('<=lg') {
+			margin-bottom: 37px;
+		}
+		
+		@include media('<=xxxs') {
+			margin-bottom: 30px;
+		}
+		
+		&.c-title {
+			font-size: 34px;
+			
+			@include media('<=xxlg') {
+				font-size: 32px;
+			}
+			
+			@include media('<=lg') {
+				font-size: 28px;
+			}
+			
+			@include media('<=xxs') {
+				font-size: 26px;
+			}
+			
+			@include media('<=xxxs') {
+				font-size: 20px;
+			}
+		}
+	}
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -10px;
+		
+		@include media('<=xs') {
+			display: block;
+			margin: 0;
+		}
+	}
+	
+	&__item {
+		box-sizing: border-box;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-family: "MSB", sans-serif;
+		font-size: 20px;
+		line-height: 1.4;
+		text-align: center;
+		color: #fff;
+		border: 3px solid transparent;
+		background: linear-gradient(#201E20 0 0) padding-box,
+			linear-gradient(145deg, rgba(0, 0, 0, 0) 70%, rgba(250, 100, 53, 0.7) 100%) border-box, 
+			linear-gradient(207deg, #000000 17%, #DE5CFF 100%) border-box;
+		border-radius: 15px;
+		padding: 40px 30px;
+		margin: 0 10px 40px;
+		width: calc(50% - 20px);
+		position: relative;
+		
+		@include media('<=lg') {
+			font-size: 16px;
+			padding: 38px 30px;
+		}
+		
+		@include media('<=xs') {
+			margin: 0 auto 40px;
+			width: 100%;
+		}
+		
+		@include media('<=xxs') {
+			margin: 0 auto 45px;
+			max-width: 370px;
+		}
+		
+		@include media('<=xxxs') {
+			border-radius: 10px;
+			margin: 0 auto 32px;
+			padding: 25px 20px;
+			font-size: 14px;
+		}
+
+		&::before {
+			display: block;
+			content: '';
+			width: 49px;
+			height: 49px;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			position: absolute;
+			left: 50%;
+			top: 0;
+			transform: translate(-35%, -50%);
+			
+			@include media('<=xxs') {
+				width: 43px;
+				height: 43px;
+			}
+			
+			@include media('<=xxxs') {
+				width: 34px;
+				height: 34px;
+			}
+		}
+
+		&_type-1::before {
+			background-image: url('#{$images-path}ic-flat-education.png');
+		}
+		
+		&_type-2::before {
+			background-image: url('#{$images-path}ic-flat-piano.png');
+		}
+		
+		&_type-3::before {
+			background-image: url('#{$images-path}ic-flat-key.png');
+		}
+		
+		&_type-4::before {
+			background-image: url('#{$images-path}ic-flat-comet.png');
+		}
+		
+		&_type-5::before {
+			background-image: url('#{$images-path}ic-flat-ear.png');
+		}
+		
+		&_type-6::before {
+			background-image: url('#{$images-path}ic-flat-smile.png');
+		}
+		
+		&_type-7::before {
+			background-image: url('#{$images-path}ic-flat-mic.png');
+		}
+		
+		&_type-8::before {
+			background-image: url('#{$images-path}ic-flat-rainbow.png');
+		}
+		
+		&_type-9::before {
+			background-image: url('#{$images-path}ic-flat-pipe.png');
+		}
+		
+		&_type-10::before {
+			background-image: url('#{$images-path}ic-flat-notes.png');
+		}
+		
+		&_type-11::before {
+			background-image: url('#{$images-path}ic-mic.png');
+		}
+		
+		&_type-12::before {
+			background-image: url('#{$images-path}ic-flat-sadly.png');
+		}
+		
+		&_type-13::before {
+			background-image: url('#{$images-path}ic-flat-alarm.png');
+		}
+		
+		&_type-14::before {
+			background-image: url('#{$images-path}ic-flat-paper.png');
+		}
+		
+		&_type-15::before {
+			background-image: url('#{$images-path}ic-flat-smart.png');
+		}
+		
+		&_type-16::before {
+			background-image: url('#{$images-path}ic-flat-graf.png');
+		}
+		
+		&_type-17::before {
+			background-image: url('#{$images-path}ic-flat-hand.png');
+		}
+		
+		&_type-18::before {
+			background-image: url('#{$images-path}ic-flat-monitor.png');
+		}
+		
+		&_type-19::before {
+			background-image: url('#{$images-path}ic-guitar.png');
+		}
+		
+		&_type-20::before {
+			background-image: url('#{$images-path}ic-flat-cup.png');
+		}
+		
+		&_type-21::before {
+			background-image: url('#{$images-path}ic-flat-handshake.png');
+		}
+		
+		&_type-22::before {
+			background-image: url('#{$images-path}ic-flat-wink.png');
+		}
+		
+		&_type-23::before {
+			background-image: url('#{$images-path}ic-flat-heart.png');
+		}
+		
+		&_type-24::before {
+			background-image: url('#{$images-path}ic-flat-thought.png');
+		}
+		
+		&_type-25::before {
+			background-image: url('#{$images-path}ic-flat-rock.png');
+		}
+	}
+}

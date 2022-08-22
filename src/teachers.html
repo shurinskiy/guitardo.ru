@@ -1,0 +1,75 @@
+@@include("_head.html", {"class":"decor-2"})
+@@include("_header.html")
+
+<main class="main">
+	<section class="teachers container">
+		<h1 class="teachers__title">Наши преподаватели</h1>
+		<div class="teachers__info">Мы постарались предоставить всю необходимую информацию, чтобы тебе было просто найти подходящего преподавателя.</div>
+		<div class="teachers__controls">
+			<select class="teachers__control teachers__control_dir">
+				<option value="1">Вокал</option>
+				<option value="2">Фортепиано</option>
+				<option value="3">Гитара</option>
+			</select>
+			<select class="teachers__control teachers__control_gen">
+				<option value="1">Мужчина</option>
+				<option value="2">Женщина</option>
+			</select>
+			<label class="teachers__control teachers__control_checkbox">
+				<span>Обучает онлайн</span>
+				<input type="checkbox">
+			</label>
+			<label class="teachers__control teachers__control_checkbox">
+				<span>Работает с детьми</span>
+				<input type="checkbox">
+			</label>
+		</div>
+		<div class="teachers__card t-card">
+			<div class="t-card__image" data-online="можно онлайн"><img src="./images/stuff/teachers-image.png" alt=""></div>
+			<div class="t-card__side">
+				<h3 class="t-card__name">Дмитрий Константинов</h3>
+				<div class="t-card__position">Топ-преподаватель</div>
+				<div class="t-card__entries">
+					<div class="t-card__entry t-card__entry_voc">ВОКАЛ</div>
+					<div class="t-card__entry t-card__entry_pin">ФОРТЕПИАНО</div>
+					<div class="t-card__entry t-card__entry_git">ГИТАРА</div>
+					<div class="t-card__entry t-card__entry_exp"><strong>25 лет опыта,</strong> cтаж преподавания — 15 лет</div>
+					<div class="t-card__entry t-card__entry_edc">РАМ им. Гнесиных</div>
+					<div class="t-card__entry t-card__entry_grp"><strong>ИНДИВИДУАЛЬНЫЕ И ГРУППОВЫЕ УРОКИ ВОКАЛА</strong></div>
+					<div class="t-card__entry t-card__entry_chld"><strong>Работает со взрослыми и детьми с 6 лет</strong></div>
+					<div class="t-card__entry t-card__entry_prf"><strong>Предпочтения:</strong> джаз, эстрада, народная музыка</div>
+				</div>
+				<div class="t-card__text">Жесткий, дисциплинированный подход, с акцентом на глубокие теоретические знания</div>
+				<div class="t-card__controls">
+					<a class="t-card__button" href="./" data-modal="signup"><span>Записаться</span></a>
+					<a class="t-card__link" href="./">Смотреть исполнение</a>
+				</div>
+			</div>
+		</div>
+		<div class="teachers__card t-card">
+			<a class="t-card__image" href="./"><img src="./images/stuff/teachers-image.png" alt=""></a>
+			<div class="t-card__side">
+				<h3 class="t-card__name">Дмитрий Константинов</h3>
+				<div class="t-card__position">Топ-преподаватель</div>
+				<div class="t-card__entries">
+					<div class="t-card__entry t-card__entry_voc">ВОКАЛ</div>
+					<div class="t-card__entry t-card__entry_pin">ФОРТЕПИАНО</div>
+					<div class="t-card__entry t-card__entry_git">ГИТАРА</div>
+					<div class="t-card__entry t-card__entry_exp"><strong>25 лет опыта,</strong> cтаж преподавания — 15 лет</div>
+					<div class="t-card__entry t-card__entry_edc">РАМ им. Гнесиных</div>
+					<div class="t-card__entry t-card__entry_grp"><strong>ИНДИВИДУАЛЬНЫЕ И ГРУППОВЫЕ УРОКИ ВОКАЛА</strong></div>
+					<div class="t-card__entry t-card__entry_chld"><strong>Работает со взрослыми и детьми с 6 лет</strong></div>
+					<div class="t-card__entry t-card__entry_prf"><strong>Предпочтения:</strong> джаз, эстрада, народная музыка</div>
+				</div>
+				<div class="t-card__text">Жесткий, дисциплинированный подход, с акцентом на глубокие теоретические знания</div>
+				<div class="t-card__controls">
+					<a class="t-card__button" href="./" data-modal="signup"><span>Записаться</span></a>
+					<a class="t-card__link" href="./">Смотреть исполнение</a>
+				</div>
+			</div>
+		</div>
+		<a class="teachers__more" href="./">Посмотреть еще</a>
+	</section>
+</main>
+
+@@include("_bottom.html")

@@ -1,0 +1,525 @@
+.about {
+	$self: &;
+	color: #fff;
+	padding: 117px 0 0;
+	position: relative;
+	
+	@include media('<=xxs') {
+		padding: 50px 0 0;
+	}
+	
+	@include media('<=xxxs') {
+		padding: 54px 0 0;
+	}
+
+	&::after {
+		display: block;
+		content: '';
+		height: 45px;
+		background: url('#{$images-path}home-hero-bottom.svg') top center / auto no-repeat transparent;
+		position: relative;
+		z-index: 1;
+		
+		@include media('<=xxxs') {
+			background-size: cover;
+			height: 30px;
+		}
+	}
+
+	&__container {
+		position: relative;
+		
+		&::before {
+			display: block;
+			content: '';
+			width: 510px;
+			height: 635px;
+			background: url('#{$images-path}glow-5.png') center / auto no-repeat transparent;
+			position: absolute;
+			top: 0;
+			left: 0;
+			transform: translate(-45%, -30%);
+		}
+		
+		&::after {
+			display: block;
+			content: '';
+			width: 590px;
+			height: 630px;
+			background: url('#{$images-path}glow-6.png') center / auto no-repeat transparent;
+			position: absolute;
+			top: 0;
+			right: 0;
+			transform: translate(30%, 10%);
+		}
+	}
+
+	&__title {
+		font-family: "MBL", sans-serif;
+		font-size: 40px;
+		text-transform: uppercase;
+		margin-bottom: 23px;
+		position: relative;
+		z-index: 1;
+		
+		@include media('<=lg') {
+			font-size: 30px;
+			margin-bottom: 15px;
+		}
+		
+		@include media('<=sm') {
+			font-size: 25px;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 35px;
+		}
+		
+		@include media('<=xxxs') {
+			font-size: 25px;
+		}
+	}
+
+	&__text {
+		font-family: "MR", sans-serif;
+		font-size: 18px;
+		line-height: 1.6;
+		position: relative;
+		z-index: 2;
+		
+		@include media('<=lg') {
+			font-size: 16px;
+			line-height: 1.5;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 18.4px;
+		}
+		
+		@include media('<=xxxs') {
+			font-size: 13px;
+		}
+
+		p {
+			margin-bottom: 30px;
+			
+			@include media('<=xxs') {
+				margin-bottom: 35px;
+			}
+			
+			@include media('<=xxxs') {
+				margin-bottom: 20px;
+			}
+		}
+
+		strong {
+			font-family: "MB", sans-serif;
+		}
+
+		&::after {
+			display: block;
+			content: '';
+			clear: both;
+		}
+	}
+
+	&__image {
+		overflow: hidden;
+		border-radius: 15px;
+		margin-right: 35px;
+		float: left;
+		height: 275px;
+		
+		@include media('<=lg') {
+			height: 245px;
+			max-width: 250px;
+			margin-right: 30px;
+		}
+		
+		@include media('<=xs') {
+			margin: 0 20px 5px 0;
+		}
+		
+		@include media('<=xxs') {
+			height: 280px;
+			max-width: none;
+			width: 100%;
+			float: none;
+			margin-bottom: 30px;
+			box-shadow: 10px 9px 44px rgba(145, 134, 204, 0.85);
+			border-radius: 26.8px;
+		}
+		
+		@include media('<=xxxs') {
+			height: 200px;
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__globus::after {
+		display: inline-block;
+		content: '';
+		width: 25px;
+		height: 25px;
+		background-position: center;
+		background-repeat: no-repeat;
+		vertical-align: middle;
+		margin-left: 8px;
+		background-image: url('#{$images-path}ic-globus.png');
+		background-size: 25px;
+	}
+
+	&__note {
+		box-sizing: border-box;
+		font-family: "MSB", sans-serif;
+		font-size: 18px;
+		line-height: 1.4;
+		position: relative;
+		border-radius: 16px;
+		max-width: 885px;
+		padding: 22px 100px 22px 50px;
+		margin: 60px 0 67px;
+		border: 2px solid transparent;
+		background: linear-gradient(#1A101B 0 0) padding-box,
+					linear-gradient(170deg, #5A23B5 10%, #D05A25 25%, #572AB8 50%, #36C3AE 75%, #5530C2 100%) border-box;
+		
+		@include media('<=lg') {
+			margin: 40px 0 73px;
+		}
+		
+		@include media('<=sm') {
+			padding: 22px;
+		}
+		
+		@include media('<=xs') {
+			font-size: 16px;
+		}
+		
+		@include media('<=xxs') {
+			padding: 20px;
+			font-size: 17px;
+			line-height: 1.6;
+			margin: 80px 0 100px;
+		}
+		
+		@include media('<=xxxs') {
+			padding: 10px;
+			font-size: 12px;
+			border-radius: 10px;
+			margin: 68px 0 73px;
+		}
+
+		&::after {
+			display: block;
+			content: '';
+			position: absolute;
+			width: 162px;
+			height: 160px;
+			background: url('#{$images-path}about-quote-after.png') center / auto no-repeat transparent;
+			bottom: -80px;
+			right: -5px;
+			z-index: 2;
+			background-size: 160px;
+			
+			@include media('<=sm') {
+				background-size: 120px;
+				right: -30px;
+			}
+			
+			@include media('<=xxs') {
+				background-size: 160px;
+				bottom: -90px;
+				right: -15px;
+			}
+			
+			@include media('<=xxxs') {
+				background-size: 120px;
+				right: -40px;
+			}
+		}
+
+		&::before {
+			display: block;
+			content: '';
+			position: absolute;
+			width: 1005px;
+			height: 510px;
+			background: url('#{$images-path}glow-7.png') center / auto no-repeat transparent;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			
+			@include media('<=xxxs') {
+
+			}
+		}
+
+		p {
+			position: relative;
+			z-index: 1;
+			margin-bottom: 0;
+		}
+	}
+
+	&__quote {
+		padding-top: 74px;
+		margin-bottom: 82px;
+		position: relative;
+		
+		@include media('<=xs') {
+			margin-bottom: 55px;
+		}
+		
+		@include media('<=xxs') {
+			padding-top: 70px;
+		}
+		
+		@include media('<=xxxs') {
+			padding-top: 54px;
+			margin-bottom: 35px;
+		}
+
+		&::after {
+			display: block;
+			content: '';
+			background: url('#{$images-path}stuff/about-dude.png') center / auto no-repeat transparent;
+			width: 465px;
+			height: 620px;
+			position: absolute;
+			bottom: -107px;
+			right: -85px;
+			
+			@include media('<=lg') {
+				background-size: 410px;
+				bottom: -150px;
+				right: -75px;
+			}
+			
+			@include media('<=xs') {
+				background-size: 340px;
+				right: -110px;
+			}
+			
+			@include media('<=xxs') {
+				width: 330px;
+				height: 510px;
+				background-size: 385px;
+				right: -75px;
+				bottom: -65px;
+			}
+			
+			@include media('<=xxxs') {
+				width: 270px;
+				height: 420px;
+				background-size: 290px;
+				right: -75px;
+				top: -38px;
+				bottom: auto;
+			}
+		}
+	}
+
+	&__quote-slogan {
+		box-sizing: border-box;
+		font-family: "MEB", sans-serif;
+		text-transform: uppercase;
+		font-size: 30px;
+		margin-bottom: 73px;
+		padding: 0 135px 0 25px;
+		position: relative;
+		max-width: 790px;
+		
+		@include media('<=lg') {
+			padding: 0 270px 0 10px;
+			font-size: 25px;
+			margin-bottom: 40px;
+		}
+		
+		@include media('<=xs') {
+			padding: 0 170px 0 25px;
+		}
+		
+		@include media('<=xxs') {
+			text-align: right;
+			font-size: 26.5px;
+			line-height: 1.5;
+			padding: 0 190px 0 25px;
+			margin-bottom: 27px;
+		}
+		
+		@include media('<=iphone') {
+			font-size: 23px;
+		}
+		
+		@include media('<=xxxs') {
+			padding: 0 130px 0 20px;
+			font-size: 18.6px;
+			margin-bottom: 18px;
+		}
+	
+		&::before {
+			display: block;
+			content: '';
+			height: 2px;
+			background: linear-gradient(90deg, #6942B9 0%, #C2289A 100%);
+			margin: 0 -135px 67px -25px;
+			
+			@include media('<=lg') {
+				margin: 0 -135px 53px -10px;
+			}
+			
+			@include media('<=xs') {
+				margin: 0 -170px 53px -10px;
+			}
+			
+			@include media('<=xxs') {
+				margin: 0 -170px 30px -10px;
+			}
+			
+			@include media('<=xxxs') {
+				margin: 0 -70px 20px -10px;
+			}
+		}
+		
+		&::after {
+			display: block;
+			content: '';
+			height: 2px;
+			background: linear-gradient(-90deg, #6942B9 0%, #C2289A 100%);
+			margin: 60px -135px 0 -15px;
+			
+			@include media('<=lg') {
+				margin: 49px -65px 0 -15px;
+			}
+			
+			@include media('<=xs') {
+				margin: 49px -65px 0 -20px;
+			}
+			
+			@include media('<=xxs') {
+				margin: 23px -65px 0 -20px;
+			}
+			
+			@include media('<=xxxs') {
+				margin: 15px -65px 0 -20px;
+			}
+		}
+
+		span {
+			display: block;
+			content: '';
+			height: 73px;
+			width: 73px;
+			border-radius: 50%;
+			background: linear-gradient(130deg, #5A23B5 15%, #D05A25 25%, #572AB8 50%, #36C3AE 70%, #5530C2 90%);
+			position: absolute;
+			top: 0;
+			left: 0;
+			transform: translateY(-50%);
+
+			@include media('<=lg') {
+				height: 60px;
+				width: 60px;
+			}
+			
+			@include media('<=xxs') {
+				height: 65px;
+				width: 65px;
+			}
+			
+			@include media('<=xxxs') {
+				height: 45px;
+				width: 45px;
+			}
+			
+			&::before {
+				display: block;
+				content: '';
+				background: url('#{$images-path}icons-sprite.svg#icon-quote-view-white') center / 50px 35px no-repeat #180F18;
+				position: absolute;
+				border-radius: 50%;
+				top: 2px;
+				right: 2px;
+				bottom: 2px;
+				left: 2px;
+	
+				@include media('<=lg') {
+					background-size: 40px 27px;
+				}
+				
+				@include media('<=xxs') {
+					background-size: 42px 30px;
+				}
+				
+				@include media('<=xxxs') {
+					background-size: 32px 22px;
+				}
+			}
+		}
+	}
+
+	&__quote-name {
+		box-sizing: border-box;
+		font-family: "MB", sans-serif;
+		text-align: right;
+		font-size: 19px;
+		max-width: 790px;
+		margin-bottom: 22px;
+		padding-right: 135px;
+		
+		@include media('<=lg') {
+			padding-right: 290px;
+			font-size: 17px;
+		}
+		
+		@include media('<=xs') {
+			padding-right: 225px;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 15px;
+			padding-right: 190px;
+			margin-bottom: 10px;
+		}
+		
+		@include media('<=xxxs') {
+			font-size: 10.8px;
+			margin-bottom: 7px;
+			padding-right: 130px;
+		}
+	}
+	
+	&__quote-regalia {
+		box-sizing: border-box;
+		text-align: right;
+		font-size: 15px;
+		line-height: 1.6;
+		max-width: 790px;
+		padding-right: 135px;
+		
+		@include media('<=lg') {
+			padding-right: 290px;
+			font-size: 14px;
+		}
+		
+		@include media('<=xs') {
+			padding-right: 225px;
+		}
+			
+		@include media('<=xxs') {
+			font-size: 12.3px;
+			padding-right: 190px;
+		}
+		
+		@include media('<=xxxs') {
+			font-size: 8.8px;
+			padding-right: 130px;
+		}
+	}
+}

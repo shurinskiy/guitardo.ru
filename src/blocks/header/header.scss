@@ -1,0 +1,237 @@
+.header {
+	$self: &;
+	position: relative;
+	overflow: hidden;
+	// margin-bottom: 100px;
+		
+	@include media('<=lg') {
+		// margin-bottom: 85px;
+	}
+	
+	@include media('<=sm') {
+		// margin-bottom: 80px;
+	}
+	
+	@include media('<=xxxs') {
+
+	}
+	
+	&_home {
+		// min-height: 100vh;
+		margin-bottom: 0;
+		display: flex;
+		flex-flow: column nowrap;
+		background: url('#{$images-path}header-bg-1.png') center top / cover no-repeat #0f0d0f;
+		
+		@include media('<=lg') {
+			background: url('#{$images-path}header-bg-2.png') center top / cover no-repeat #0f0d0f;
+		}
+		
+		@include media('<=sm') {
+			background-position: right top;
+		}
+		
+		@include media('<=xxs') {
+			background: url('#{$images-path}header-bg-3.png') center top / auto no-repeat #0f0d0f;
+		}
+		
+		&::after {
+			display: block;
+			content: '';
+			height: 182px;
+			background: url('#{$images-path}bottom-clip.svg') top center / auto no-repeat transparent;
+			margin-top: auto;
+			position: relative;
+			z-index: 2;
+			
+			@include media('<=lg') {
+				height: 115px;
+			}
+			
+			@include media('<=xxs') {
+				display: none;
+			}
+		}
+
+		#{$self}__top {
+			margin-bottom: 100px;
+		
+			@include media('<=lg') {
+				margin-bottom: 85px;
+			}
+			
+			@include media('<=sm') {
+				margin-bottom: 80px;
+			}
+			
+			@include media('<=xxs') {
+				margin-bottom: 145px;
+			}
+			
+			@include media('<=xxxs') {
+				margin-bottom: 88px;
+			}
+		}
+
+		#{$self}__flyer {
+			/* position: absolute;
+			z-index: 1;
+	
+			&_1 {
+				width: 160px;
+				height: 550px;
+				background: url('#{$images-path}stick-1.png') center / auto no-repeat transparent;
+				left: -55px;
+				bottom: 0;
+			
+				@include media('<=lg') {
+					display: none;
+				}
+			}
+			
+			&_2 {
+				width: 100px;
+				height: 990px;
+				background: url('#{$images-path}stick-2.png') center / auto no-repeat transparent;
+				left: 180px;
+				bottom: 0;
+				
+				@include media('<=lg') {
+					left: -8px;
+					display: none;
+				}
+				
+				@include media('<=sm') {
+					background: url('#{$images-path}stick-4.png') center / auto no-repeat transparent;
+					left: -30px;
+					bottom: -320px;
+				}
+			}
+			
+			&_3 {
+				width: 370px;
+				height: 790px;
+				background: url('#{$images-path}stick-3.png') center / auto no-repeat transparent;
+				right: -120px;
+				bottom: 0;
+				
+				@include media('<=lg') {
+					right: -187px;
+					display: none;
+				}
+				
+				@include media('<=sm') {
+					background: url('#{$images-path}stick-5.png') center / auto no-repeat transparent;
+					right: -167px;
+					bottom: 60px;
+				}
+			}
+			
+			&_4 {
+				width: 790px;
+				height: 875px;
+				background: url('#{$images-path}glow-0.png') center / auto no-repeat transparent;
+				right: 300px;
+				bottom: -70px;
+				z-index: 3;
+			} */
+		}
+	}
+
+	&__container {
+		position: relative;
+		z-index: 4;
+	}
+
+	&__top {
+		padding-top: 80px;
+		display: flex;
+		align-items: center;
+		
+		@include media('<=lg') {
+			padding-top: 60px;
+		}
+		
+		@include media('<=sm') {
+			padding-top: 30px;
+		}
+		
+		@include media('<=xxxs') {
+			padding-top: 35px;
+		}
+	}
+
+	&__logo {
+		flex-shrink: 0;
+		margin-left: -20px;
+		margin-right: 20px;
+		max-width: 147px;
+		
+		@include media('<=lg') {
+			max-width: 124px;
+		}
+		
+		@include media('<=sm') {
+			margin: 0 0 0 -15px;
+			max-width: 147px;
+		}
+		
+		@include media('<=xxxs') {
+			max-width: 114px;
+		}
+	}
+
+	&__toggle {
+		@extend %reset-button;
+		display: none;
+		width: 26px;
+		height: 17px;
+		flex-shrink: 0;
+		background: url('#{$images-path}icons-sprite.svg#icon-menu-view-white') center / auto no-repeat transparent;
+		margin-left: auto;
+		
+		@include media('<=sm') {
+			display: block;
+		}
+		
+		@include media('<=xs') {
+			width: 22px;
+		}
+		
+		@include media('<=xxxs') {
+			width: 21px;
+			height: 12px;
+		}
+	}
+
+	&__navi {
+		flex-grow: 1;
+
+		@include media('<=sm') {
+			position: fixed;
+			height: 100vh;
+			height: calc(var(--vh, 1vh) * 100);
+			z-index: 4;
+			right: -400px; top: 0;
+			max-width: 350px;
+			width: 100%;
+			transition: right 0.4s ease-out;
+			overflow: auto;
+			background: linear-gradient(165deg, #0D0D0D 13%, #1A101B 40%);
+			box-shadow: 13px 12px 59px rgba(145, 134, 204, 0.85);
+
+			&.opened {
+				right: 0;
+			}
+		}
+
+		@include media('<=xxs') {
+			right: -270px;
+			max-width: 210px;
+		}
+	}
+
+	&__hero {
+
+	}
+}

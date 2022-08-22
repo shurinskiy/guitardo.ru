@@ -1,0 +1,67 @@
+.l-results {
+	$self: &;
+	margin-bottom: 130px;
+	
+	@include media('<=lg') {
+		margin-bottom: 140px;
+	}
+	
+	@include media('<=xxs') {
+		margin-bottom: 58px;
+	}
+
+	&_fro {
+		position: relative;
+		
+		@include media('<=xs') {
+			margin-bottom: 100px;			
+		}
+		
+		&::before {
+			display: block;
+			content: '';
+			width: 350px;
+			height: 450px;
+			background: url('#{$images-path}fro-planet-1.png') center / 100% 100% no-repeat transparent;
+			position: absolute;
+			top: 0;
+			left: 0;
+			transform: translate(-35%, -15%) rotate(-15deg);
+		}
+	}
+
+	&__title {
+		text-align: center;
+		margin-bottom: 40px;
+		
+		@include media('<=lg') {
+			margin-bottom: 30px;
+		}
+		
+		@include media('<=xxs') {
+			margin-bottom: 14px;
+		}
+	}
+
+	&__video {
+		@include aspect-ratio(1.777, 1);
+		min-height: 300px;
+		margin-bottom: 90px;
+		border-radius: 25px;
+		overflow: hidden;
+		
+		@include media('<=md') {
+			margin-bottom: 40px;
+		}
+		
+		@include media('<=xxs') {
+			border-radius: 10px;
+			min-height: 217px;
+		}
+		
+		@include media('<=xxxs') {
+			border-radius: 8px;
+			min-height: 160px;
+		}
+	}
+}

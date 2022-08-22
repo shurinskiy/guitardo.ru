@@ -1,0 +1,164 @@
+.l-quote {
+	$self: &;
+	margin-bottom: 130px;
+	
+	@include media('<=lg') {
+		margin-bottom: 97px;
+	}
+	
+	@include media('<=xxs') {
+		margin-bottom: 30px;
+	}
+	
+	@include media('<=xxxs') {
+		margin-bottom: 21px;
+	}
+
+	&__inner {
+		position: relative;
+		border: 2px solid skyblue;
+		border-image: linear-gradient(to right top, #FE8160, #EA97FF, #FE8160);
+		border-image-slice: 1;
+		border-right: none;
+		border-left: none;
+		color: #fff;
+		font-family: "MR", sans-serif;
+		font-size: 24.8px;
+		line-height: 1.5;
+		padding: 22px 30px 22px 110px;
+		
+		@include media('<=lg') {
+			padding: 22px 22px 22px 90px;
+			font-size: 20px;
+			line-height: 1.44;
+		}
+		
+		@include media('<=xs') {
+			font-size: 18px;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 16px;
+			padding: 34px 9px 26px 20px;
+		}
+		
+		@include media('<=xxxs') {
+			padding: 26px 9px 18px 20px;
+			line-height: 1.5;
+			font-size: 11px;
+		}
+
+		&::before {
+			display: block;
+			content: "";
+			width: 1840px;
+			height: 980px;
+			background: url('#{$images-path}litvak-glow-quote.png') center / auto no-repeat transparent;
+			transform: translate(-50%, -50%);			
+			position: absolute;
+			left: 50%;
+			top: 50%;
+		}
+
+		&::after {
+			display: block;
+			content: '';
+			height: 104px;
+			width: 104px;
+			background: url('#{$images-path}litvak-quote-piano.png') center / auto 100% no-repeat transparent;
+			position: absolute;
+			bottom: -32px;
+			right: -25px;
+			
+			@include media('<=lg') {
+				height: 84px;
+				width: 84px;
+				bottom: -25px;
+				right: -10px;
+			}
+			
+			@include media('<=xs') {
+				height: 65px;
+				width: 65px;
+				bottom: -25px;
+				right: -10px;
+			}
+			
+			@include media('<=xxs') {
+				height: 55px;
+				width: 55px;
+				bottom: -27px;
+				right: -22px;
+			}
+			
+			@include media('<=xxxs') {
+				height: 39px;
+				width: 39px;
+				bottom: -19px;
+				right: -14px;
+			}
+		}
+
+		p {
+			margin: 0;
+			position: relative;
+			z-index: 1;
+		}
+
+		span {
+			display: block;
+			content: "";
+			height: 88px;
+			width: 88px;
+			border-radius: 50%;
+			background: linear-gradient(to right top, #FE8160, #EA97FF, #FE8160);
+			position: absolute;
+			top: 0;
+			left: 0;
+			transform: translateY(-50%);
+			
+			@include media('<=lg') {
+				height: 70px;
+				width: 70px;
+			}
+			
+			@include media('<=xxs') {
+				height: 47px;
+				width: 47px;
+			}
+			
+			@include media('<=xxxs') {
+				height: 35px;
+				width: 35px;
+			}
+
+			&::before {
+				display: block;
+				content: "";
+				background: url(images/icons-sprite.svg#icon-quote-view-white) center / 58px 42px no-repeat #180F18;
+				position: absolute;
+				border-radius: 50%;
+				top: 2px;
+				right: 2px;
+				bottom: 2px;
+				left: 2px;
+				
+				@include media('<=lg') {
+					background-size: 46px 33px;
+				}
+				
+				@include media('<=xxs') {
+					background-size: 30px 21px;
+				}
+				
+				@include media('<=xxxs') {
+					background-size: 23px 15px;
+					top: 1px;
+					right: 1px;
+					bottom: 1px;
+					left: 1px;
+				}
+			}
+		}
+	}
+}

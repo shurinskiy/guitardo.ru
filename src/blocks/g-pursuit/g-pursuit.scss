@@ -1,0 +1,97 @@
+.g-pursuit {
+	$self: &;
+	margin-bottom: 100px;
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -10px;
+		
+		@include media('<=xxxs') {
+			margin: 0 -5px;
+		}
+	}
+	
+	&__item {
+		box-sizing: border-box;
+		position: relative;
+		margin: 0 10px 20px;
+		width: calc(100% / 4 - 20px);
+		background: linear-gradient(145deg, rgba(7, 5, 4, 0.7) 18%, rgba(209, 39, 38, 0.7) 80%), linear-gradient(242deg, #000000 37%, #F8941F 94%);
+		border-radius: 15px;
+		padding: 18px 16px;
+		color: #fff;
+		font-family: "MM", sans-serif;
+		font-size: 18px;
+		line-height: 1.5;
+
+		&::after {
+			display: block;
+			content: '';
+			position: absolute;
+			bottom: 0;
+			right: 15px;
+			transform: translateY(50%);
+			width: 60px;
+			height: 60px;
+			background-color: transparent;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+			
+			@include media('<=lg') {
+				height: 48px;
+				width: 48px;
+				right: 10px;
+			}
+			
+			@include media('<=xxs') {
+				height: 39px;
+				width: 39px;
+			}
+			
+			@include media('<=xxxs') {
+				height: 28px;
+				width: 28px;
+				right: 5px;
+			}
+		}
+
+		&_type-1::after {
+			background-image: url('#{$images-path}ic-flat-notes.png');
+		}
+		
+		&_type-2::after {
+			background-image: url('#{$images-path}ic-flat-play.png');
+		}
+		
+		&_type-3::after {
+			background-image: url('#{$images-path}ic-flat-birthday.png');
+		}
+		
+		&_type-4::after {
+			background-image: url('#{$images-path}ic-flat-clock.png');
+		}
+
+		@include media('<=lg') {
+			font-size: 14px;
+		}
+			
+		@include media('<=sm') {
+			width: calc(100% / 3 - 20px);
+			margin: 0 10px 35px;
+		}
+		
+		@include media('<=xs') {
+			width: calc(100% / 2 - 20px);
+		}
+		
+		@include media('<=xxxs') {
+			width: calc(100% / 2 - 10px);
+			border-radius: 10px;
+			margin: 0 5px 30px;
+			font-size: 11px;
+			padding: 12px;
+		}
+	}
+}

@@ -1,0 +1,28 @@
+.c-title {
+	$self: &;
+	font-family: "MEB", sans-serif;
+	font-size: 32px;
+	line-height: 1.5;
+	color: #fff;
+	text-transform: uppercase;
+	
+	@include media('<=lg') {
+		font-size: 28px;
+	}
+	
+	@include media('<=xxs') {
+		font-size: 26px;
+	}
+	
+	@include media('<=xxxs') {
+		font-size: 20px;
+	}
+
+	&_center {
+		
+	}
+
+	&__button {
+
+	}
+}

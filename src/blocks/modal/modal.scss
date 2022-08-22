@@ -1,0 +1,158 @@
+.modal {
+	$self: &;
+	box-sizing: border-box;
+	display: none;
+	position: fixed;
+	z-index: 9999;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.7);
+	backdrop-filter: blur(5px);
+	padding: 30px;
+	align-items: center;
+	overflow-y: auto;
+	
+	@include media('<=xxxs') {
+		padding: 15px;
+	}
+
+	&[style*="display: block"] {
+		display: flex !important;
+	}
+
+	&_error {
+		#{$self}__content {
+			&::after {
+				content: 'Задайте id целевого блока в атрибуте data-modal';
+			}
+		}
+	}
+
+	&_payment1 {
+
+		iframe {
+			height: 580px !important;
+			
+			@include media('<=xxs') {
+				height: 630px !important;
+			}
+			
+			@include media('<=xxxs') {
+				height: 670px !important;
+			}
+		}
+	}
+
+	&_payment2 {
+
+		iframe {
+			height: 580px !important;
+			
+			@include media('<=xxs') {
+				height: 640px !important;
+			}
+			
+			@include media('<=xxxs') {
+				height: 670px !important;
+			}
+		}
+	}
+
+	&_payment3 {
+
+		iframe {
+			height: 640px !important;
+			
+			@include media('<=xxs') {
+				height: 660px !important;
+			}
+			
+			@include media('<=xxxs') {
+				height: 740px !important;
+			}
+		}
+	}
+
+	&_payment4 {
+
+		iframe {
+			height: 820px !important;
+			
+			@include media('<=xxs') {
+				height: 950px !important;
+			}
+			
+			@include media('<=xxxs') {
+				height: 1140px !important;
+			}
+		}
+	}
+
+	&__hidden {
+		display: none;
+	}
+	
+	&__close {
+		position: absolute;
+		top: 40px; right: 40px;
+		cursor: pointer;
+		width: 30px;
+		height: 30px;
+		background: url('#{$images-path}icons-sprite.svg#icon-close-view-white') center / 30px 29px no-repeat transparent;
+		
+		@media (max-height: 640px), (max-width: 640px) {
+			width: 15px;
+			height: 15px;
+			background-size: 13px 13px;
+			top: 16px; right: 16px;
+		}
+	}
+
+	&__body {
+		@include zoomIn(
+			$duration: 0.6s,
+			$delay: 0s,
+			$function: ease, 
+			$fill: both			
+		);
+		box-sizing: border-box;
+		position: relative;
+		border-radius: 40px;
+		margin: auto;
+		padding: 80px 100px;
+		width: 100%;
+		max-width: 800px;
+		color: #fff;
+		background-color: #1A101B;
+		background: linear-gradient(180deg, #0D0D0D 0%, #1A101B 100%);
+		// box-shadow: 0 0 35px #5541C6;
+		box-shadow: 0 0 35px rgba(255, 255, 255, 0.5);
+		
+		@include media('<=lg') {
+			max-width: 750px;
+			padding: 80px;
+		}
+		
+		@include media('<=sm') {
+			border-radius: 30px;
+			padding: 70px;
+		}
+	
+		@media (max-height: 640px), (max-width: 640px) {
+			padding: 50px 40px 45px;
+			border-radius: 14px;
+		}
+	
+		@include media('<=xxs') {
+			padding: 50px 25px 45px;
+			box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+		}
+	}
+	
+	&__content {
+		min-height: 260px;
+	}
+}

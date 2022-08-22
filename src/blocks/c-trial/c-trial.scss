@@ -1,0 +1,396 @@
+.c-trial {
+	$self: &;
+	margin-bottom: 145px;
+	position: relative;
+	
+	@include media('<=lg') {
+		margin-bottom: 95px;
+	}
+	
+	@include media('<=xxs') {
+		margin-bottom: 135px;
+	}
+	
+	@include media('<=xxxs') {
+		margin-bottom: 118px;
+	}
+
+	&::before {
+		display: block;
+		content: '';
+		background: url('#{$images-path}course-planet-3.png') center / contain no-repeat transparent;
+		width: 117px;
+		height: 115px;
+		position: absolute;
+		top: 23%;
+		left: 7%;
+		z-index: 2;
+		
+		@include media('<=xxs') {
+			width: 75px;
+			height: 80px;
+		}
+	}
+	
+	&::after {
+		display: block;
+		content: '';
+		background: url('#{$images-path}course-planet-4.png') center / contain no-repeat transparent;
+		width: 160px;
+		height: 155px;
+		position: absolute;
+		top: 36%;
+		right: -30px;
+		
+		@include media('<=lg') {
+			width: 135px;
+			height: 130px;
+			background-size: 135px;
+			top: 40%;
+			right: -55px;
+		}
+	
+		@include media('<=xxs') {
+			top: 40%;
+			width: 100px;
+			height: 95px;
+			background-size: 100px;
+		}
+	}
+
+	&_guitar {
+		margin-bottom: 135px;
+		
+		@include media('<=xxs') {
+			margin-bottom: 70px;
+		}
+		
+		@include media('<=xxxs') {
+			margin-bottom: 55px;
+		}
+
+		&::after {
+			background-image: url('#{$images-path}guitar-planet-2.png');
+			top: 40%;
+			right: 50px;
+		}
+
+		&::before {
+			display: none;
+		}
+
+		#{$self}__title.c-title {
+			@include media('<=xxxs') {
+				font-size: 19px;
+			}
+		}
+
+		#{$self}__image {
+			max-width: 670px;
+			margin: 0 auto;
+			
+			@include media('<=lg') {
+				max-width: 625px;
+			}
+			
+			@include media('<=xxs') {
+				max-width: 310px;
+			}
+		
+			@include media('<=xxxs') {
+
+			}
+			
+			&::after {
+				background-image: url('#{$images-path}guitar-glow-trial.png');
+			}
+
+			img {
+						
+				@include media('<=xxxs') {
+					width: auto;
+					max-width: 100%;
+				}
+			}
+		}
+	}
+
+	&_guitar2 {
+		margin-bottom: 190px;
+		
+		@include media('<=xxs') {
+			margin-bottom: 70px;
+		}
+		
+		@include media('<=xxxs') {
+			margin-bottom: 55px;
+		}
+
+		&::after {
+			background-image: url('#{$images-path}guitar-planet-2.png');
+			top: 40%;
+			right: 50px;
+		}
+
+		&::before {
+			display: none;
+		}
+
+		#{$self}__title {
+			margin: 0 auto 22px;
+			
+			@include media('<=xxlg') {
+				max-width: 600px;
+				margin: 0 auto 80px;
+			}
+				
+			@include media('<=lg') {
+
+			}
+			
+			@include media('<=xxs') {
+				margin: 0 auto 45px;
+			}
+		
+			@include media('<=xxxs') {
+				margin-bottom: 0;
+			}
+			
+			&.c-title {
+				@include media('<=xxxs') {
+					font-size: 19px;
+				}
+			}
+
+		}
+
+		#{$self}__image {
+			max-width: 730px;
+			margin: 0 auto;
+			
+			@include media('<=lg') {
+				max-width: 625px;
+			}
+			
+			@include media('<=xxs') {
+				max-width: 310px;
+				min-height: auto;
+				
+				img {
+					max-width: 100%;
+					position: relative;
+					width: auto;
+				}
+			}
+		
+			@include media('<=xxxs') {
+
+			}
+			
+			&::after {
+				background-image: url('#{$images-path}guitar-glow-trial.png');
+			}
+
+			img {
+						
+				@include media('<=xxxs') {
+					width: auto;
+					max-width: 100%;
+				}
+			}
+		}
+
+		#{$self}__note {
+			margin: 0 auto 55px;
+			
+			@include media('<=xxxs') {
+				margin: 0 auto 30px;
+			}
+		}
+	}
+
+	&_vocal {
+
+		&::before {
+			background-image: url('#{$images-path}vocal-planet-2.png');
+			width: 75px;
+			height: 75px;
+		}
+	
+		&::after {
+			background-image: url('#{$images-path}vocal-planet-2.png');
+		}
+
+		#{$self}__image {
+			max-width: 310px;
+			margin: 0 auto;
+			
+			@include media('<=lg') {
+				max-width: 260px;
+			}
+			
+			@include media('<=xxs') {
+				max-width: 210px;
+			}
+			
+			&::after {
+				background-image: url('#{$images-path}vocal-glow-trial.png');
+			}
+
+			img {
+				
+				@include media('<=xxxs') {
+					width: auto;
+					max-width: 100%;
+				}
+				
+				@include media('<=xxs') {
+					position: static;
+					transform: none;
+				}
+			}
+		}
+	}
+
+	&_vocal2 {
+
+		#{$self}__image {
+			max-width: 390px;
+			margin: 0 auto;
+			
+			@include media('<=lg') {
+				max-width: 360px;
+			}
+			
+			@include media('<=xxs') {
+				max-width: 290px;
+			}
+			
+			@include media('<=xxxs') {
+				max-width: 220px;
+			}
+			
+			&::after {
+				background-image: url('#{$images-path}vocal-glow-trial.png');
+			}
+
+			img {
+				
+				@include media('<=xxxs') {
+					width: auto;
+					max-width: 100%;
+				}
+				
+				@include media('<=xxs') {
+					position: static;
+					transform: none;
+				}
+			}
+		}
+	}
+
+	&__title {
+		line-height: 1.5;
+		max-width: 570px;
+		margin: 0 auto 15px;
+		text-align: center;
+		position: relative;
+		z-index: 1;
+		
+		@include media('<=lg') {
+			margin: 0 auto 40px;
+			max-width: 470px;
+		}
+		
+		@include media('<=xxs') {
+			margin: 0 auto 35px;
+		}
+		
+		@include media('<=xxxs') {
+			margin: 0 auto 30px;
+		}
+		
+		&.c-title {
+			@include media('<=xxxs') {
+				font-size: 18.5px;
+			}
+		}
+	}
+
+	&__image {
+		position: relative;
+		text-align: center;
+		max-width: 800px;
+		margin: 0 auto;
+		
+		&::after {
+			display: block;
+			content: '';
+			height: 1255px;
+			width: 1415px;
+			background: url('#{$images-path}course-glow-5.png') center / auto no-repeat transparent;
+			position: absolute;
+			z-index: -1;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		
+		@include media('<=lg') {
+			max-width: 620px;
+		}
+				
+		@include media('<=xxs') {
+			min-height: 300px;
+		}
+		
+		@include media('<=xxxs') {
+			min-height: 225px;
+		}
+
+		img {
+			display: block;
+			position: relative;
+			z-index: 1;
+				
+			@include media('<=xxs') {
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				transform: translate(-54%, 0);
+				max-width: none;
+				width: 115%;
+			}
+			
+			@include media('<=xxxs') {
+				transform: translate(-48%, 0);
+				width: 121%;
+			}
+		}		
+	}
+
+	&__note {
+		margin-bottom: 60px;
+		max-width: 830px;
+		margin: 0 auto 40px;
+		
+		@include media('<=lg') {
+			max-width: 690px;
+			margin-bottom: 45px;
+		}
+		
+		@include media('<=xxs') {
+			margin-bottom: 30px;
+		}
+		
+		@include media('<=xxxs') {
+
+		}
+	}
+
+	&__button {
+		margin: 0 auto;
+		position: relative;
+		z-index: 1;
+	}
+}

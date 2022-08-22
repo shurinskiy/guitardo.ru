@@ -1,0 +1,130 @@
+.v-meet {
+	$self: &;
+	margin-bottom: 240px;
+	position: relative;
+
+	&::before {
+		display: block;
+		content: '';
+		width: 1000px;
+		height: 800px;
+		background: url('#{$images-path}fro-glow-mean.png') center / 100% 100% no-repeat transparent;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translate(-5%, -50%);
+	}
+
+	&::after {
+		display: block;
+		content: '';
+		width: 200px;
+		height: 200px;
+		background: url('#{$images-path}fro-planet-1.png') center / 100% 100% no-repeat transparent;
+		position: absolute;
+		right: -130px;
+		top: calc(100% - 20px);
+		
+		@include media('<=xs') {
+			top: calc(100% - 50px);
+			width: 180px;
+			height: 180px;
+			right: -70px;
+		}
+	}
+	
+	@include media('<=sm') {
+		margin-bottom: 140px;
+	}
+
+	&__inner {
+		display: flex;
+		align-items: center;
+
+		@include media('<=sm') {
+			display: block;
+		}
+	}
+
+	&__side {
+		color: #fff;
+		font-family: "MB", sans-serif;
+		font-size: 28px;
+		text-transform: uppercase;
+		line-height: 1.5;
+		position: relative;
+		margin-right: 25px;
+		
+		@include media('<=sm') {
+			margin-bottom: 40px;
+			text-align: center;
+			
+			br {
+				display: none;
+			}
+		}
+		
+		@include media('<=xs') {
+			font-size: 24px;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 20px;
+		}
+		
+		@include media('<=xxxs') {
+			font-size: 15px;
+		}
+	
+		&::after {
+			display: block;
+			content: '';
+			height: 120px;
+			width: 100%;
+			max-width: 140px;
+			margin: 25px 0 0 auto;
+			background: url('#{$images-path}ic-flat-smile.png') top right 25px / 53px 53px no-repeat, url('#{$images-path}fro-meet-arr.svg') center left / 90px 90px no-repeat;
+			
+			@include media('<=sm') {
+				display: inline-block;
+				height: 50px;
+				width: 50px;
+				background: url('#{$images-path}ic-flat-smile.png') center / contain no-repeat transparent;
+				margin: 0 0 0 20px;
+				vertical-align: middle;
+			}
+			
+			@include media('<=xxs') {
+				margin: 0 0 0 10px;
+				height: 36px;
+				width: 36px;
+			}
+			
+			@include media('<=xxxs') {
+				margin: 0 0 0 5px;
+				height: 30px;
+				width: 30px;
+			}
+		}
+	}
+
+	&__video {
+		@include aspect-ratio(1.777, 1);
+		border-radius: 30px;
+		min-height: 300px;
+		width: 100%;
+		max-width: 630px;
+		overflow: hidden;
+		z-index: 1;
+		
+		@include media('<=sm') {
+			border-radius: 20px;
+			max-width: 640px;
+			margin: 0 auto;
+		}
+		
+		@include media('<=xxs') {
+			border-radius: 10px;
+		}
+	}
+}

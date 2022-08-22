@@ -1,0 +1,256 @@
+.l-reviews {
+	$self: &;
+	margin-bottom: 110px;
+	position: relative;
+	
+	@include media('<=lg') {
+		margin-bottom: 150px;
+	}
+	
+	@include media('<=xxs') {
+		margin-bottom: 55px;
+	}
+	
+	@include media('<=xxxs') {
+		margin-bottom: 60px;
+	}
+
+	&::before {
+		display: block;
+		content: '';
+		width: 400px;
+		height: 450px;
+		background: url('#{$images-path}litvak-planet-format.png') center / 100% 100% no-repeat transparent;
+		position: absolute;
+		left: -160px;
+		top: -30px;
+	}
+
+	&_che {
+		&::before {
+			background-image: url('#{$images-path}che-planet-1.png');
+		}
+
+		#{$self}__next, #{$self}__prev {
+			background: linear-gradient(145deg, rgba(7, 5, 4, 0.7) 18%, rgba(209, 39, 38, 0.7) 80%), linear-gradient(242deg, #000000 37%, #F8941F 94%);
+		}
+
+		#{$self}__dot {
+			background-color: #773D32;
+			
+			&_active {
+				background-color: #FF8058;
+			}
+		}
+	}
+
+	&_fro {
+
+		@include media('<=xs') {
+			margin-bottom: 100px;
+		}
+
+		&::before {
+			height: 1400px;
+			width: 1900px;
+			background-image: url('#{$images-path}fro-glow-mean.png');
+			background-size: 100% 100%;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			
+			@include media('<=lg') {
+				height: 1200px;
+				width: 1700px;
+				transform: translate(-50%, -55%);
+			}
+		}
+
+		#{$self}__next, #{$self}__prev {
+			background: linear-gradient(137deg, rgba(0, 0, 0, 0) 20%, rgba(237, 31, 255, 0.7) 86%), linear-gradient(208deg, #0D071C 18%, #38ACFF 96%);
+		}
+
+		#{$self}__dot {
+			background-color: #37296A;
+			
+			&_active {
+				background-color: #5541C6;
+			}
+		}
+	}
+
+	&__title {
+		text-align: center;
+		margin-bottom: 70px;
+		
+		@include media('<=lg') {
+			margin-bottom: 55px;
+		}
+		
+		@include media('<=xxs') {
+			margin-bottom: 10px;
+		}
+		
+		@include media('<=xxxs') {
+			margin-bottom: 7px;
+		}
+	}
+
+	&__inner {
+		position: relative;
+				
+		/* @include media('<=xxs') {
+			max-width: 355px;
+			margin: 0 auto;
+		}
+		
+		@include media('<=xxxs') {
+			max-width: 255px;
+		} */
+	}
+
+	&__slider {
+
+	}
+
+	&__item {
+		overflow: hidden;
+		max-height: 575px;
+		border-radius: 25px;
+		
+		img {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+		
+		@include media('<=xxs') {
+			border-radius: 10px;
+		}
+	}
+
+	&__prev, &__next {
+		@extend %reset-button;
+		width: 46px;
+		height: 46px;
+		border-radius: 50%;
+		background: linear-gradient(136deg, rgba(0, 0, 0, 0) 25%, rgba(250, 100, 53, 0.7) 100%), linear-gradient(207deg, #000000 17%, #DE5CFF 96%);
+		position: absolute;
+		top: calc(50% - 55px);
+		z-index: 1;
+		
+		@include media('<=xxs') {
+			top: calc(50% - 22px);
+			width: 18px;
+			height: 18px;
+		}
+		
+		&::before {
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: #fff;
+			font-size: 30px;
+			
+			@include media('<=xxs') {
+				font-size: 11px;
+			}
+		}
+	}
+
+	&__prev {
+		left: -70px;
+
+		@include media('<=sm') {
+			display: none;
+		}
+		
+		/* @include media('<=xxs') {
+			left: -33px;
+		}
+		
+		@include media('<=xxxs') {
+			left: -28px;
+		} */
+
+		&::before {
+			content: '<';
+		}
+	}
+	
+	&__next {
+		right: -70px;
+
+		@include media('<=sm') {
+			display: none;
+		}
+		
+		/* @include media('<=xxs') {
+			right: -33px;
+		}
+		
+		@include media('<=xxxs') {
+			right: -28px;
+		} */
+	
+		&::before {
+			content: '>';
+		}
+	}
+
+	&__navi {
+		min-height: 45px;
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		
+		@include media('<=lg') {
+			min-height: 40px;
+		}
+
+		@include media('<=sm') {
+			display: none;
+		}
+		
+		/* @include media('<=xxs') {
+			min-height: 20px;
+		}
+		
+		@include media('<=xxxs') {
+			min-height: 14px;
+		} */
+	}
+
+	&__dot {
+		display: block;
+		width: 11px;
+		height: 11px;
+		border-radius: 50%;
+		background-color: #F5CCFF;
+		margin: 0 4px;
+		cursor: pointer;
+		
+		@include media('<=lg') {
+			width: 9px;
+			height: 9px;
+		}
+		
+		/* @include media('<=xxs') {
+			margin: 0 2px;
+			width: 4px;
+			height: 4px;
+		}
+		
+		@include media('<=xxxs') {
+			margin: 0 1px;
+			width: 3px;
+			height: 3px;
+		} */
+	
+		&_active {
+			background-color: #DE5CFF;
+		}
+	}
+}

@@ -1,0 +1,163 @@
+.l-self {
+	$self: &;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	margin-bottom: 110px;
+	
+	@include media('<=lg') {
+		margin-bottom: 50px;
+	}
+	
+	@include media('<=xxs') {
+		margin-bottom: 32px;
+	}
+
+	&__baloon {
+		box-sizing: border-box;
+		position: relative;
+		background-color: #e6e6e6;
+		font-family: "MSB", sans-serif;
+		font-size: 31.8px;
+		line-height: 1.5;
+		padding: 30px 38px;
+		max-width: 608px;
+		border-radius: 60px;
+		margin-top: 30px;
+		box-shadow: 13px 12px 61px rgba(145, 134, 204, 0.6);
+		
+		@include media('<=lg') {
+			border-radius: 50px;
+			margin: 30px 20px 0 0;
+			padding: 25px;
+			font-size: 25.5px;
+		}
+		
+		@include media('<=md') {
+			border-radius: 40px;
+			font-size: 23px;
+		}
+		
+		@include media('<=sm') {
+			font-size: 21px;
+		}
+		
+		@include media('<=xs') {
+			border-radius: 30px;
+			font-size: 16px;
+		}
+		
+		@include media('<=xxs') {
+			margin-top: 16px;
+			border-radius: 20px;
+			font-size: 14px;
+			padding: 14px;
+		}
+		
+		@include media('<=xxxs') {
+			margin: 13px 10px 0 -10px;
+			border-radius: 10px;
+			font-size: 10px;
+			padding: 10px;
+		}
+
+		p {
+			position: relative;
+			z-index: 1;
+			margin: 0;
+	
+			&::after {
+				display: inline-block;
+				content: '';
+				width: 39px;
+				height: 39px;
+				background: url('#{$images-path}ic-flat-smile.png') center / auto 100% no-repeat transparent;
+				vertical-align: middle;
+				margin-left: 8px;
+				position: relative;
+				z-index: 1;
+				
+				@include media('<=lg') {
+					width: 32px;
+					height: 32px;
+				}
+				
+				@include media('<=sm') {
+					width: 30px;
+					height: 30px;
+				}
+				
+				@include media('<=xxs') {
+					margin-left: 2px;
+					width: 20px;
+					height: 20px;
+				}
+				
+				@include media('<=xxxs') {
+					width: 13px;
+					height: 13px;
+				}
+			}
+		}
+
+		&::before {
+			display: block;
+			content: '';
+			width: 60px;
+			height: 60px;
+			position: absolute;
+			right: -25px;
+			bottom: 0;
+			background: url('#{$images-path}litvak-self-tail.svg') right bottom / 120% 165% no-repeat transparent;
+			
+			@include media('<=xxs') {
+				background-size: 90% 115%;
+			}
+			
+			@include media('<=xxxs') {
+				width: 40px;
+				height: 40px;
+				background-size: 110% 115%;
+			}
+		}
+	}
+
+	&__image {
+		// @include outline();
+		position: relative;
+		width: 280px;
+		flex-shrink: 0;
+		margin-right: 5px;
+		
+		@include media('<=lg') {
+			width: 250px;
+		}
+		
+		@include media('<=xs') {
+			width: 230px;
+		}
+		
+		@include media('<=xxs') {
+			width: 177px;
+			margin-right: -17px;
+		}
+		
+		@include media('<=xxxs') {
+			width: 130px;
+			margin-right: -11px;
+		}
+
+		&::before {
+			display: block;
+			content: "";
+			width: 650px;
+			height: 580px;
+			background: url('#{$images-path}litvak-glow-self.png') center / auto no-repeat transparent;
+			transform: translate(-50%, 15%);			
+			position: absolute;
+			left: 50%;
+			bottom: 0;
+			z-index: -1;
+		}
+	}
+}

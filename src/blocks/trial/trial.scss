@@ -1,0 +1,167 @@
+.trial {
+	$self: &;
+	color: #fff;
+	margin-bottom: 200px;
+	position: relative;
+	
+	@include media('<=lg') {
+		margin-bottom: 155px;
+	}
+	
+	@include media('<=xxs') {
+		margin-top: -10px;
+		margin-bottom: 140px;
+	}
+	
+	@include media('<=xxxs') {
+		margin-top: 10px;
+		margin-bottom: 125px;
+	}
+
+	&::before {
+		display: block;
+		position: absolute;
+		content: '';
+		width: 735px;
+		height: 575px;
+		background: url('#{$images-path}glow-4.png') center / auto no-repeat transparent;
+		top: 50%;
+		left: 50%;
+		transform: translate(-65%, -50%);
+	}
+
+	&__container {
+		position: relative;
+		z-index: 1;
+	}
+
+	&__title {
+		text-transform: uppercase;
+		font-family: "MBL", sans-serif;
+		line-height: 1.5;
+		font-size: 30px;
+		margin-bottom: 25px;
+		
+		@include media('<=lg') {
+			font-size: 25px;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 27px;
+			margin-bottom: 28px;
+			
+			br { display: none; }
+		}
+		
+		@include media('<=xxxs') {
+			font-size: 20px;
+			margin-bottom: 24px;
+		}
+	}
+	
+	&__note {
+		font-family: "MB", sans-serif;
+		font-size: 20px;
+		line-height: 1.4;
+		margin-bottom: 45px;
+		
+		@include media('<=lg') {
+			font-size: 17px;
+			margin-bottom: 38px;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 19.7px;
+			line-height: 1.2;
+			margin-bottom: 32px;
+		}
+		
+		@include media('<=xxxs') {
+			font-size: 14px;
+			line-height: 1.2;
+			margin-bottom: 22px;
+		}
+	}
+
+	&__content {
+		display: flex;
+		align-items: center;
+		
+		@include media('<=sm') {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__button {
+		@extend %reset-button;
+		display: block;
+		background-color: #fff;
+		font-family: "MBL", sans-serif;
+		font-size: 15px;
+		text-align: center;
+		line-height: 1.4;
+		text-transform: uppercase;
+		color: #000;
+		padding: 16px 28px;
+		border-radius: 100px;
+		box-shadow: 6px 5px 27px rgba(145, 134, 204, 0.85);
+		width: 385px;
+		flex-shrink: 0;
+		margin-right: 30px;
+		
+		span {
+			display: block;
+			text-align: center;
+			background: radial-gradient(100% 110% at 100% 50%, rgba(79, 171, 239, 0.7) 0%, rgba(102, 70, 228, 0.5) 20%, rgba(70, 229, 235, 0.5) 38%, rgba(224, 55, 116, 0.4) 63%, rgba(102, 70, 228, 0.6) 77%, rgba(232, 89, 43, 0.5) 100%), #48258F;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			text-fill-color: transparent;
+		}
+		
+		@include media('<=lg') {
+			font-size: 12px;
+			width: 310px;
+			padding: 14px 20px;
+		}
+		
+		@include media('<=sm') {
+			margin-bottom: 40px;
+			padding: 12px 15px;
+			font-size: 11px;
+			width: 100%;
+			max-width: 295px;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 13.2px;
+			max-width: 350px;
+			padding: 15px 15px;
+			margin: 0 auto 20px;
+		}
+		
+		@include media('<=xxxs') {
+			max-width: 255px;
+			margin-bottom: 15px;
+			padding: 10px 15px;
+			font-size: 9.6px;
+		}
+	}
+
+	&__side {
+		font-size: 16px;
+		font-family: "MR", sans-serif;
+		
+		@include media('<=lg') {
+			font-size: 14px;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 14.4px;
+		}
+
+		@include media('<=xxxs') {
+			font-size: 11px;
+		}
+	}
+}

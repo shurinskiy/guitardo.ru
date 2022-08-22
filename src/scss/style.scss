@@ -1,0 +1,202 @@
+@import "lib/additional.scss"; 
+@include reset(); 
+
+// Include breakpoints badge
+// body { @include screen-media(); }
+
+// Import media-query helper
+@import "../../node_modules/include-media/dist/_include-media.scss";
+
+$breakpoints: (
+	'xxxs': 375px,
+	'iphone': 428px,
+	'xxs': 480px,
+	'xs': 640px,
+	'sm': 780px,
+	'md': 960px,
+	'lg': 1100px,
+	'xlg': 1280px,
+	'xxlg': 1440px,
+	'xxxlg': 1680px,
+	'xxxxlg': 1920px
+);
+
+// Import animate-scss
+@import
+	"../../node_modules/animate-scss/_properties.scss",
+	// "../../node_modules/animate-scss/_attention-seekers/attention-seekers.scss",
+	// "../../node_modules/animate-scss/_bouncing-entrances/bouncing-entrances.scss",
+	// "../../node_modules/animate-scss/_bouncing-exits/bouncing-exits.scss",
+	// "../../node_modules/animate-scss/_fading-entrances/fading-entrances.scss",
+	// "../../node_modules/animate-scss/_fading-exits/fading-exits.scss",
+	// "../../node_modules/animate-scss/_flippers/flippers.scss",
+	// "../../node_modules/animate-scss/_lightspeed/lightspeed.scss",
+	// "../../node_modules/animate-scss/_rotating-entrances/rotating-entrances.scss",
+	// "../../node_modules/animate-scss/_rotating-exits/rotating-exits.scss",
+	// "../../node_modules/animate-scss/_sliding-entrances/sliding-entrances.scss",
+	// "../../node_modules/animate-scss/_sliding-exits/sliding-exits.scss",
+	// "../../node_modules/animate-scss/_specials/specials.scss",
+	// "../../node_modules/animate-scss/_zooming-exits/zooming-exits.scss",
+	"../../node_modules/animate-scss/_zooming-entrances/zooming-entrances.scss";
+
+
+@include font-face("Montserrat-Black", "MBL");
+@include font-face("Montserrat-Bold", "MB");
+@include font-face("Montserrat-ExtraBold", "MEB");
+@include font-face("Montserrat-ExtraLight", "MEL");
+@include font-face("Montserrat-Light", "ML");
+@include font-face("Montserrat-Medium", "MM");
+@include font-face("Montserrat-Regular", "MR");
+@include font-face("Montserrat-SemiBold", "MSB");
+@include font-face("Montserrat-Thin", "MT");
+
+@import "../../node_modules/swiper/swiper";
+
+// Import BEM blocks scss
+@import "../blocks/**/*.scss";
+
+body, html {
+	box-sizing: border-box;
+	font-size: #{$basesize}px;
+	line-height: 1.2;
+	font-family: "MM", sans-serif;
+	min-height: 100vh;
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+body {
+	background: linear-gradient(180deg, #0D0D0D 0%, #1A101B 80%);
+	
+	&.home {
+		background: none;
+		background-color: #1A101B;
+	}
+
+	&.decor-1 {
+		background: url('#{$images-path}page-planet-1.png') right 7% top 130px no-repeat, url('#{$images-path}page-planet-2.png') right 25% top 740px no-repeat, url('#{$images-path}page-glow-1.png') left -450px top -450px no-repeat, linear-gradient(to bottom, #0D0D0D 0%, #1A101B 80%);
+	}
+
+	&.decor-2 {
+		background: url('#{$images-path}page-planet-1.png') right 19% top 130px no-repeat, url('#{$images-path}page-planet-2.png') left 23% top 20px no-repeat, url('#{$images-path}page-planet-3.png') right 25% top 380px no-repeat, url('#{$images-path}page-glow-7.png') center top 0px no-repeat, url('#{$images-path}page-glow-1.png') left -450px top -450px no-repeat, linear-gradient(to bottom, #0D0D0D 0%, #1A101B 80%);
+		
+		@include media('<=xxlg') {
+			background: url('#{$images-path}page-planet-1.png') right 19% top 130px no-repeat, url('#{$images-path}page-planet-2.png') left 10% top 20px no-repeat, url('#{$images-path}page-planet-3.png') right 25% top 380px no-repeat, url('#{$images-path}page-glow-7.png') center top 0px no-repeat, url('#{$images-path}page-glow-1.png') left -450px top -450px no-repeat, linear-gradient(to bottom, #0D0D0D 0%, #1A101B 80%);
+		}
+		
+		@include media('<=lg') {
+			background: url('#{$images-path}page-planet-1.png') right 19% top 130px no-repeat, url('#{$images-path}page-planet-2.png') left 7% top 20px / 210px no-repeat, url('#{$images-path}page-planet-3.png') right 25% top 380px no-repeat, url('#{$images-path}page-glow-7.png') center top 0px no-repeat, url('#{$images-path}page-glow-1.png') left -450px top -450px no-repeat, linear-gradient(to bottom, #0D0D0D 0%, #1A101B 80%);
+		}
+
+		@include media('<=xs') {
+			background: url('#{$images-path}page-glow-1.png') right -150px top 50px / 650px no-repeat, url('#{$images-path}page-planet-2.png') right -50px top 500px no-repeat, linear-gradient(to bottom, #0D0D0D 0%, #1A101B 80%);
+		}
+	}
+
+	&.decor-3 {
+		background: url('#{$images-path}page-glow-5.png') center top 50px no-repeat, linear-gradient(to bottom, #0D0D0D 0%, #1A101B 80%);
+	}
+
+	&.decor-4 {
+		background: url('#{$images-path}page-glow-8.png') center top -100px no-repeat, linear-gradient(to bottom, #0D0D0D 0%, #1A101B 80%);
+	}
+
+	&.decor-5 {
+		background: url('#{$images-path}course-planet-1.png') left 10% top 160px no-repeat, url('#{$images-path}course-planet-2.png') left 57% top 650px no-repeat, url('#{$images-path}course-glow-1.png') right 40px top -40px no-repeat, linear-gradient(to bottom, #0D0D0D 0%, #1A101B 80%);
+		
+		@include media('<=xxlg') {
+			background: url('#{$images-path}course-planet-1.png') left 4% top 160px / 145px no-repeat, url('#{$images-path}course-planet-2.png') left 57% top 530px no-repeat, url('#{$images-path}course-glow-1.png') right 40px top -40px no-repeat, linear-gradient(to bottom, #0D0D0D 0%, #1A101B 80%);
+		}
+		
+		@include media('<=lg') {
+			background: url('#{$images-path}course-planet-1.png') left -15px top 130px / 100px no-repeat, url('#{$images-path}course-planet-2.png') left 60% top 490px / 60px no-repeat, url('#{$images-path}course-glow-1.png') right -250px top -40px no-repeat, linear-gradient(to bottom, #0D0D0D 0%, #1A101B 80%);
+		}
+		
+		@include media('<=xxs') {
+			background: url('#{$images-path}course-planet-1.png') left top 960px / 120px no-repeat, url('#{$images-path}course-planet-2.png') left 83% top 660px / 60px no-repeat, url('#{$images-path}course-glow-1.png') right -250px top 340px no-repeat, linear-gradient(to bottom, #0D0D0D 0%, #1A101B 80%);
+		}
+		
+		@include media('<=xxxs') {
+			background: url('#{$images-path}course-planet-1.png') right 5px top 135px / 140px no-repeat, url('#{$images-path}course-planet-1.png') left 0 top 800px / 110px no-repeat, url('#{$images-path}course-planet-2.png') left 90% top 570px / 45px no-repeat, url('#{$images-path}course-glow-1.png') right -230px top 360px / 750px no-repeat, linear-gradient(to bottom, #0D0D0D 0%, #1A101B 80%);
+		}
+	}
+
+	&.decor-6 {
+		background: url('#{$images-path}course-planet-1.png') left 10% top 160px no-repeat, url('#{$images-path}course-planet-2.png') left 50% top 550px no-repeat, url('#{$images-path}course-glow-1.png') right 40px top -40px no-repeat, linear-gradient(to bottom, #0D0D0D 0%, #1A101B 80%);
+		
+		@include media('<=xxlg') {
+			background: url('#{$images-path}course-planet-1.png') left 4% top 160px / 145px no-repeat, url('#{$images-path}course-planet-2.png') left 48% top 480px no-repeat, url('#{$images-path}course-glow-1.png') right -180px top -40px no-repeat, linear-gradient(to bottom, #0D0D0D 0%, #1A101B 80%);
+		}
+		
+		@include media('<=lg') {
+			background: url('#{$images-path}course-planet-1.png') left -15px top 130px / 100px no-repeat, url('#{$images-path}course-planet-2.png') left 55% top 440px / 50px no-repeat, url('#{$images-path}course-glow-1.png') right -300px top -100px no-repeat, linear-gradient(to bottom, #0D0D0D 0%, #1A101B 80%);
+		}
+		
+		@include media('<=sm') {
+			background: url('#{$images-path}course-planet-1.png') left -15px top 130px / 100px no-repeat, url('#{$images-path}course-planet-2.png') left 55% top 440px / 50px no-repeat, url('#{$images-path}course-glow-1.png') right -450px top -150px no-repeat, linear-gradient(to bottom, #0D0D0D 0%, #1A101B 80%);
+		}
+		
+		@include media('<=xs') {
+			background: url('#{$images-path}course-planet-1.png') left -15px top 130px / 100px no-repeat, url('#{$images-path}course-planet-2.png') left 10% top 770px / 50px no-repeat, url('#{$images-path}course-glow-1.png') left 40% top 250px no-repeat, linear-gradient(to bottom, #0D0D0D 0%, #1A101B 80%);
+		}
+	}
+
+	&.decor-7 {
+		background: url('#{$images-path}guitar-planet-1.png') left 10% top 160px no-repeat, url('#{$images-path}guitar-planet-2.png') left 50% top 550px / 62px 65px no-repeat, url('#{$images-path}guitar-glow-hero.png') right 40px top -40px no-repeat, linear-gradient(to bottom, #0D0D0D 0%, #1A101B 80%);
+		
+		@include media('<=xxlg') {
+			background: url('#{$images-path}guitar-planet-1.png') left 3% top 160px no-repeat, url('#{$images-path}guitar-planet-2.png') left 56% top 535px / 62px 65px no-repeat, url('#{$images-path}guitar-glow-hero.png') right 40px top -20px no-repeat, linear-gradient(to bottom, #0D0D0D 0%, #1A101B 80%);
+		}
+		
+		@include media('<=xs') {
+			background: url('#{$images-path}guitar-planet-1.png') left 3% top 160px no-repeat, url('#{$images-path}guitar-planet-2.png') left 85% top 535px / 62px 65px no-repeat, url('#{$images-path}guitar-glow-hero.png') right 40px top -20px no-repeat, linear-gradient(to bottom, #0D0D0D 0%, #1A101B 80%);
+		}
+		
+		@include media('<=xxs') {
+			background: url('#{$images-path}guitar-planet-2.png') left 1% top 875px / 50px 53px no-repeat, url('#{$images-path}guitar-glow-hero.png') right 40px top -20px no-repeat, linear-gradient(to bottom, #0D0D0D 0%, #1A101B 80%);
+		}
+	}
+
+	&.decor-8 {
+		background: url('#{$images-path}vocal-planet-1.png') left 10% top 160px no-repeat, url('#{$images-path}vocal-planet-2.png') left 50% top 550px / 62px 65px no-repeat, url('#{$images-path}vocal-glow-hero.png') right 40px top -40px no-repeat, linear-gradient(to bottom, #0D0D0D 0%, #1A101B 80%);
+		
+		@include media('<=xxlg') {
+			background: url('#{$images-path}vocal-planet-1.png') left 3% top 160px no-repeat, url('#{$images-path}vocal-planet-2.png') left 56% top 535px / 62px 65px no-repeat, url('#{$images-path}vocal-glow-hero.png') right 40px top -20px no-repeat, linear-gradient(to bottom, #0D0D0D 0%, #1A101B 80%);
+		}
+		
+		@include media('<=xs') {
+			background: url('#{$images-path}vocal-planet-1.png') left 3% top 160px no-repeat, url('#{$images-path}vocal-planet-2.png') left 85% top 535px / 62px 65px no-repeat, url('#{$images-path}vocal-glow-hero.png') center top 330px no-repeat, linear-gradient(to bottom, #0D0D0D 0%, #1A101B 80%);
+		}
+		
+		@include media('<=xxs') {
+			background: url('#{$images-path}vocal-planet-2.png') left 1% top 730px / 52px 53px no-repeat, url('#{$images-path}vocal-glow-hero.png') center top 250px no-repeat, linear-gradient(to bottom, #0D0D0D 0%, #1A101B 80%);
+		}
+		
+		@include media('<=xxxs') {
+			background: url('#{$images-path}vocal-planet-2.png') left 1% top 600px / 45px 46px no-repeat, url('#{$images-path}vocal-glow-hero.png') center top 250px no-repeat, linear-gradient(to bottom, #0D0D0D 0%, #1A101B 80%);
+		}
+	}
+
+	&.decor-9 {
+		background: url('#{$images-path}fro-glow-hero.png') top right 23% / 860px 960px no-repeat, url('#{$images-path}fro-glow-mean.png') top 380px left 5% / auto no-repeat, linear-gradient(to bottom, #0D0D0D 0%, #1A101B 80%);
+		
+		@include media('<=lg') {
+			background: url('#{$images-path}fro-glow-hero.png') top -50px right -130px / 860px 960px no-repeat, url('#{$images-path}fro-glow-mean.png') top 380px left 5% / auto no-repeat, linear-gradient(to bottom, #0D0D0D 0%, #1A101B 80%);
+		}
+
+		@include media('<=xs') {
+			background: url('#{$images-path}fro-glow-hero.png') top 270px center / 660px 760px no-repeat, url('#{$images-path}fro-glow-mean.png') top 700px center / auto no-repeat, linear-gradient(to bottom, #0D0D0D 0%, #1A101B 80%);
+		}
+	}
+}
+
+// .main { flex: 1 0 auto; }
+
+.footer { 
+	flex: 0 0 auto; 
+	margin-top: auto; 
+}
+
+p { margin-bottom: 10px; }
+strong { font-weight: bold; }
+em { font-style: italic; }

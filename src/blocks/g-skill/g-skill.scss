@@ -1,0 +1,177 @@
+.g-skill {
+	$self: &;
+	position: relative;
+	margin-bottom: 100px;
+
+	&::before {
+		display: block;
+		content: '';
+		position: absolute;
+		width: 1320px;
+		height: 1040px;
+		background: url('#{$images-path}che-glow-skill.png') center / contain no-repeat transparent;
+		top: -350px;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: -1;
+	}
+
+	&__title {
+		max-width: 650px;
+		margin: 0 auto 25px;
+		text-align: center;
+	}
+
+	&__subtitle {
+		display: block;
+		color: #fff;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 26px;
+		font-family: "MEB", sans-serif;
+		margin-bottom: 25px;
+		
+		@include media('<=lg') {
+			font-size: 21px;
+		}
+		
+		@include media('<=xxxs') {
+			font-size: 16px;
+		}
+	}
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -10px 10px;
+		
+		@include media('<=xxxs') {
+			margin: 0 -7px 10px;
+		}
+	}
+	
+	&__item {
+		box-sizing: border-box;
+		display: flex;
+		align-items: center;
+		border: 3px solid transparent;
+		background: linear-gradient(#160F16 0 0) padding-box,
+		linear-gradient(90deg, #FFBF75 4%, #CB3737 100%) border-box;
+		border-radius: 20px;
+		margin: 0 10px 25px;
+		padding: 20px;
+		color: #fff;
+		font-family: "MR", sans-serif;
+		font-size: 20px;
+		line-height: 1.5;
+		width: calc(100% / 2 - 20px);
+		
+		@include media('<=lg') {
+			border-width: 2px;
+			font-size: 16px;
+		}
+		
+		@include media('<=xs') {
+			border-radius: 15px;
+			font-size: 15px;
+		}
+		
+		@include media('<=xxs') {
+			padding: 12px;
+		}
+		
+		@include media('<=xxxs') {
+			padding: 15px;
+			margin: 0 7px 20px;
+			border-radius: 12px;
+			width: calc(100% / 2 - 14px);
+			font-size: 10px;
+		}
+	
+		&:last-child {
+			display: block;
+			width: calc(100% - 20px);
+			
+			@include media('<=xxxs') {
+				width: calc(100% - 14px);
+			}
+		}
+	}
+
+	&__list {
+		display: flex;
+		padding-top: 8px;
+			
+		@include media('<=sm') {
+			flex-wrap: wrap;
+		}
+
+		li {
+			position: relative;
+			margin-right: 25px;
+			padding-left: 30px;
+			font-family: "ML", sans-serif;
+			white-space: nowrap;
+			
+			@include media('<=lg') {
+				padding-left: 25px;
+			}
+			
+			@include media('<=sm') {
+				white-space: normal;
+			}
+			
+			@include media('<=xxxs') {
+				padding-left: 15px;
+			}
+
+			&:last-child {
+				white-space: normal;
+
+				@include media('<=sm') {
+					width: 100%;
+				}
+			}
+
+			&::before {
+				display: block;
+				content: '';
+				width: 18px;
+				height: 18px;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-image: url('#{$images-path}ic-star.png');
+				background-size: contain;
+				position: absolute;
+				left: 0;
+				top: 6px;
+				
+				@include media('<=lg') {
+					top: 4px;
+				}
+				
+				@include media('<=sm') {
+					width: 15px;
+					height: 15px;
+				}
+				
+				@include media('<=xs') {
+					width: 13px;
+					height: 13px;
+				}
+				
+				@include media('<=xxxs') {
+					top: 2px;
+					width: 10px;
+					height: 10px;
+				}
+			}
+		}
+	}
+
+	&__button {
+		position: relative;
+		z-index: 1;
+		margin: 0 auto;
+	}
+}

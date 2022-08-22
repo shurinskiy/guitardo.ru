@@ -1,0 +1,444 @@
+.c-answers {
+	$self: &;
+	margin-bottom: 145px;
+	position: relative;
+	
+	@include media('<=lg') {
+		margin-bottom: 125px;
+	}
+	
+	@include media('<=xxs') {
+		margin-bottom: 142px;
+	}
+	
+	@include media('<=xxxs') {
+		margin-bottom: 107px;
+	}
+
+	&_guitar {
+		margin-bottom: 115px;
+		
+		@include media('<=lg') {
+			margin-bottom: 85px;
+		}
+		
+		@include media('<=xxs') {
+			margin-bottom: 70px;
+		}
+		
+		@include media('<=xxxs') {
+			margin-bottom: 95px;
+		}
+	}
+
+	&_litvak {
+		margin-bottom: 125px;
+		
+		@include media('<=lg') {
+			margin-bottom: 185px;
+		}
+		
+		@include media('<=xxs') {
+			margin-bottom: 105px;
+		}
+		
+		@include media('<=xxxs') {
+			margin-bottom: 62px;
+		}
+
+		&::before {
+			display: block;
+			content: '';
+			width: 420px;
+			height: 400px;
+			background: url('#{$images-path}litvak-planet-format.png') center / 100% 100% no-repeat transparent;
+			position: absolute;
+			right: -80px;
+			top: 10px;
+		}
+	
+		&::after {
+			display: block;
+			content: '';
+			width: 230px;
+			height: 230px;
+			background: url('#{$images-path}litvak-planet-format.png') center / 100% 100% no-repeat transparent;
+			position: absolute;
+			left: -280px;
+			bottom: 20px;
+		}
+		
+		#{$self}__title {
+			text-align: center;
+			margin-bottom: 75px;
+			
+			@include media('<=lg') {
+				margin-bottom: 60px;
+			}
+			
+			@include media('<=xxs') {
+				margin-bottom: 45px;
+			}
+			
+			@include media('<=xxxs') {
+				margin-bottom: 33px;
+			}
+		}
+
+		#{$self}__items {
+			position: relative;
+			z-index: 1;			
+		}
+
+		#{$self}__block {
+		
+			@include media('<=xxs') {
+				font-size: 11px;
+				padding-bottom: 18px;
+			}
+		}
+
+		#{$self}__head {
+			padding: 34px 60px 33px 0;
+			
+			@include media('<=lg') {
+				padding: 27px 60px 27px 0;
+				background-size: 25px 25px;
+			}
+			
+			@include media('<=xxs') {
+				font-size: 14px;
+				min-height: 40px;
+				padding: 10px 60px 4px 0;
+				background-size: 14px 14px;
+				background-position: center right;
+			}
+			
+			@include media('<=xxxs') {
+				font-size: 10px;
+				padding: 0 30px 0 0;
+				background-size: 11px 11px;
+				min-height: 35px;
+			}
+		
+			&.opened {
+				background-size: 27px 27px;
+				background-position: center right 22px;
+				background-image: url('#{$images-path}icons-sprite.svg#icon-close-filled-view-white');
+			
+				@include media('<=lg') {
+					background-size: 21px 21px;
+				}
+		
+				@include media('<=xxs') {
+					background-size: 13px 13px;
+					background-position: center right;
+				}
+						
+				@include media('<=xxxs') {
+					background-size: 11px 11px;
+				}
+			}
+		}
+	}
+
+	&_che {
+		margin-bottom: 125px;
+		
+		@include media('<=lg') {
+			margin-bottom: 185px;
+		}
+		
+		@include media('<=xxs') {
+			margin-bottom: 105px;
+		}
+		
+		@include media('<=xxxs') {
+			margin-bottom: 62px;
+		}
+
+		&::before {
+			display: block;
+			content: '';
+			width: 420px;
+			height: 400px;
+			background: url('#{$images-path}che-planet-1.png') center / 100% 100% no-repeat transparent;
+			position: absolute;
+			right: -180px;
+			top: 10px;
+		}
+	
+		&::after {
+			display: block;
+			content: '';
+			width: 230px;
+			height: 230px;
+			background: url('#{$images-path}che-planet-1.png') center / 100% 100% no-repeat transparent;
+			position: absolute;
+			left: -250px;
+			bottom: -150px;
+		}
+		
+		#{$self}__title {
+			text-align: center;
+			margin-bottom: 75px;
+			
+			@include media('<=lg') {
+				margin-bottom: 60px;
+			}
+			
+			@include media('<=xxs') {
+				margin-bottom: 45px;
+			}
+			
+			@include media('<=xxxs') {
+				margin-bottom: 33px;
+			}
+		}
+
+		#{$self}__items {
+			position: relative;
+			z-index: 1;			
+		}
+
+		#{$self}__block {
+		
+			@include media('<=xxs') {
+				font-size: 11px;
+				padding-bottom: 18px;
+			}
+		}
+
+		#{$self}__head {
+			padding: 34px 60px 33px 0;
+			
+			@include media('<=lg') {
+				padding: 27px 60px 27px 0;
+				background-size: 25px 25px;
+			}
+			
+			@include media('<=xxs') {
+				font-size: 14px;
+				min-height: 40px;
+				padding: 10px 60px 10px 0;
+				background-size: 14px 14px;
+				background-position: center right;
+			}
+			
+			@include media('<=xxxs') {
+				font-size: 10px;
+				padding: 0 30px 0 0;
+				background-size: 11px 11px;
+				min-height: 35px;
+			}
+		
+			&.opened {
+				background-size: 27px 27px;
+				background-position: center right 22px;
+				background-image: url('#{$images-path}icons-sprite.svg#icon-close-filled-view-white');
+			
+				@include media('<=lg') {
+					background-size: 21px 21px;
+				}
+		
+				@include media('<=xxs') {
+					background-size: 13px 13px;
+					background-position: center right;
+				}
+						
+				@include media('<=xxxs') {
+					background-size: 11px 11px;
+				}
+			}
+		}
+	}
+
+	&_fro {
+		margin-bottom: 150px;
+		
+		@include media('<=lg') {
+			margin-bottom: 185px;
+		}
+		
+		@include media('<=xxs') {
+			margin-bottom: 105px;
+		}
+		
+		@include media('<=xxxs') {
+			margin-bottom: 62px;
+		}
+		
+		#{$self}__title {
+			text-align: center;
+			margin-bottom: 75px;
+			
+			@include media('<=lg') {
+				margin-bottom: 60px;
+			}
+			
+			@include media('<=xxs') {
+				margin-bottom: 45px;
+			}
+			
+			@include media('<=xxxs') {
+				margin-bottom: 33px;
+			}
+		}
+
+		#{$self}__items {
+			position: relative;
+			z-index: 1;			
+		}
+
+		#{$self}__block {
+		
+			@include media('<=xxs') {
+				font-size: 11px;
+				padding-bottom: 18px;
+			}
+		}
+
+		#{$self}__head {
+			padding: 34px 60px 33px 0;
+			
+			@include media('<=lg') {
+				padding: 27px 60px 27px 0;
+				background-size: 25px 25px;
+			}
+			
+			@include media('<=xxs') {
+				font-size: 14px;
+				min-height: 40px;
+				padding: 10px 60px 10px 0;
+				background-size: 14px 14px;
+				background-position: center right;
+			}
+			
+			@include media('<=xxxs') {
+				font-size: 10px;
+				padding: 0 30px 0 0;
+				background-size: 11px 11px;
+				min-height: 35px;
+			}
+		
+			&.opened {
+				background-size: 27px 27px;
+				background-position: center right 22px;
+				background-image: url('#{$images-path}icons-sprite.svg#icon-close-filled-view-white');
+			
+				@include media('<=lg') {
+					background-size: 21px 21px;
+				}
+		
+				@include media('<=xxs') {
+					background-size: 13px 13px;
+					background-position: center right;
+				}
+						
+				@include media('<=xxxs') {
+					background-size: 11px 11px;
+				}
+			}
+		}
+	}
+
+	&__inner {
+
+	}
+
+	&__title {
+		margin-bottom: 30px;
+		
+		@include media('<=xxlg') {
+			margin-bottom: 28px;
+		}
+		
+		@include media('<=lg') {
+			margin-bottom: 20px;
+		}
+		
+		@include media('<=xxs') {
+			margin-bottom: 41px;
+		}
+		
+		@include media('<=xxxs') {
+			margin-bottom: 27px;
+		}
+	}
+
+	&__items {
+		border-top: 1px solid #fff;
+	}
+
+	&__item {
+		border-bottom: 1px solid #fff;
+	}
+
+	&__head {
+		box-sizing: border-box;
+		font-family: "MSB", sans-serif;
+		font-size: 22px;
+		color: #fff;
+		padding: 43px 60px 43px 0;
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		background: url('#{$images-path}icons-sprite.svg#icon-plus-view-white') center right 20px / 32px 32px no-repeat transparent;
+		
+		@include media('<=xxlg') {
+			// padding: 45px 60px 44px 0;
+			// font-size: 20px;
+		}
+		
+		@include media('<=lg') {
+			font-size: 18px;
+			padding: 35px 60px 35px 0;
+		}
+		
+		@include media('<=sm') {
+			background-size: 30px 30px;
+		}
+		
+		@include media('<=xxs') {
+			background-position: center right;
+			padding: 25px 60px 25px 0;
+			min-height: 107px;
+			line-height: 1.5;
+		}
+		
+		@include media('<=xxxs') {
+			padding: 14px 40px 14px 0;
+			font-size: 14.2px;
+			background-size: 24px 24px;
+			background-position: center right;
+			min-height: 78px;
+		}
+
+		&.opened {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-minus-view-white');
+		}
+	}
+	
+	&__block {
+		font-family: "ML", sans-serif;
+		font-size: 20px;
+		line-height: 1.5;
+		color: #fff;
+		display: none;
+		padding-bottom: 40px;
+		
+		@include media('<=xxlg') {
+			font-size: 20px;
+		}
+		
+		@include media('<=lg') {
+			font-size: 18px;
+		}
+		
+		ul > li {
+			list-style: decimal;
+			padding-left: 10px;
+			margin-left: 22px;
+		}
+	}
+}

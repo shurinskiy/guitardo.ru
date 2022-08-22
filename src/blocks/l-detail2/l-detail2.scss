@@ -1,0 +1,91 @@
+.l-detail2 {
+	$self: &;
+	margin-bottom: 75px;
+	
+	@include media('<=lg') {
+		margin-bottom: 55px;
+	}
+	
+	@include media('<=xxs') {
+		margin-bottom: 25px;
+	}
+	
+	@include media('<=xxxs') {
+		margin-bottom: 20px;
+	}
+
+	&__title {
+		max-width: 600px;
+		text-align: center;
+		margin: 0 auto 32px;
+		
+		@include media('<=lg') {
+			max-width: 500px;
+			margin: 0 auto 30px;
+		}
+		
+		@include media('<=xxs') {
+			margin: 0 auto 42px;
+		}
+		
+		@include media('<=xxxs') {
+			margin: 0 -5px 35px;
+		}
+	}
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -14px;
+		
+		@include media('<=sm') {
+			margin: 0 -10px;
+		}
+		
+		@include media('<=xxxs') {
+
+		}
+	}
+
+	&__item {
+		box-sizing: border-box;
+		border: 1px solid transparent;
+		background: linear-gradient(#160F16 0 0) padding-box,
+		linear-gradient(207deg, #FE8160, #DE5CFF 100%) border-box;
+		border-radius: 100px;
+		margin: 0 14px 28px;
+		padding: 14px 20px;
+		font-family: "MM", sans-serif;
+		font-size: 24px;
+		color: #fff;
+		flex-grow: 1;
+		text-align: center;
+		
+		@include media('<=lg') {
+			margin: 0 14px 23px;
+			padding: 11px 17px;
+			font-size: 20px;
+		}
+		
+		@include media('<=sm') {
+			margin: 0 10px 20px;
+			padding: 10px 15px;
+			font-size: 17px;
+		}
+		
+		@include media('<=xxs') {
+			margin: 0 10px 16px;
+			padding: 13px 15px;
+		}
+		
+		@include media('<=xxxs') {
+			margin: 0 10px 12px;
+			font-size: 12px;
+			padding: 10px;
+		}
+		
+		&_wide {
+			width: 100%;
+		}
+	}
+}

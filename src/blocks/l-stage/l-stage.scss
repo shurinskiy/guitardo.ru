@@ -1,0 +1,160 @@
+.l-stage {
+	$self: &;
+	padding-bottom: 70px;
+	margin-bottom: 140px;
+	position: relative;
+	
+	@include media('<=lg') {
+		margin-bottom: 100px;
+	}
+	
+	@include media('<=xxs') {
+		margin-bottom: 80px;
+	}
+	
+	@include media('<=xxxs') {
+		margin-bottom: 40px;
+	}
+
+	&::before {
+		display: block;
+		content: '';
+		position: absolute;
+		width: 1890px;
+		height: 1300px;
+		background: url('#{$images-path}litvak-glow-stage.png') center / 1370px no-repeat transparent;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -40%);
+	}
+
+	&__title {
+		text-align: center;
+		margin-bottom: 50px;
+		
+		@include media('<=xxs') {
+			margin-bottom: 40px;
+		}
+		
+		@include media('<=xxxs') {
+			margin-bottom: 36px;
+		}
+	}
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		counter-reset: stage_ctr;
+			
+		@include media('<=xxxs') {
+			margin: 0 -12px;
+		}
+	}
+
+	&__item {
+		box-sizing: border-box;
+		@include aspect-ratio(1, 1);
+		border: 5px solid transparent;
+		background: linear-gradient(#0F0D10 0 0) padding-box, linear-gradient(270deg, #FE8160 17%, #DE5CFF 100%) border-box;
+		box-shadow: 8px 3px 15px rgba(245, 204, 255, 0.45);
+		border-radius: 50%;
+		width: calc(100% / 3 + 22px);
+		transform: translateX(-22px);
+		margin: 0 -44px -70px 0;
+		color: #fff;
+		
+		@include media('<=lg') {
+			width: calc(100% / 3 + 20px);
+			transform: translateX(-20px);
+			margin: 0 -40px -55px 0;
+		}
+		
+		@include media('<=sm') {
+			margin: 0 -40px -50px 0;
+		}
+		
+		@include media('<=xs') {
+			border: 3px solid transparent;
+		}
+		
+		@include media('<=xxs') {
+			margin: 0 -15px -30px 0;
+			transform: translateX(-8px);
+			width: calc(100% / 3 + 10px);
+			border: 2px solid transparent;
+		}
+			
+		@include media('<=xxxs') {
+			margin: 0 -15px -26px 0;
+		}
+
+		&:nth-child(1) { z-index: 1; }
+		&:nth-child(2) { z-index: 3; }
+		&:nth-child(3) { z-index: 4; }
+		&:nth-child(4) { z-index: 2; }
+		&:nth-child(5) { z-index: 5; }
+	}
+	
+	&__wrapper {
+		padding: 40px;
+		font-size: 25px;
+		font-family: "MSB", sans-serif;
+		
+		@include media('<=lg') {
+			font-family: "MM", sans-serif;
+			font-size: 20px;
+			padding: 30px;
+		}
+		
+		@include media('<=md') {
+			font-size: 18px;
+		}
+		
+		@include media('<=sm') {
+			font-size: 16px;
+		}
+		
+		@include media('<=xs') {
+			font-size: 13px;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 11px;
+			padding: 15px;
+		}
+		
+		@include media('<=xxxs') {
+			font-size: 8px;
+			padding: 14px;
+		}
+
+		&::before {
+			display: block;
+			counter-increment: stage_ctr;
+			content: counter(stage_ctr);
+			font-family: "MEB", sans-serif;
+			font-size: 65px;
+			line-height: 1;
+			margin-bottom: 20px;
+			text-align: center;
+			
+			@include media('<=lg') {
+				font-size: 52.3px;
+			}
+			
+			@include media('<=xs') {
+				font-size: 40px;
+			}
+			
+			@include media('<=xxs') {
+				margin-bottom: 10px;
+				font-size: 27px;
+			}
+			
+			@include media('<=xxxs') {
+				font-size: 20px;
+			}
+		}
+	}
+}

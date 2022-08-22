@@ -1,0 +1,237 @@
+.footer {
+	$self: &;
+	color: #fff;
+	padding: 60px 0 90px;
+	background-color: #160F17;
+	
+	@include media('<=lg') {
+		padding: 45px 0 90px;
+	}
+	
+	@include media('<=xxs') {
+		padding: 75px 0 90px;
+	}
+	
+	@include media('<=xxxs') {
+		padding: 45px 0 90px;
+	}
+
+	&__container {
+		max-width: 460px;
+		text-align: center;
+	}
+
+	&__logo {
+		display: inline-block;
+		max-width: 147px;
+		margin: 0 0 8px -20px;
+		
+		@include media('<=lg') {
+			max-width: 105px;
+		}
+		
+		@include media('<=xxs') {
+			max-width: 200px;
+			margin-bottom: 12px;
+		}
+		
+		@include media('<=xxxs') {
+			max-width: 147px;
+		}
+	}
+
+	&__phone {
+		font-family: "MSB", sans-serif;
+		text-decoration: none;
+		font-size: 15px;
+		color: inherit;
+		display: block;
+		text-align: center;
+		margin: -6px 0 10px 0;
+		
+		@include media('<=lg') {
+			font-size: 12px;
+			margin: -5px 0 5px 0;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 19px;
+		}
+		
+		@include media('<=xxxs') {
+			margin: 0 0 5px 0;
+			font-size: 14px;
+		}
+	}
+	
+	&__payments {
+
+	}
+	
+	&__payments-title {
+		font-family: "MSB", sans-serif;
+		margin-bottom: 10px;
+		font-size: 20px;
+		
+		@include media('<=lg') {
+			font-size: 14px;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 20px;
+			margin-bottom: 22px;
+		}
+		
+		@include media('<=xxxs') {
+			font-size: 14px;
+			margin-bottom: 14px;
+		}
+	}
+
+	&__payments-cards {
+		margin-bottom: 20px;
+		text-align: center;
+		
+		@include media('<=lg') {
+			margin-bottom: 10px;
+		}
+		
+		@include media('<=xxs') {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			max-width: 230px;
+			margin: 0 auto 15px;
+		}
+		
+		@include media('<=xxxs') {
+			max-width: 190px;
+			margin-bottom: 4px;
+		}
+	}
+
+	&__card {
+		display: inline-block;
+		max-width: 82px;
+
+		@include media('<=lg') {
+			max-width: 60px;
+		}
+	
+		@include media('<=xxs') {
+			width: calc(50% - 10px);
+			max-width: 100px;
+			margin: 0 5px 5px;
+		}
+	
+		@include media('<=xxxs') {
+			max-width: 80px;
+		}
+	}
+
+	&__appeal {
+		font-family: "MB", sans-serif;
+		font-size: 15px;
+		margin-bottom: 11px;
+		
+		@include media('<=lg') {
+			font-size: 12px;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 18.4px;
+			margin-bottom: 25px;
+		}
+		
+		@include media('<=xxxs') {
+			margin-bottom: 15px;
+			font-size: 14px;
+		}
+	}
+	
+	&__socials {
+		margin-bottom: 10px;
+		
+		@include media('<=xxs') {
+			display: flex;
+			justify-content: space-between;
+			max-width: 270px;
+			margin: 0 auto 22px;
+		}
+		
+		@include media('<=xxxs') {
+			margin-bottom: 20px;
+			max-width: 140px;
+		}
+	}
+
+	&__social {
+		display: inline-block;
+		width: 40px;
+		height: 40px;
+		margin: 0 7px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		
+		@include media('<=lg') {
+			width: 30px;
+			height: 30px;
+		}
+		
+		@include media('<=xxs') {
+			width: 43px;
+			height: 43px;
+		}
+		
+		@include media('<=xxxs') {
+			width: 34px;
+			height: 34px;
+		}
+
+		&_tg {
+			background-image: url('#{$images-path}ic-soc-tg.png');
+		}
+		
+		&_yt {
+			background-image: url('#{$images-path}ic-soc-yout.png');
+		}
+		
+		&_vk {
+			background-image: url('#{$images-path}ic-soc-vk.png');
+		}
+	}
+
+	&__bottom {
+		font-size: 13px;
+		line-height: 2.0;
+		
+		@include media('<=lg') {
+			font-size: 11px;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 14.7px;
+			display: flex;
+			flex-flow: column nowrap;
+
+			br { display: none; }
+		}
+		
+		@include media('<=xxxs') {
+			font-size: 11.2px;
+		}
+
+		a {
+			display: inline-block;
+			color: inherit;
+			margin-right: 5px;
+		
+			@include media('<=xxs') {
+				&:nth-child(2) {
+					order: 1;
+				}
+			}
+		}
+	}
+}
