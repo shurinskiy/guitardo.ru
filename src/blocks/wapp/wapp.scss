@@ -1,11 +1,10 @@
 .wapp {
 	$self: &;
-	display: none;
 	color: #fff;
-	margin-bottom: 45px;
+	margin-bottom: 150px;
 	
 	@include media('<=xxs') {
-		display: block;
+		margin-bottom: 45px;
 	}
 
 	&__container {
@@ -14,10 +13,14 @@
 
 	&__title {
 		font-family: "MB", sans-serif;
-		font-size: 26.2px;
+		font-size: 30px;
 		text-transform: uppercase;
 		margin-bottom: 15px;
 		
+		@include media('<=lg') {
+			font-size: 25px;
+		}
+			
 		@include media('<=xxxs') {
 			font-size: 20px;
 			margin-bottom: 11px;
