@@ -1,0 +1,318 @@
+.drumb {
+	$self: &;
+
+	@include media('<=xs') {
+		width: 100%;
+		margin: 0 auto 50px;
+		max-width: 370px;
+	}
+
+	@include media('<=375px') {
+		max-width: 228px;
+	}
+
+	&__head {
+		box-sizing: border-box;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		background: linear-gradient(175deg, rgb(0 0 0 / 40%) 35%, rgb(209 182 38 / 50%) 80%), linear-gradient(203deg, rgb(0 0 0 / 45%) 32%, #1fe137 94%);
+		border-radius: 16px;
+		padding: 15px 100px 15px 50px;
+		position: relative;
+		
+		@include media('<=lg') {
+			background: linear-gradient(175deg, rgb(0 0 0 / 30%) 33%, rgb(209 182 38 / 50%) 80%), linear-gradient(203deg, rgb(0 0 0 / 0%) 32%, #1fe137 94%);
+			padding: 15px 100px 15px 40px;
+		}
+		
+		@include media('<=xs') {
+			display: block;
+			border-radius: 25px 25px 16px 16px;
+			padding: 0;
+			height: 320px;
+			margin-bottom: 53px;
+		}
+		
+		@include media('<=xxs') {
+			border-radius: 37px 37px 25px 25px;
+			margin-bottom: 85px;
+			height: 460px;
+		}
+		
+		@include media('<=xxxs') {
+			border-radius: 25px 25px 16px 16px;
+			margin-bottom: 53px;
+			height: 285px;
+		}
+	
+		&::after {
+			display: block;
+			content: '';
+			width: 275px;
+			height: 190px;
+			background: url('#{$images-path}stuff/drumb-image.png') center / contain no-repeat transparent;
+			position: absolute;
+			bottom: 0px;
+			right: -15px;
+			
+			@include media('<=lg') {
+				width: 220px;
+				height: 160px;
+				right: -8px;
+			}
+
+			@include media('<=xs') {
+				display: none;
+			}
+		}
+	}
+
+	&__emblem {
+		margin-right: 60px;
+		
+		@include media('<=lg') {
+			margin-right: 50px;
+		}
+		
+		@include media('<=xs') {
+			display: none;
+		}
+	
+		img {
+			display: block;
+			max-width: 160px;
+			width: 100%;
+			
+			@include media('<=lg') {
+				max-width: 130px;
+			}
+		}
+	}
+
+	&__title {
+		text-shadow: 0px 4px 10px rgb(0 0 0 / 45%);
+		margin-right: 30px;
+		
+		@include media('<=lg') {
+			margin-right: 25px;
+		}
+
+		@include media('<=xs') {
+			display: none;
+		}
+	
+		span:nth-child(1) {
+			display: block;
+			font-family: "MEB", sans-serif;
+			text-transform: uppercase;
+			font-size: 26px;
+			line-height: 1.5;
+			
+			@include media('<=lg') {
+				font-size: 21px;
+			}
+		}
+		
+		span:nth-child(2) {
+			display: block;
+			font-family: "MSB", sans-serif;
+			font-size: 18px;
+			line-height: 1.5;
+			
+			@include media('<=lg') {
+				font-size: 15px;
+			}
+		}
+	}
+
+	&__price {
+		position: relative;
+		z-index: 1;
+		flex-shrink: 0;
+
+		@include media('<=xs') {
+			display: none;
+		}
+	
+		&::before, &::after {
+			display: block;
+			content: '';
+			width: 50px;
+			height: 50px;
+			background: url('#{$images-path}ic-flat-lightning.png') center / contain no-repeat transparent;
+			position: absolute;
+			filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.4));
+			top: calc(100% - 15px);
+			left: -8px;
+			
+			@include media('<=lg') {
+				top: calc(100% - 12px);
+				width: 40px;
+				height: 40px;
+			}
+		}
+		
+		&::after {
+			top: auto;
+			left: auto;
+			bottom: calc(100% - 17px);
+			right: -8px;
+			
+			@include media('<=lg') {
+				bottom: calc(100% - 14px);
+			}
+		}
+	}
+
+	&__p-inner {
+		display: block;
+		font-family: "MSB", sans-serif;
+		font-size: 18px;
+		background-color: #fff;
+		padding: 7px 15px;
+		border-radius: 50px;
+		position: relative;
+		z-index: 2;
+		box-shadow: 0 5px 8px rgb(0 0 0 / 0.4);
+
+		@include media('<=lg') {
+			font-size: 14px;
+		}
+
+		span {
+			background: linear-gradient(145deg, rgba(0, 0, 0, 0) 18%, rgb(209 189 38 / 70%) 80%), linear-gradient(189deg, rgb(0 0 0 / 80%) 37%, #22f81f 94%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			text-fill-color: transparent;
+		}
+
+		strong {
+			font-family: "MEB", sans-serif;
+		}
+	}
+
+	&__m-title {
+		display: none;
+		box-sizing: border-box;
+		text-transform: uppercase;
+		font-family: "MEB", sans-serif;
+		font-size: 26.6px;
+		padding: 10px;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		z-index: 1;
+		clear: both;
+		cursor: pointer;
+		border-radius: 25px 25px 0 0;
+		height: 105px;
+		margin-top: -105px;
+		font-size: 26.6px;
+		background: url('#{$images-path}icons-sprite.svg#icon-arr-down-view-white') center right 40px/22px 20px no-repeat, linear-gradient(167deg, rgba(0, 0, 0, 0.25) 35%, rgb(209 197 38 / 0.7) 80%), linear-gradient(242deg, #000000 37%, #4af81f 94%);
+					
+		&.opened {
+			background: url('#{$images-path}icons-sprite.svg#icon-arr-up-view-white') center right 40px/22px 20px no-repeat, linear-gradient(167deg, rgba(0, 0, 0, 0.25) 35%, rgb(209 197 38 / 0.7) 80%), linear-gradient(242deg, #000000 37%, #4af81f 94%);
+		}
+
+		@include media('<=xs') {
+			display: flex;
+		}
+
+		@media (max-width: 380px) {
+			font-size: 22px;
+			background: url('#{$images-path}icons-sprite.svg#icon-arr-down-view-white') center right 20px / 19px 17px no-repeat, linear-gradient(167deg, rgba(0, 0, 0, 0.25) 35%, rgba(209 197 38 / 0.7) 80%), linear-gradient(242deg, #000000 37%, #4af81f 94%);
+			
+			&.opened {
+				background: url('#{$images-path}icons-sprite.svg#icon-arr-up-view-white') center right 20px / 19px 17px no-repeat, linear-gradient(167deg, rgba(0, 0, 0, 0.25) 35%, rgba(209 197 38 / 0.7) 80%), linear-gradient(242deg, #000000 37%, #4af81f 94%);
+			}
+		}
+
+		@include media('<=xxxs') {
+			border-radius: 16px 16px 0 0;
+			height: 65px;
+			margin-top: -65px;
+			font-size: 16.5px;
+			background: url('#{$images-path}icons-sprite.svg#icon-arr-down-view-white') center right 15px / 15px 13px no-repeat, linear-gradient(167deg, rgba(0, 0, 0, 0.25) 35%, rgba(209 197 38 / 0.7) 80%), linear-gradient(242deg, #000000 37%, #4af81f 94%);
+			
+			&.opened {
+				background: url('#{$images-path}icons-sprite.svg#icon-arr-up-view-white') center right 15px / 15px 13px no-repeat, linear-gradient(167deg, rgba(0, 0, 0, 0.25) 35%, rgba(209 197 38 / 0.7) 80%), linear-gradient(242deg, #000000 37%, #4af81f 94%);
+			}
+		}
+	}
+
+	&__m-image {
+		display: none;
+
+		@include media('<=xs') {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center top;
+		}
+	}
+
+	&__items {
+		display: none;
+	}
+
+	&__item {
+
+	}
+
+	&__i-inner {
+		box-sizing: border-box;
+		padding: 35px 25px;
+		height: 180px;
+		border-radius: 25px;
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: flex-start;
+		background: url('#{$images-path}stuff/drumb-card-image-1.png') center / cover, linear-gradient(169deg, rgba(0, 0, 0, 0) 25%, rgba(209, 182, 38, 0.7) 80%), linear-gradient(240deg, rgb(0 0 0 / 60%) 40%, #42c916 94%);
+
+		@include media('<=375px') {
+			padding: 25px 20px 30px;
+			border-radius: 16px;
+			height: 140px;
+		}
+	}
+
+	&__i-title {
+		font-family: "MSB", sans-serif;
+		font-size: 18px;
+		line-height: 1.4;
+		margin-bottom: 5px;
+		
+		@include media('<=xxxs') {
+			font-size: 14px;
+		}
+	}
+
+	&__i-price {
+		display: inline-block;
+		margin-top: auto;
+		font-family: "MSB", sans-serif;
+		font-size: 18px;
+		background-color: #fff;
+		padding: 7px 12px;
+		border-radius: 50px;
+		
+		@include media('<=375px') {
+			font-size: 14px;
+		}
+
+		span {
+			background: linear-gradient(145deg, rgba(0, 0, 0, 0) 18%, rgb(209 189 38 / 70%) 80%), linear-gradient(189deg, rgb(0 0 0 / 80%) 37%, #22f81f 94%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			text-fill-color: transparent;
+
+			strong {
+				font-family: "MEB", sans-serif;
+			}
+		}
+	}
+}

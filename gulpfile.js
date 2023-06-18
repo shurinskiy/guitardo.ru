@@ -108,7 +108,7 @@ function html() {
 				]
 			}
 		}))) */
-		// .pipe($.newer(pth.pbl.html))
+		.pipe($.newer(pth.pbl.html))
 		.pipe(gulp.dest(pth.pbl.html))
 		.pipe($.if(isSync, $.browserSync.stream()));
 }

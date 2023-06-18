@@ -1,13 +1,13 @@
 (() => {
 
-	let $toggle = $('.training__head-title');
-	let $block = $('.training__items');
+	let $toggle = $('.training__head-title, .drumb__m-title');
+	let $block = $('.training__items, .drumb__items');
 
 	$toggle.on('click', function(e) {
 		if (window.getComputedStyle(e.target).clear === 'both') {
 			$(this)
 				.toggleClass('opened')
-				.parent('.training__head')
+				.parent('.training__head, .drumb__head')
 				.next($block)
 				.slideToggle();
 		}

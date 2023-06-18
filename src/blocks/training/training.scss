@@ -391,8 +391,6 @@
 		}
 		
 		@include media('<=xxxs') {
-			clear: both;
-			cursor: pointer;
 			border-radius: 16px 16px 0 0;
 			height: 65px;
 			margin-top: -65px;
@@ -450,7 +448,7 @@
 			height: 130px;
 		}
 		
-		@include media('<=xxs') {
+		@include media('<=xs') {
 			padding: 35px 25px 30px;
 			height: 180px;
 			border-radius: 25px;
@@ -473,7 +471,7 @@
 			font-size: 14px;
 		}
 		
-		@include media('<=xxs') {
+		@include media('<=xs') {
 			font-size: 18px;
 		}
 		
@@ -526,7 +524,7 @@
 			font-size: 14px;
 		}
 		
-		@include media('<=xxs') {
+		@include media('<=xs') {
 			font-size: 18px;
 		}
 		
@@ -569,5 +567,9 @@
 
 	&__bottom-title {
 		margin-bottom: 15px;
+	}
+
+	&__drumb {
+		
 	}
 }
